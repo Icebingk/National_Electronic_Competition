@@ -1,0 +1,197 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Modelsim/examples
+T_opt
+!s110 1739266567
+Vah]aam??7TCOWgh>SPbFG0
+04 13 4 work SPI_testbench fast 0
+=4-ac5afc91ce63-67ab1a07-126-724
+Z1 o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;2020.4;71
+R0
+T_opt1
+!s110 1741501745
+VeBQTA[61eO^68UijaBa`D1
+04 19 4 work SPI_slave_testbench fast 0
+=2-ac5afc91ce63-67cd3530-389-71f8
+R1
+R2
+n@_opt1
+R3
+vspi_master
+Z4 !s110 1741501743
+!i10b 1
+!s100 Fi8a`mdF]TC3k4Hg=5`iQ2
+Z5 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ik0RO93aS=KmDgf4z`SL7<3
+Z6 dE:/National_Electronic_Competition/modulsim
+w1741493524
+8E:/National_Electronic_Competition/SPI/src/spi_master.v
+FE:/National_Electronic_Competition/SPI/src/spi_master.v
+!i122 122
+L0 11 136
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z9 !s108 1741501743.000000
+!s107 E:\National_Electronic_Competition\SPI\src\top_define.v|E:/National_Electronic_Competition/SPI/src/spi_master.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/National_Electronic_Competition/SPI/src/spi_master.v|
+!i113 0
+Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vSPI_mater_testbench
+R4
+!i10b 1
+!s100 44SS;99m;zQ08:b;Uc1bB1
+R5
+I2iDSX=iKcZgdVc=bNhdk`0
+R6
+w1741497767
+8E:/National_Electronic_Competition/SPI/testbench/SPI_master_testbench.v
+FE:/National_Electronic_Competition/SPI/testbench/SPI_master_testbench.v
+!i122 124
+Z11 L0 7 65
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 E:/National_Electronic_Competition/SPI/testbench/SPI_master_testbench.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/National_Electronic_Competition/SPI/testbench/SPI_master_testbench.v|
+!i113 0
+R10
+R2
+n@s@p@i_mater_testbench
+vSPI_module_master
+!s110 1739266565
+!i10b 1
+!s100 ?:]bH<4E<<OLTZ73cVk9D3
+R5
+IDeEd`JVHIY3CXh4hmf@bD2
+R6
+w1739266563
+8E:/National_Electronic_Competition/SPI/src/SPI_module_master.v
+FE:/National_Electronic_Competition/SPI/src/SPI_module_master.v
+!i122 8
+L0 13 138
+R7
+R8
+r1
+!s85 0
+31
+!s108 1739266565.000000
+!s107 E:\National_Electronic_Competition\SPI\src\top_define.v|E:/National_Electronic_Competition/SPI/src/SPI_module_master.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/National_Electronic_Competition/SPI/src/SPI_module_master.v|
+!i113 0
+R10
+R2
+n@s@p@i_module_master
+vSPI_module_slave
+!s110 1739266274
+!i10b 1
+!s100 =P0zaeQdKQS^J41VAiV`I3
+R5
+I3e=e2O_A=A]nJ=QAC_[l81
+R6
+w1739261305
+8E:/National_Electronic_Competition/SPI/src/SPI_module_slave.v
+FE:/National_Electronic_Competition/SPI/src/SPI_module_slave.v
+!i122 5
+L0 11 20
+R7
+R8
+r1
+!s85 0
+31
+!s108 1739266274.000000
+!s107 E:/National_Electronic_Competition/SPI/src/SPI_module_slave.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/National_Electronic_Competition/SPI/src/SPI_module_slave.v|
+!i113 0
+R10
+R2
+n@s@p@i_module_slave
+vSPI_slave
+R4
+!i10b 1
+!s100 Ab=i@V2H[Q@KGLkNOm<Fn3
+R5
+I?H:9KgaLfm8Afgea]g_Tz3
+R6
+w1741501739
+8E:/National_Electronic_Competition/SPI/src/SPI_slave.v
+FE:/National_Electronic_Competition/SPI/src/SPI_slave.v
+!i122 123
+L0 11 158
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 E:\National_Electronic_Competition\SPI\src\top_define.v|E:/National_Electronic_Competition/SPI/src/SPI_slave.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/National_Electronic_Competition/SPI/src/SPI_slave.v|
+!i113 0
+R10
+R2
+n@s@p@i_slave
+vSPI_slave_testbench
+R4
+!i10b 1
+!s100 XO_HkHQkRAhF5F[0WZW]S0
+R5
+IOJM7GM?`F0aXmb]A3IekS1
+R6
+w1741500759
+8E:/National_Electronic_Competition/SPI/testbench/SPI_slave_testbench.v
+FE:/National_Electronic_Competition/SPI/testbench/SPI_slave_testbench.v
+!i122 125
+L0 2 49
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 E:/National_Electronic_Competition/SPI/testbench/SPI_slave_testbench.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/National_Electronic_Competition/SPI/testbench/SPI_slave_testbench.v|
+!i113 0
+R10
+R2
+n@s@p@i_slave_testbench
+vSPI_testbench
+!s110 1739266275
+!i10b 1
+!s100 ]kNV_]hQiGn4g7G:0i1X71
+R5
+Im8`C[BbFTi5k7mBaFF[H]1
+R6
+w1739266264
+8E:/National_Electronic_Competition/SPI/testbench/SPI_testbench.v
+FE:/National_Electronic_Competition/SPI/testbench/SPI_testbench.v
+!i122 6
+R11
+R7
+R8
+r1
+!s85 0
+31
+!s108 1739266275.000000
+!s107 E:/National_Electronic_Competition/SPI/testbench/SPI_testbench.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/National_Electronic_Competition/SPI/testbench/SPI_testbench.v|
+!i113 0
+R10
+R2
+n@s@p@i_testbench
