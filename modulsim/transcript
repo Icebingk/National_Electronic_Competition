@@ -319,3 +319,40 @@ run
 run
 run
 run
+# Compile of spi_master.v was successful.
+# Compile of SPI_slave.v was successful.
+# Compile of SPI_top.v was successful.
+# Compile of top_define.v was successful.
+# Compile of SPI_master_testbench.v was successful.
+# Compile of SPI_slave_testbench.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.SPI_slave_testbench(fast)
+# Loading work.SPI_slave(fast)
+run
+run
+run
+run
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.SPI_slave_testbench(fast)
+# Loading work.SPI_slave(fast)
+# Compile of spi_master.v was successful.
+# Compile of SPI_slave.v was successful.
+# Compile of SPI_top.v was successful.
+# Compile of top_define.v was successful.
+# Compile of SPI_master_testbench.v was successful.
+# Compile of SPI_slave_testbench.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "SPI_slave(fast)".
+# Loading work.SPI_slave_testbench(fast)
+# Loading work.SPI_slave(fast)
+run
+run
+run
+run
