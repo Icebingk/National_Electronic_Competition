@@ -2,10 +2,10 @@
 ////更新时间：      2025年3月8日
 ////文件说明：      SPI模块作为从机，用于与SPI从机通信，模式可选,8bit数据位
 ////用途：          与单片机进行通信
-////补充：          模式0：CPOL=0，CPHA=0 时钟上升沿采样，下降沿发送
-////                模式1：CPOL=0，CPHA=1 时钟下降沿采样，上升沿发送
-////                模式2：CPOL=1，CPHA=0 时钟下降沿采样，上升沿发送
-////                模式3：CPOL=1，CPHA=1 时钟上升沿采样，下降沿发送
+////补充：          模式0：CPOL=0，CPHA=0 高电平有效，时钟上升沿采样，下降沿发送
+////                模式1：CPOL=0，CPHA=1 高电平有效，时钟下降沿采样，上升沿发送
+////                模式2：CPOL=1，CPHA=0 低电平有效，时钟下降沿采样，上升沿发送
+////                模式3：CPOL=1，CPHA=1 低电平有效，时钟上升沿采样，下降沿发送
 ////////////////////////////////////////////////////////////////////////////
 `include "top_define.v"
 module SPI_slave(
@@ -46,7 +46,7 @@ assign DCLK_edge_up = ~DCLK_reg & DCLK;//上升沿检测
 assign DCLK_edge_down = DCLK_reg & ~DCLK;//下降沿检测
 //状态变化
 wire IDLE_START = (state == IDLE) && (nCS == 0);//
-wire START_TRANS = (state == START) && (CPOL?DCLK_edge_up:DCLK_edge_down);//高电平有效则检测上升沿，低电平有效则检测下降沿
+wire START_TRANS = (state == START) && (CPOL?DCLK_edge_down:DCLK_edge_up);//高电平有效则检测上升沿，低电平有效则检测下降沿
 wire TRANS_WAIT = (state == TRANS) && (data_cnt == `DATA_WIDTH - 1);//数据计数器
 wire WAIT_OVER = (state == WAIT) && ((CPHA == 'b0 && DCLK_edge_up) || (CPHA == 'b1 && DCLK_edge_down));
 
@@ -108,7 +108,7 @@ always @(posedge  clk or negedge rst_n) begin
     if (!rst_n) begin
         data_cnt <= 3'd0;
     end else if(state == TRANS) begin 
-        if (data_cnt == 3'd7) begin
+        if (state == WAIT) begin
             data_cnt <= 3'd0;
         end else if (CPHA == 'b0 && DCLK_edge_up) begin
             data_cnt <= data_cnt + 1;
