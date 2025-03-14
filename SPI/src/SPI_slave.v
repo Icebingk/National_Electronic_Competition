@@ -38,17 +38,18 @@ reg                     DCLK_reg;//时钟信号寄存器
 wire                    DCLK_edge_up;//时钟边沿检测，上升沿
 wire                    DCLK_edge_down;//时钟边沿检测，下降沿
 reg [`DATA_ADDR-1:0]    data_cnt;//数据计数器
+wire[1:0]               CPHA_CPOL;//时钟相位和极性
 //
 assign MISO = MISO_shift[`DATA_WIDTH-1];//输出数据
-
+assign CPHA_CPOL = {CPHA,CPOL};//时钟相位和极性
 //时钟检测
 assign DCLK_edge_up = ~DCLK_reg & DCLK;//上升沿检测
 assign DCLK_edge_down = DCLK_reg & ~DCLK;//下降沿检测
 //状态变化
 wire IDLE_START = (state == IDLE) && (nCS == 0);//
-wire START_TRANS = (state == START) && (CPOL?DCLK_edge_down:DCLK_edge_up);//高电平有效则检测上升沿，低电平有效则检测下降沿
+wire START_TRANS = (state == START) && ((^CPHA_CPOL)?DCLK_edge_down:DCLK_edge_up);//高电平有效则检测上升沿，低电平有效则检测下降沿
 wire TRANS_WAIT = (state == TRANS) && (data_cnt == `DATA_WIDTH - 1);//数据计数器
-wire WAIT_OVER = (state == WAIT) && ((CPHA == 'b0 && DCLK_edge_up) || (CPHA == 'b1 && DCLK_edge_down));
+wire WAIT_OVER = (state == WAIT) && ((!(^CPHA_CPOL) && DCLK_edge_up) || ((^CPHA_CPOL) && DCLK_edge_down));
 
 always @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
@@ -72,6 +73,8 @@ always @(*) begin
         IDLE: begin
             if (IDLE_START) begin
                 next_state = START;
+            end else if (nCS)begin
+                next_state = IDLE;
             end else begin
                 next_state = IDLE;
             end
@@ -79,6 +82,8 @@ always @(*) begin
         START:begin
             if (START_TRANS)begin
                 next_state = TRANS;
+            end else if (nCS)begin
+                next_state = IDLE;
             end else begin
                 next_state = START;
             end
@@ -86,6 +91,8 @@ always @(*) begin
         TRANS:begin
             if (TRANS_WAIT)begin
                 next_state = WAIT;
+            end else if (nCS)begin
+                next_state = IDLE;
             end else begin
                 next_state = TRANS;
             end
@@ -93,6 +100,8 @@ always @(*) begin
         WAIT:begin
             if (WAIT_OVER)begin
                 next_state = OVER;
+            end else if (nCS)begin
+                next_state = IDLE;
             end else begin
                 next_state = WAIT;
             end
@@ -107,12 +116,12 @@ end
 always @(posedge  clk or negedge rst_n) begin
     if (!rst_n) begin
         data_cnt <= 3'd0;
-    end else if(state == TRANS) begin 
-        if (state == WAIT) begin
-            data_cnt <= 3'd0;
-        end else if (CPHA == 'b0 && DCLK_edge_up) begin
+    end else if (state == WAIT)begin
+        data_cnt <= data_cnt;
+    end else if(state == TRANS || state == START) begin 
+        if (!(^CPHA_CPOL) && DCLK_edge_up) begin
             data_cnt <= data_cnt + 1;
-        end else if (CPHA == 'b1 && DCLK_edge_down) begin
+        end else if ((^CPHA_CPOL) && DCLK_edge_down) begin
             data_cnt <= data_cnt + 1;
         end else begin
             data_cnt <= data_cnt;
@@ -121,16 +130,17 @@ always @(posedge  clk or negedge rst_n) begin
         data_cnt <= 3'd0;
     end
 end
-                        
+
+//发送数据
 always @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin 
 		MISO_shift <= {`DATA_WIDTH{1'b0}};
     end else if (state == IDLE && data_in_vld)begin
        MISO_shift <= data_in;
     end else if ((state == TRANS) || (state ==  WAIT))begin
-        if (CPHA == 'b0 && DCLK_edge_down)begin
+        if (!(^CPHA_CPOL) && DCLK_edge_down)begin
             MISO_shift <= {MISO_shift[`DATA_WIDTH-2:0],MISO_shift[`DATA_WIDTH-1]};
-        end else if (CPHA == 'b1 && DCLK_edge_up)begin
+        end else if ((^CPHA_CPOL) && DCLK_edge_up)begin
             MISO_shift <= {MISO_shift[`DATA_WIDTH-2:0],MISO_shift[`DATA_WIDTH-1]};
         end else begin
             MISO_shift <= MISO_shift;
@@ -138,14 +148,15 @@ always @(posedge clk or negedge rst_n) begin
     end
 end
 
+//接收数据
 always @(posedge clk or negedge rst_n) begin
     if (!rst_n)begin
         MOSI_shift <= {`DATA_WIDTH{1'b0}};
-    end else if ((state == TRANS) || (state ==  WAIT))begin
-        if (CPHA == 'b0 && DCLK_edge_up)begin
-            MOSI_shift <= {MOSI,MOSI_shift[`DATA_WIDTH-1:1]};
-        end else if (CPHA == 'b1 && DCLK_edge_down)begin
-            MOSI_shift <= {MOSI,MOSI_shift[`DATA_WIDTH-1:1]};
+    end else if ((state == TRANS) || (state ==  WAIT) || (state == START))begin
+        if (!(^CPHA_CPOL) && DCLK_edge_up)begin
+            MOSI_shift <= {MOSI_shift[`DATA_WIDTH-2:0],MOSI};
+        end else if ((^CPHA_CPOL) && DCLK_edge_down)begin
+            MOSI_shift <= {MOSI_shift[`DATA_WIDTH-2:0],MOSI};
         end else begin
             MOSI_shift <= MOSI_shift;
         end

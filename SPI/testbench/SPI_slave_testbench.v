@@ -3,7 +3,7 @@ module SPI_slave_testbench;
 
 reg             clk = 0;
 reg             rst_n = 0;
-reg [7:0]       data_in = 8'H55;
+reg [7:0]       data_in = 8'HF5;//1111_0101
 reg             data_in_vld = 'b1;
 wire[7:0]       data_out;
 wire            data_out_vld;
@@ -29,7 +29,7 @@ initial begin
 end
 
 initial begin
-    forever #400 MOSI = ~MOSI;
+    forever #630 MOSI = ~MOSI;
 end
 
 SPI_slave  SPI_slave_inst (
