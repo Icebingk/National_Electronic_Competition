@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp
+"spi-f407\startup_stm32f407xx.o"
+"spi-f407\main.o"
+"spi-f407\stm32f4xx_it.o"
+"spi-f407\stm32f4xx_hal_msp.o"
+"spi-f407\stm32f4xx_hal_spi.o"
+"spi-f407\stm32f4xx_hal_rcc.o"
+"spi-f407\stm32f4xx_hal_rcc_ex.o"
+"spi-f407\stm32f4xx_hal_flash.o"
+"spi-f407\stm32f4xx_hal_flash_ex.o"
+"spi-f407\stm32f4xx_hal_flash_ramfunc.o"
+"spi-f407\stm32f4xx_hal_gpio.o"
+"spi-f407\stm32f4xx_hal_dma_ex.o"
+"spi-f407\stm32f4xx_hal_dma.o"
+"spi-f407\stm32f4xx_hal_pwr.o"
+"spi-f407\stm32f4xx_hal_pwr_ex.o"
+"spi-f407\stm32f4xx_hal_cortex.o"
+"spi-f407\stm32f4xx_hal.o"
+"spi-f407\stm32f4xx_hal_exti.o"
+"spi-f407\stm32f4xx_hal_tim.o"
+"spi-f407\stm32f4xx_hal_tim_ex.o"
+"spi-f407\system_stm32f4xx.o"
+--strict --scatter "spi-F407\spi-F407.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "spi-F407.map" -o spi-F407\spi-F407.axf
