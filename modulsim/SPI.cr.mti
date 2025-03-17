@@ -22,13 +22,6 @@ Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
 Top level modules:
 	spi_master
 
-} {} {}} E:/National_Electronic_Competition/SPI/testbench/SPI_slave_testbench.v {1 {vlog -work work -vopt -stats=none E:/National_Electronic_Competition/SPI/testbench/SPI_slave_testbench.v
-Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
--- Compiling module SPI_slave_testbench
-
-Top level modules:
-	SPI_slave_testbench
-
 } {} {}} E:/National_Electronic_Competition/SPI/src/top_define.v {1 {vlog -work work -vopt -stats=none E:/National_Electronic_Competition/SPI/src/top_define.v
 Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
 

@@ -3,22 +3,23 @@ module SPI_slave_testbench;
 
 reg             clk = 0;
 reg             rst_n = 0;
-reg [7:0]       data_in = 8'H55;
+reg [7:0]       data_in = 8'HF5;//1111_0101
 reg             data_in_vld = 'b1;
 wire[7:0]       data_out;
 wire            data_out_vld;
 reg             nCS = 1;
-reg             DCLK = 0;
 reg             MOSI = 0;
 wire            MISO;
-reg             CPOL = 0;
-reg             CPHA = 0;
+reg             CPOL = 1;
+reg             CPHA = 1;
+reg             DCLK;
 
 initial begin
     forever #5 clk = ~clk;
 end
 
 initial begin
+    DCLK = CPOL;
     #20 rst_n = 1; 
     #100 nCS = 0;
     #3600 nCS = 1; 
@@ -29,7 +30,7 @@ initial begin
 end
 
 initial begin
-    forever #400 MOSI = ~MOSI;
+    forever #630 MOSI = ~MOSI;
 end
 
 SPI_slave  SPI_slave_inst (
