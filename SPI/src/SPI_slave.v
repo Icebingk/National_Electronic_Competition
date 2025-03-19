@@ -145,6 +145,8 @@ always @(posedge clk or negedge rst_n) begin
         end else begin
             MISO_shift <= MISO_shift;
         end
+    end else begin
+        MISO_shift <= MISO_shift;
     end
 end
 
@@ -167,7 +169,7 @@ always @(posedge clk or negedge rst_n) begin
     if (!rst_n)begin
         data_out <= {`DATA_WIDTH{1'b0}};
         data_out_vld <= 1'b0;
-    end else if (state == OVER)begin
+    end else if (next_state == OVER)begin
         data_out <= MOSI_shift;
         data_out_vld <= 1'b1;
     end else begin
