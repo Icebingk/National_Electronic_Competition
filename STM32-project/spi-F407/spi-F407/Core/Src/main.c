@@ -107,7 +107,7 @@ uint8_t SPI_FPGA_ReadByte(void)
   */
 void SPI_FPGA_TransmitReceive(uint8_t *txData, uint8_t *rxData, uint16_t size)
 {
-    /* 拉高CS */
+    /* 拉低CS */
     SPI_FPGA_CS_LOW();
 
     if (HAL_SPI_TransmitReceive(&hspi3, txData, rxData, size, SPI_TIMEOUT) != HAL_OK)
@@ -115,7 +115,7 @@ void SPI_FPGA_TransmitReceive(uint8_t *txData, uint8_t *rxData, uint16_t size)
         Error_Handler();
     }
 
-    /* 拉低CS */
+    /* 拉高CS */
     SPI_FPGA_CS_HIGH();
 }
 
@@ -137,7 +137,7 @@ void Delay(__IO uint32_t nCount)
   */
 void SPI_FPGA_Transmit(uint8_t *txData, uint16_t size)
 {
-	    /* 拉高CS */
+	    /* 拉低CS */
     SPI_FPGA_CS_LOW();
 	
     if (HAL_SPI_Transmit(&hspi3, txData, size, SPI_TIMEOUT) != HAL_OK)
@@ -145,7 +145,7 @@ void SPI_FPGA_Transmit(uint8_t *txData, uint16_t size)
         Error_Handler(); // 
     }
 		
-		    /* 拉低CS */
+		    /* 拉高CS */
     SPI_FPGA_CS_HIGH();
 }
 
@@ -204,7 +204,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
  // uint8_t txByte = 0x55;
 //  uint8_t rxByte = 0;
-  uint8_t txBuffer[5] = {0x10, 0x20, 0x30, 0x40, 0x50};
+  uint8_t txBuffer[4] = {0x1F, 0x2E, 0x3D, 0x4E};
+	uint8_t rxBuffer[1];
   //uint8_t rxBuffer[5] = {0};
   /* USER CODE END 2 */
 
@@ -215,8 +216,18 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-		SPI_FPGA_Transmit(txBuffer, 5);
-		Delay(10000);
+		SPI_FPGA_Transmit(txBuffer, 1);
+		Delay(2000);
+
+		SPI_FPGA_Transmit(txBuffer+1, 1);
+		Delay(2000);		
+		
+		
+		SPI_FPGA_Transmit(txBuffer+2, 1);
+		Delay(2000);
+		
+		SPI_FPGA_Transmit(txBuffer+3, 1);
+		Delay(2000);
   }
   /* USER CODE END 3 */
 }
