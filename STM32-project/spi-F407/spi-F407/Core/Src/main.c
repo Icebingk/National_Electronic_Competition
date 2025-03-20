@@ -67,6 +67,8 @@ static void MX_SPI3_Init(void);
 #define SPI_FPGA_CS_LOW()  HAL_GPIO_WritePin(SPI_FPGA_CS_PORT, SPI_FPGA_CS_PIN, GPIO_PIN_RESET)
 #define SPI_FPGA_CS_HIGH() HAL_GPIO_WritePin(SPI_FPGA_CS_PORT, SPI_FPGA_CS_PIN, GPIO_PIN_SET)
 
+int state_flag=0;//状态选择标志位
+
 /**
   * @brief  发送一个字节数据并返回接收的数据
   * @param  byte:要发送的数据
@@ -169,6 +171,23 @@ void SPI_FPGA_Receive(uint8_t *rxData, uint16_t size)
 }
 
 
+/**
+  * @brief  读取状态指令
+  * @param  
+  * @param  
+  */
+void Update_State_Flag(void)
+{
+    // 读取 PA10, PA11, PA12 状态
+    int pa10 = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_10);
+    int pa11 = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_11);
+    int pa12 = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_12);
+
+    // 计算state_flag
+    state_flag = (pa10 << 2) | (pa11 << 1) | pa12;
+}
+
+
 /* USER CODE END 0 */
 
 /**
@@ -204,8 +223,9 @@ int main(void)
   /* USER CODE BEGIN 2 */
  // uint8_t txByte = 0x55;
 //  uint8_t rxByte = 0;
-  uint8_t txBuffer[4] = {0x1F, 0x2E, 0x3D, 0x4E};
-	uint8_t rxBuffer[1];
+  uint8_t txData[12] = {0x1F, 0x2E, 0x3D, 0x4E,0x2F, 0x3E, 0x4D, 0x5E,0x6F, 0x7E, 0x2D, 0x8E};
+  uint8_t rxData[12] = {0x12, 0x2E, 0x3C, 0x4E,0x2A, 0x3E, 0x4D, 0x5E,0x6F, 0x9E, 0x1D, 0x8E};
+//	uint8_t rxBuffer[1];
   //uint8_t rxBuffer[5] = {0};
   /* USER CODE END 2 */
 
@@ -216,18 +236,56 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-		SPI_FPGA_Transmit(txBuffer, 1);
-		Delay(2000);
+   Update_State_Flag();
+		
+	  switch (state_flag)
+    {
+        case 1: // 发送一个字节
+            SPI_FPGA_SendByte(txData[0]);
+            break;
 
-		SPI_FPGA_Transmit(txBuffer+1, 1);
-		Delay(2000);		
-		
-		
-		SPI_FPGA_Transmit(txBuffer+2, 1);
-		Delay(2000);
-		
-		SPI_FPGA_Transmit(txBuffer+3, 1);
-		Delay(2000);
+        case 2: // 接受一个字节
+            rxData[0] = SPI_FPGA_ReadByte();
+            break;
+
+        case 3: // 连续发送10个字节
+            SPI_FPGA_Transmit(txData, 10);
+            break;
+
+        case 4: // 连续接收10个字节
+            SPI_FPGA_Receive(rxData, 10);
+            break;
+
+        case 5: // 连续发送并接收10个字节
+            SPI_FPGA_TransmitReceive(txData, rxData, 10);
+            break;
+
+        case 6: // 连续发送12 个字节,发送完第5个字节后拉高片选信号
+            SPI_FPGA_CS_LOW();
+            HAL_SPI_Transmit(&hspi3, txData, 5, SPI_TIMEOUT);
+            SPI_FPGA_CS_HIGH(); // 
+            HAL_Delay(1); // 延时
+            HAL_SPI_Transmit(&hspi3, txData + 5, 5, SPI_TIMEOUT);
+           // 发送完第10个字节后拉低片选信号
+            SPI_FPGA_CS_LOW();
+            HAL_SPI_Transmit(&hspi3, txData + 10, 2, SPI_TIMEOUT);
+            SPI_FPGA_CS_HIGH();
+            break;
+
+        case 7: // 连续接收12 个字节,接收完第5个字节后拉高片选信号
+            SPI_FPGA_CS_LOW();
+            HAL_SPI_Receive(&hspi3, rxData, 5, SPI_TIMEOUT);
+            SPI_FPGA_CS_HIGH(); // 
+            HAL_SPI_Receive(&hspi3, rxData + 5, 5, SPI_TIMEOUT);
+           // 接收完第10个字节后拉低片选信号
+            SPI_FPGA_CS_LOW();
+            HAL_SPI_Receive(&hspi3, rxData + 10, 2, SPI_TIMEOUT);
+            SPI_FPGA_CS_HIGH();
+            break;
+ 
+        default:
+            break;
+    }
   }
   /* USER CODE END 3 */
 }
@@ -339,6 +397,20 @@ HAL_GPIO_Init(SPI_FPGA_CS_PORT, &GPIO_InitStruct);
 
 /* CS初始状态不选中*/
 SPI_FPGA_CS_HIGH();
+
+ /* 配置PA5 和 PA6 为推挽输出,高电平 */
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5 | GPIO_PIN_6, GPIO_PIN_SET);
+    GPIO_InitStruct.Pin = GPIO_PIN_5 | GPIO_PIN_6;
+    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP; // 推挽输出
+    GPIO_InitStruct.Pull = GPIO_NOPULL;        // 无上下拉
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+    /* 配置 PA10和PA11和PA12 为输入模式 */
+    GPIO_InitStruct.Pin = GPIO_PIN_10 | GPIO_PIN_11 | GPIO_PIN_12;
+    GPIO_InitStruct.Mode = GPIO_MODE_INPUT; // 输入模式
+    GPIO_InitStruct.Pull = GPIO_NOPULL;     // 无上下拉
+    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
 /* USER CODE END MX_GPIO_Init_2 */
 }
