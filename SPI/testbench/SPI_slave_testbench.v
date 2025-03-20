@@ -22,7 +22,15 @@ initial begin
     DCLK = CPOL;
     #20 rst_n = 1; 
     #100 nCS = 0;
-    #3600 nCS = 1; 
+    #10000 nCS = 1; 
+end
+
+always @(posedge clk or negedge rst_n) begin
+    if (data_out_vld)begin
+        data_in <= data_in + 1'b1;
+    end else begin
+        data_in <= data_in;
+    end
 end
 
 initial begin

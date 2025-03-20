@@ -1,4 +1,4 @@
---cpu=Cortex-M4.fp
+--cpu=Cortex-M4.fp.sp
 "spi-f407\startup_stm32f407xx.o"
 "spi-f407\main.o"
 "spi-f407\stm32f4xx_it.o"

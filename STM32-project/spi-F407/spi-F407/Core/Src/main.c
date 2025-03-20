@@ -56,60 +56,64 @@ static void MX_SPI3_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-/* SPI³¬Ê±Ê±¼ä */
+/* SPIï¿½ï¿½Ê±Ê±ï¿½ï¿½ */
 #define SPI_TIMEOUT 1000
 
-/* spiÆ¬Ñ¡Òý½ÅÓë¶Ë¿Ú*/
+/* spiÆ¬Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¿ï¿½*/
 #define SPI_FPGA_CS_PORT  GPIOA
 #define SPI_FPGA_CS_PIN   GPIO_PIN_4
 
-/* Æ¬Ñ¡ÐÅºÅ¿ØÖÆ */
+/* Æ¬Ñ¡ï¿½ÅºÅ¿ï¿½ï¿½ï¿½ */
 #define SPI_FPGA_CS_LOW()  HAL_GPIO_WritePin(SPI_FPGA_CS_PORT, SPI_FPGA_CS_PIN, GPIO_PIN_RESET)
 #define SPI_FPGA_CS_HIGH() HAL_GPIO_WritePin(SPI_FPGA_CS_PORT, SPI_FPGA_CS_PIN, GPIO_PIN_SET)
 
 int state_flag=0;//×´Ì¬Ñ¡Ôñ±êÖ¾Î»
 
 /**
-  * @brief  ·¢ËÍÒ»¸ö×Ö½ÚÊý¾Ý²¢·µ»Ø½ÓÊÕµÄÊý¾Ý
-  * @param  byte:Òª·¢ËÍµÄÊý¾Ý
-  * @retval ½ÓÊÕµ½µÄÊý¾Ý
+  * @brief  ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ö½ï¿½ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½ï¿½Ø½ï¿½ï¿½Õµï¿½ï¿½ï¿½ï¿½ï¿½
+  * @param  byte:Òªï¿½ï¿½ï¿½Íµï¿½ï¿½ï¿½ï¿½ï¿½
+  * @retval ï¿½ï¿½ï¿½Õµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
   */
 uint8_t SPI_FPGA_SendByte(uint8_t byte)
 {
     uint8_t rxData = 0;
 
-    /* ´«ÊäÖ®Ç°À­µÍCS */
+    /* ï¿½ï¿½ï¿½ï¿½Ö®Ç°ï¿½ï¿½ï¿½ï¿½CS */
     SPI_FPGA_CS_LOW();
 
     if (HAL_SPI_TransmitReceive(&hspi3, &byte, &rxData, 1, SPI_TIMEOUT) != HAL_OK)
     {
-        Error_Handler();  // ´¦Àí´íÎó
+        Error_Handler();  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     }
 
-    /* ´«ÊäÍê³ÉºóÀ­¸ßCS */
+    /* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Éºï¿½ï¿½ï¿½ï¿½ï¿½CS */
     SPI_FPGA_CS_HIGH();
     return rxData;
 }
 
 /**
-  * @brief  ¶ÁÈ¡Ò»¸ö×Ö½ÚÊý¾Ý(·¢ËÍÒ»¸öÐéÄâ×Ö½Ú)
-  * @retval ½ÓÊÕµ½µÄÊý¾Ý
+  * @brief  ï¿½ï¿½È¡Ò»ï¿½ï¿½ï¿½Ö½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½ï¿½)
+  * @retval ï¿½ï¿½ï¿½Õµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
   */
 uint8_t SPI_FPGA_ReadByte(void)
 {
-    return SPI_FPGA_SendByte(0xFF);  // 0xFF×÷ÎªÐéÄâ×Ö½Ú¶ÁÈ¡Êý¾Ý
+    return SPI_FPGA_SendByte(0xFF);  // 0xFFï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½Ö½Ú¶ï¿½È¡ï¿½ï¿½ï¿½ï¿½
 }
 
 /**
-  * @brief  ·¢ËÍ²¢½ÓÊÕ¶à¸ö×Ö½ÚÊý¾Ý
-  * @param  txData: ·¢ËÍÊý¾Ý»º³åÇøÖ¸Õë
-  * @param  rxData: ½ÓÊÕÊý¾Ý»º³åÇøÖ¸Õë
-  * @param  size: Êý¾Ý³¤¶È
-  * @retval ÎÞ
+  * @brief  ï¿½ï¿½ï¿½Í²ï¿½ï¿½ï¿½ï¿½Õ¶ï¿½ï¿½ï¿½Ö½ï¿½ï¿½ï¿½ï¿½ï¿½
+  * @param  txData: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý»ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½
+  * @param  rxData: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý»ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½
+  * @param  size: ï¿½ï¿½ï¿½Ý³ï¿½ï¿½ï¿½
+  * @retval ï¿½ï¿½
   */
 void SPI_FPGA_TransmitReceive(uint8_t *txData, uint8_t *rxData, uint16_t size)
 {
+<<<<<<< HEAD
     /* À­µÍCS */
+=======
+    /* ï¿½ï¿½ï¿½ï¿½CS */
+>>>>>>> c470bd0c1212322381b1c8e2f024de0f02281798
     SPI_FPGA_CS_LOW();
 
     if (HAL_SPI_TransmitReceive(&hspi3, txData, rxData, size, SPI_TIMEOUT) != HAL_OK)
@@ -117,15 +121,19 @@ void SPI_FPGA_TransmitReceive(uint8_t *txData, uint8_t *rxData, uint16_t size)
         Error_Handler();
     }
 
+<<<<<<< HEAD
     /* À­¸ßCS */
+=======
+    /* ï¿½ï¿½ï¿½ï¿½CS */
+>>>>>>> c470bd0c1212322381b1c8e2f024de0f02281798
     SPI_FPGA_CS_HIGH();
 }
 
 
 /**
-  * @brief  ÑÓÊ±º¯Êý(×èÈû)
-  * @param  nCount: ÑÓÊ±¼ÆÊý
-  * @retval ÎÞ
+  * @brief  ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½)
+  * @param  nCount: ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½
+  * @retval ï¿½ï¿½
   */
 void Delay(__IO uint32_t nCount)
 {
@@ -133,13 +141,17 @@ void Delay(__IO uint32_t nCount)
 }
 
 /**
-  * @brief  SPI ·¢ËÍÊý¾Ý(½ö·¢ËÍ)
-  * @param  txData: ·¢ËÍ»º³åÇøÖ¸Õë
-  * @param  size: ·¢ËÍÊý¾Ý×Ö½ÚÊý
+  * @brief  SPI ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
+  * @param  txData: ï¿½ï¿½ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½
+  * @param  size: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½ï¿½ï¿½ï¿½
   */
 void SPI_FPGA_Transmit(uint8_t *txData, uint16_t size)
 {
+<<<<<<< HEAD
 	    /* À­µÍCS */
+=======
+	    /* ï¿½ï¿½ï¿½ï¿½CS */
+>>>>>>> c470bd0c1212322381b1c8e2f024de0f02281798
     SPI_FPGA_CS_LOW();
 	
     if (HAL_SPI_Transmit(&hspi3, txData, size, SPI_TIMEOUT) != HAL_OK)
@@ -147,18 +159,22 @@ void SPI_FPGA_Transmit(uint8_t *txData, uint16_t size)
         Error_Handler(); // 
     }
 		
+<<<<<<< HEAD
 		    /* À­¸ßCS */
+=======
+		    /* ï¿½ï¿½ï¿½ï¿½CS */
+>>>>>>> c470bd0c1212322381b1c8e2f024de0f02281798
     SPI_FPGA_CS_HIGH();
 }
 
 /**
-  * @brief  SPI ½ÓÊÕÊý¾Ý(½ö¶ÁÈ¡)
-  * @param  rxData: ½ÓÊÕ»º³åÇøÖ¸Õë
-  * @param  size: ½ÓÊÜÊý¾Ý×Ö½ÚÊý
+  * @brief  SPI ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½È¡)
+  * @param  rxData: ï¿½ï¿½ï¿½Õ»ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½
+  * @param  size: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½ï¿½ï¿½ï¿½
   */
 void SPI_FPGA_Receive(uint8_t *rxData, uint16_t size)
 {
-	    /* À­¸ßCS */
+	    /* ï¿½ï¿½ï¿½ï¿½CS */
     SPI_FPGA_CS_LOW();
 	
     if (HAL_SPI_Receive(&hspi3, rxData, size, SPI_TIMEOUT) != HAL_OK)
@@ -166,7 +182,7 @@ void SPI_FPGA_Receive(uint8_t *rxData, uint16_t size)
         Error_Handler(); // 
     }
 		
-		    /* À­µÍCS */
+		    /* ï¿½ï¿½ï¿½ï¿½CS */
     SPI_FPGA_CS_HIGH();
 }
 
@@ -223,9 +239,14 @@ int main(void)
   /* USER CODE BEGIN 2 */
  // uint8_t txByte = 0x55;
 //  uint8_t rxByte = 0;
+<<<<<<< HEAD
   uint8_t txData[12] = {0x1F, 0x2E, 0x3D, 0x4E,0x2F, 0x3E, 0x4D, 0x5E,0x6F, 0x7E, 0x2D, 0x8E};
   uint8_t rxData[12] = {0x12, 0x2E, 0x3C, 0x4E,0x2A, 0x3E, 0x4D, 0x5E,0x6F, 0x9E, 0x1D, 0x8E};
 //	uint8_t rxBuffer[1];
+=======
+  uint8_t txBuffer[4] = {0x23, 0x32, 0x43, 0x24};
+	uint8_t rxBuffer[1];
+>>>>>>> c470bd0c1212322381b1c8e2f024de0f02281798
   //uint8_t rxBuffer[5] = {0};
   /* USER CODE END 2 */
 
@@ -236,6 +257,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+<<<<<<< HEAD
    Update_State_Flag();
 		
 	  switch (state_flag)
@@ -286,11 +308,13 @@ int main(void)
         default:
             break;
     }
+=======
+		SPI_FPGA_Transmit(txBuffer, 4);
+		HAL_Delay(10000);
+>>>>>>> c470bd0c1212322381b1c8e2f024de0f02281798
   }
   /* USER CODE END 3 */
 }
-
-
 
 /**
   * @brief System Clock Configuration
@@ -353,10 +377,10 @@ static void MX_SPI3_Init(void)
   hspi3.Init.Mode = SPI_MODE_MASTER;
   hspi3.Init.Direction = SPI_DIRECTION_2LINES;
   hspi3.Init.DataSize = SPI_DATASIZE_8BIT;
-  hspi3.Init.CLKPolarity = SPI_POLARITY_HIGH;
-  hspi3.Init.CLKPhase = SPI_PHASE_2EDGE;
+  hspi3.Init.CLKPolarity = SPI_POLARITY_LOW;
+  hspi3.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi3.Init.NSS = SPI_NSS_SOFT;
-  hspi3.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_4;
+  hspi3.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_8;
   hspi3.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi3.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi3.Init.CRCCalculation = SPI_CRCCALCULATION_ENABLE;
@@ -382,20 +406,21 @@ static void MX_GPIO_Init(void)
 /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOC_CLK_ENABLE();
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 
 GPIO_InitTypeDef GPIO_InitStruct = {0};
 
 __HAL_RCC_GPIOA_CLK_ENABLE();
-/* ÅäÖÃCS ÎªÍÆÍìÊä³ö */
+/* ï¿½ï¿½ï¿½ï¿½CS Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 GPIO_InitStruct.Pin = SPI_FPGA_CS_PIN;
 GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
 GPIO_InitStruct.Pull = GPIO_NOPULL;
 GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
 HAL_GPIO_Init(SPI_FPGA_CS_PORT, &GPIO_InitStruct);
 
-/* CS³õÊ¼×´Ì¬²»Ñ¡ÖÐ*/
+/* CSï¿½ï¿½Ê¼×´Ì¬ï¿½ï¿½Ñ¡ï¿½ï¿½*/
 SPI_FPGA_CS_HIGH();
 
  /* ÅäÖÃPA5 ºÍ PA6 ÎªÍÆÍìÊä³ö,¸ßµçÆ½ */

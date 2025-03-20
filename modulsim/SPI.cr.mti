@@ -1,19 +1,9 @@
-E:/National_Electronic_Competition/SPI/src/SPI_slave.v {1 {vlog -work work -vopt -stats=none E:/National_Electronic_Competition/SPI/src/SPI_slave.v
-Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
--- Compiling module SPI_slave
-
-Top level modules:
-	SPI_slave
-
-} {} {}} E:/National_Electronic_Competition/SPI/testbench/SPI_master_testbench.v {1 {vlog -work work -vopt -stats=none E:/National_Electronic_Competition/SPI/testbench/SPI_master_testbench.v
+E:/National_Electronic_Competition/SPI/testbench/SPI_master_testbench.v {1 {vlog -work work -vopt -stats=none E:/National_Electronic_Competition/SPI/testbench/SPI_master_testbench.v
 Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
 -- Compiling module SPI_mater_testbench
 
 Top level modules:
 	SPI_mater_testbench
-
-} {} {}} E:/National_Electronic_Competition/SPI/src/SPI_top.v {1 {vlog -work work -vopt -stats=none E:/National_Electronic_Competition/SPI/src/SPI_top.v
-Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
 
 } {} {}} E:/National_Electronic_Competition/SPI/src/spi_master.v {1 {vlog -work work -vopt -stats=none E:/National_Electronic_Competition/SPI/src/spi_master.v
 Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
@@ -21,6 +11,20 @@ Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
 
 Top level modules:
 	spi_master
+
+} {} {}} E:/National_Electronic_Competition/SPI/src/SPI_control.v {1 {vlog -work work -vopt -stats=none E:/National_Electronic_Competition/SPI/src/SPI_control.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module SPI_control
+
+Top level modules:
+	SPI_control
+
+} {} {}} E:/National_Electronic_Competition/SPI/src/segdisplay.v {1 {vlog -work work -vopt -stats=none E:/National_Electronic_Competition/SPI/src/segdisplay.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module segdisplay
+
+Top level modules:
+	segdisplay
 
 } {} {}} E:/National_Electronic_Competition/SPI/testbench/SPI_slave_testbench.v {1 {vlog -work work -vopt -stats=none E:/National_Electronic_Competition/SPI/testbench/SPI_slave_testbench.v
 Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
