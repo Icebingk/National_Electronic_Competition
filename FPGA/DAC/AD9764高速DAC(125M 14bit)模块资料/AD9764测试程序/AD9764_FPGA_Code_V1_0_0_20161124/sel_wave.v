@@ -1,0 +1,32 @@
+module sel_wave (
+	clk,
+	rst_n,
+	sel,
+	da_ina,
+	da_inb,
+	da_inc,
+	da_out
+);
+
+
+input           clk;
+input           rst_n;
+input  [2:0]    sel;
+
+input  [11:0]    da_ina;
+input  [11:0]    da_inb;
+input  [11:0]    da_inc;
+output reg  [13:0]  da_out;
+
+always @(posedge clk) begin
+	case (sel)
+		3'b110 : da_out <= {da_ina, 2'b00};
+		3'b101 : da_out <= {da_inb, 2'b00};
+		3'b011 : da_out <= {da_inc, 2'b00};
+		default : da_out <= {da_ina, 2'b00};
+	endcase 
+end
+
+endmodule 
+
+

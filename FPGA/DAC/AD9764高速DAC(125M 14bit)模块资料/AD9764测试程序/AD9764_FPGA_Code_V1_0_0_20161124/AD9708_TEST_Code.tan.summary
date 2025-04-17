@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.176 ns
+From           : sel[1]
+To             : sel_wave:inst4|da_out[2]
+From Clock     : --
+To Clock       : clk_sys_in
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 5.311 ns
+From           : sel_wave:inst4|da_out[3]
+To             : dac_q[3]
+From Clock     : clk_sys_in
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -2.657 ns
+From           : key_in
+To             : key_con:inst5|delay_soft:key_delay_U|kl[16]
+From Clock     : --
+To Clock       : clk_sys_in
+Failed Paths   : 0
+
+Type           : Clock Setup: 'PLLM:inst|altpll:altpll_component|_clk0'
+Slack          : 3.899 ns
+Required Time  : 100.00 MHz ( period = 10.000 ns )
+Actual Time    : 163.91 MHz ( period = 6.101 ns )
+From           : key_con:inst5|delay_soft:key_delay_U|kh[0]
+To             : key_con:inst5|delay_soft:key_delay_U|kout
+From Clock     : PLLM:inst|altpll:altpll_component|_clk0
+To Clock       : PLLM:inst|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Clock Hold: 'PLLM:inst|altpll:altpll_component|_clk0'
+Slack          : 0.753 ns
+Required Time  : 100.00 MHz ( period = 10.000 ns )
+Actual Time    : N/A
+From           : key_con:inst5|delay_soft:key_delay_U|kl[31]
+To             : key_con:inst5|delay_soft:key_delay_U|kl[31]
+From Clock     : PLLM:inst|altpll:altpll_component|_clk0
+To Clock       : PLLM:inst|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+
