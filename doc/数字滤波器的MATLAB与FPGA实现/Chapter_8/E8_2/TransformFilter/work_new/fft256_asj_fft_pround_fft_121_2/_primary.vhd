@@ -1,0 +1,42 @@
+library verilog;
+use verilog.vl_types.all;
+entity fft256_asj_fft_pround_fft_121_2 is
+    port(
+        pipeline_dffe_2 : out    vl_logic;
+        pipeline_dffe_3 : out    vl_logic;
+        pipeline_dffe_4 : out    vl_logic;
+        pipeline_dffe_5 : out    vl_logic;
+        pipeline_dffe_6 : out    vl_logic;
+        pipeline_dffe_7 : out    vl_logic;
+        pipeline_dffe_8 : out    vl_logic;
+        pipeline_dffe_9 : out    vl_logic;
+        pipeline_dffe_10: out    vl_logic;
+        pipeline_dffe_11: out    vl_logic;
+        pipeline_dffe_12: out    vl_logic;
+        pipeline_dffe_13: out    vl_logic;
+        pipeline_dffe_14: out    vl_logic;
+        pipeline_dffe_15: out    vl_logic;
+        pipeline_dffe_16: out    vl_logic;
+        pipeline_dffe_17: out    vl_logic;
+        butterfly_st_real_2: in     vl_logic;
+        butterfly_st_real_1: in     vl_logic;
+        butterfly_st_real_0: in     vl_logic;
+        butterfly_st_real_17: in     vl_logic;
+        butterfly_st_real_3: in     vl_logic;
+        butterfly_st_real_4: in     vl_logic;
+        butterfly_st_real_5: in     vl_logic;
+        butterfly_st_real_6: in     vl_logic;
+        butterfly_st_real_7: in     vl_logic;
+        butterfly_st_real_8: in     vl_logic;
+        butterfly_st_real_9: in     vl_logic;
+        butterfly_st_real_10: in     vl_logic;
+        butterfly_st_real_11: in     vl_logic;
+        butterfly_st_real_12: in     vl_logic;
+        butterfly_st_real_13: in     vl_logic;
+        butterfly_st_real_14: in     vl_logic;
+        butterfly_st_real_15: in     vl_logic;
+        butterfly_st_real_16: in     vl_logic;
+        global_clock_enable: in     vl_logic;
+        clk             : in     vl_logic
+    );
+end fft256_asj_fft_pround_fft_121_2;

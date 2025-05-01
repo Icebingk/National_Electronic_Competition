@@ -1,0 +1,615 @@
+D:/altera/10.0/modelsim_ae/altera/verilog/src/220model.v {1 {vlog -work work -nocovercells D:/altera/10.0/modelsim_ae/altera/verilog/src/220model.v
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module LPM_MEMORY_INITIALIZATION
+-- Compiling module LPM_HINT_EVALUATION
+-- Compiling module LPM_DEVICE_FAMILIES
+-- Compiling module lpm_constant
+-- Compiling module lpm_inv
+-- Compiling module lpm_and
+-- Compiling module lpm_or
+-- Compiling module lpm_xor
+-- Compiling module lpm_bustri
+-- Compiling module lpm_mux
+-- Compiling module lpm_decode
+-- Compiling module lpm_clshift
+-- Compiling module lpm_add_sub
+-- Compiling module lpm_compare
+-- Compiling module lpm_mult
+-- Compiling module lpm_divide
+-- Compiling module lpm_abs
+-- Compiling module lpm_counter
+-- Compiling module lpm_latch
+-- Compiling module lpm_ff
+-- Compiling module lpm_shiftreg
+-- Compiling module lpm_ram_dq
+-- Compiling module lpm_ram_dp
+-- Compiling module lpm_ram_io
+-- Compiling module lpm_rom
+-- Compiling module lpm_fifo
+-- Compiling module lpm_fifo_dc_dffpipe
+-- Compiling module lpm_fifo_dc_fefifo
+-- Compiling module lpm_fifo_dc_async
+-- Compiling module lpm_fifo_dc
+-- Compiling module lpm_inpad
+-- Compiling module lpm_outpad
+-- Compiling module lpm_bipad
+
+Top level modules:
+	lpm_constant
+	lpm_inv
+	lpm_and
+	lpm_or
+	lpm_xor
+	lpm_bustri
+	lpm_mux
+	lpm_decode
+	lpm_clshift
+	lpm_add_sub
+	lpm_compare
+	lpm_mult
+	lpm_divide
+	lpm_abs
+	lpm_counter
+	lpm_latch
+	lpm_ff
+	lpm_shiftreg
+	lpm_ram_dq
+	lpm_ram_dp
+	lpm_ram_io
+	lpm_rom
+	lpm_fifo
+	lpm_fifo_dc
+	lpm_inpad
+	lpm_outpad
+	lpm_bipad
+
+} {} {}} D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/shifter12_128.v {1 {vlog -work work -nocovercells D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/shifter12_128.v
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module shifter12_128
+
+Top level modules:
+	shifter12_128
+
+} {} {}} D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/simulation/modelsim/TransformFilter.vt {1 {vlog -work work -nocovercells D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/simulation/modelsim/TransformFilter.vt
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module TransformFilter_vlg_tst
+
+Top level modules:
+	TransformFilter_vlg_tst
+
+} {} {}} D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/shiter16_128_bb.v {1 {vlog -work work -nocovercells D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/shiter16_128_bb.v
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module shiter16_128
+
+Top level modules:
+	shiter16_128
+
+} {} {}} D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/shifter16_256_bb.v {1 {vlog -work work -nocovercells D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/shifter16_256_bb.v
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module shifter16_256
+
+Top level modules:
+	shifter16_256
+
+} {} {}} D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/fft256.vo {1 {vlog -work work -nocovercells D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/fft256.vo
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module fft256
+
+Top level modules:
+	fft256
+
+} {} {}} D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/simulation/modelsim/TransformFilter_min_1200mv_0c_fast.vo {1 {vlog -work work -nocovercells D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/simulation/modelsim/TransformFilter_min_1200mv_0c_fast.vo
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module TransformFilter
+
+Top level modules:
+	TransformFilter
+
+} {} {}} D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/shifter12_128_bb.v {1 {vlog -work work -nocovercells D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/shifter12_128_bb.v
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module shifter12_128
+
+Top level modules:
+	shifter12_128
+
+} {} {}} D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/rom12_256.v {1 {vlog -work work -nocovercells D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/rom12_256.v
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module rom12_256
+
+Top level modules:
+	rom12_256
+
+} {} {}} D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/fft256_syn.v {1 {vlog -work work -nocovercells D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/fft256_syn.v
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module fft256
+-- Compiling module fft256_asj_fft_si_sose_so_b_fft_121
+-- Compiling module fft256_asj_fft_1dp_ram_fft_121
+-- Compiling module fft256_asj_fft_data_ram_fft_121
+-- Compiling module fft256_altsyncram_1
+-- Compiling module fft256_altsyncram_0ou3
+-- Compiling module fft256_asj_fft_1tdp_rom_fft_121
+-- Compiling module fft256_asj_fft_twid_rom_tdp_fft_121
+-- Compiling module fft256_altsyncram_2
+-- Compiling module fft256_altsyncram_he72
+-- Compiling module fft256_asj_fft_bfp_ctrl_fft_121
+-- Compiling module fft256_asj_fft_tdl_bit_fft_121
+-- Compiling module fft256_asj_fft_tdl_bit_rst_fft_121
+-- Compiling module fft256_asj_fft_dataadgen_fft_121
+-- Compiling module fft256_asj_fft_dataadgen_fft_121_1
+-- Compiling module fft256_asj_fft_dft_bfp_sgl_fft_121
+-- Compiling module fft256_asj_fft_bfp_i_fft_121
+-- Compiling module fft256_asj_fft_bfp_o_fft_121
+-- Compiling module fft256_asj_fft_tdl_bit_fft_121_1
+-- Compiling module fft256_asj_fft_tdl_bit_fft_121_2
+-- Compiling module fft256_asj_fft_cmult_can_fft_121
+-- Compiling module fft256_asj_fft_pround_fft_121
+-- Compiling module fft256_LPM_ADD_SUB_1
+-- Compiling module fft256_add_sub_knj
+-- Compiling module fft256_asj_fft_pround_fft_121_1
+-- Compiling module fft256_LPM_ADD_SUB_2
+-- Compiling module fft256_add_sub_knj_1
+-- Compiling module fft256_LPM_MULT_1
+-- Compiling module fft256_mult_9t01
+-- Compiling module fft256_LPM_MULT_2
+-- Compiling module fft256_mult_5t01
+-- Compiling module fft256_LPM_MULT_3
+-- Compiling module fft256_mult_5t01_1
+-- Compiling module fft256_asj_fft_pround_fft_121_2
+-- Compiling module fft256_LPM_ADD_SUB_3
+-- Compiling module fft256_add_sub_onj
+-- Compiling module fft256_asj_fft_pround_fft_121_3
+-- Compiling module fft256_LPM_ADD_SUB_4
+-- Compiling module fft256_add_sub_onj_1
+-- Compiling module fft256_asj_fft_in_write_sgl_fft_121
+-- Compiling module fft256_asj_fft_tdl_bit_rst_fft_121_1
+-- Compiling module fft256_asj_fft_m_k_counter_fft_121
+-- Compiling module fft256_asj_fft_tdl_bit_fft_121_3
+-- Compiling module fft256_asj_fft_tdl_bit_rst_fft_121_2
+-- Compiling module fft256_asj_fft_twadsogen_q_fft_121
+-- Compiling module fft256_asj_fft_unbburst_sose_ctrl_fft_121
+-- Compiling module fft256_auk_dspip_avalon_streaming_controller_fft_121
+-- Compiling module fft256_auk_dspip_avalon_streaming_sink_fft_121
+-- Compiling module fft256_scfifo_1
+-- Compiling module fft256_scfifo_udh1
+-- Compiling module fft256_a_dpfifo_no81
+-- Compiling module fft256_altsyncram_ssf1
+-- Compiling module fft256_cntr_ao7
+-- Compiling module fft256_cntr_tnb
+-- Compiling module fft256_cntr_unb
+-- Compiling module fft256_auk_dspip_avalon_streaming_source_fft_121
+
+Top level modules:
+	fft256
+
+} {} {}} D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/fft256_tb.vhd {1 {vcom -work work -2002 -explicit D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/fft256_tb.vhd
+Model Technology ModelSim ALTERA vcom 6.5e Compiler 2010.02 Feb 27 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Loading package textio
+-- Compiling entity fft256_tb
+-- Compiling architecture tb of fft256_tb
+
+} {} {}} D:/altera/10.0/modelsim_ae/altera/verilog/src/cycloneii_atoms.v {1 {vlog -work work -nocovercells D:/altera/10.0/modelsim_ae/altera/verilog/src/cycloneii_atoms.v
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling UDP CYCLONEII_PRIM_DFFE
+-- Compiling UDP CYCLONEII_PRIM_DFFEAS
+-- Compiling UDP CYCLONEII_PRIM_DFFEAS_HIGH
+-- Compiling module cycloneii_dffe
+-- Compiling module cycloneii_latch
+-- Compiling module cycloneii_mux21
+-- Compiling module cycloneii_mux41
+-- Compiling module cycloneii_and1
+-- Compiling module cycloneii_and16
+-- Compiling module cycloneii_bmux21
+-- Compiling module cycloneii_b17mux21
+-- Compiling module cycloneii_nmux21
+-- Compiling module cycloneii_b5mux21
+-- Compiling module cycloneii_ram_pulse_generator
+-- Compiling module cycloneii_ram_register
+-- Compiling module cycloneii_ram_block
+-- Compiling module cycloneii_jtag
+-- Compiling module cycloneii_crcblock
+-- Compiling module cycloneii_asmiblock
+-- Compiling module cycloneii_m_cntr
+-- Compiling module cycloneii_n_cntr
+-- Compiling module cycloneii_scale_cntr
+-- Compiling module cycloneii_pll_reg
+-- Compiling module cycloneii_pll
+-- Compiling module cycloneii_routing_wire
+-- Compiling module cycloneii_lcell_ff
+-- Compiling module cycloneii_lcell_comb
+-- Compiling module cycloneii_asynch_io
+-- Compiling module cycloneii_io
+-- Compiling module cycloneii_clk_delay_ctrl
+-- Compiling module cycloneii_clk_delay_cal_ctrl
+-- Compiling module cycloneii_ena_reg
+-- Compiling module cycloneii_clkctrl
+-- Compiling module cycloneii_mac_data_reg
+-- Compiling module cycloneii_mac_sign_reg
+-- Compiling module cycloneii_mac_mult_internal
+-- Compiling module cycloneii_mac_mult
+-- Compiling module cycloneii_mac_out
+
+Top level modules:
+	cycloneii_latch
+	cycloneii_and1
+	cycloneii_and16
+	cycloneii_bmux21
+	cycloneii_b17mux21
+	cycloneii_nmux21
+	cycloneii_b5mux21
+	cycloneii_ram_block
+	cycloneii_jtag
+	cycloneii_crcblock
+	cycloneii_asmiblock
+	cycloneii_pll
+	cycloneii_routing_wire
+	cycloneii_lcell_ff
+	cycloneii_lcell_comb
+	cycloneii_io
+	cycloneii_clk_delay_ctrl
+	cycloneii_clk_delay_cal_ctrl
+	cycloneii_clkctrl
+	cycloneii_mac_mult
+	cycloneii_mac_out
+
+} {} {}} D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/fft256_bb.v {1 {vlog -work work -nocovercells D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/fft256_bb.v
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module fft256
+
+Top level modules:
+	fft256
+
+} {} {}} D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/simulation/modelsim/TransformFilter_8_1200mv_0c_slow.vo {1 {vlog -work work -nocovercells D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/simulation/modelsim/TransformFilter_8_1200mv_0c_slow.vo
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module TransformFilter
+
+Top level modules:
+	TransformFilter
+
+} {} {}} D:/altera/10.0/modelsim_ae/altera/verilog/src/altera_mf.v {1 {vlog -work work -nocovercells D:/altera/10.0/modelsim_ae/altera/verilog/src/altera_mf.v
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module lcell
+-- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
+-- Compiling module ALTERA_MF_HINT_EVALUATION
+-- Compiling module ALTERA_DEVICE_FAMILIES
+-- Compiling module dffp
+-- Compiling module pll_iobuf
+-- Compiling module stx_m_cntr
+-- Compiling module stx_n_cntr
+-- Compiling module stx_scale_cntr
+-- Compiling module MF_pll_reg
+-- Compiling module MF_stratix_pll
+-- Compiling module arm_m_cntr
+-- Compiling module arm_n_cntr
+-- Compiling module arm_scale_cntr
+-- Compiling module MF_stratixii_pll
+-- Compiling module ttn_m_cntr
+-- Compiling module ttn_n_cntr
+-- Compiling module ttn_scale_cntr
+-- Compiling module MF_stratixiii_pll
+-- Compiling module cda_m_cntr
+-- Compiling module cda_n_cntr
+-- Compiling module cda_scale_cntr
+-- Compiling module MF_cycloneiii_pll
+-- Compiling module MF_cycloneiiigl_m_cntr
+-- Compiling module MF_cycloneiiigl_n_cntr
+-- Compiling module MF_cycloneiiigl_scale_cntr
+-- Compiling module cycloneiiigl_post_divider
+-- Compiling module MF_cycloneiiigl_pll
+-- Compiling module altpll
+-- Compiling module altlvds_rx
+-- Compiling module stratix_lvds_rx
+-- Compiling module stratixgx_dpa_lvds_rx
+-- Compiling module stratixii_lvds_rx
+-- Compiling module flexible_lvds_rx
+-- Compiling module stratixiii_lvds_rx
+-- Compiling module stratixiii_lvds_rx_channel
+-- Compiling module stratixiii_lvds_rx_dpa
+-- Compiling module altlvds_tx
+-- Compiling module stratix_tx_outclk
+-- Compiling module stratixii_tx_outclk
+-- Compiling module flexible_lvds_tx
+-- Compiling module dcfifo_dffpipe
+-- Compiling module dcfifo_fefifo
+-- Compiling module dcfifo_async
+-- Compiling module dcfifo_sync
+-- Compiling module dcfifo_low_latency
+-- Compiling module dcfifo_mixed_widths
+-- Compiling module dcfifo
+-- Compiling module altera_pll
+-- Compiling module altaccumulate
+-- Compiling module altmult_accum
+-- Compiling module altmult_add
+-- Compiling module altfp_mult
+-- Compiling module altsqrt
+-- Compiling module altclklock
+-- Compiling module altddio_in
+-- Compiling module altddio_out
+-- Compiling module altddio_bidir
+-- Compiling module altdpram
+-- Compiling module altsyncram
+-- Compiling module alt3pram
+-- Compiling module parallel_add
+-- Compiling module scfifo
+-- Compiling module altshift_taps
+-- Compiling module a_graycounter
+-- Compiling module altsquare
+-- Compiling module altera_std_synchronizer
+-- Compiling module altera_std_synchronizer_bundle
+-- Compiling module alt_cal
+-- Compiling module alt_cal_mm
+-- Compiling module alt_cal_c3gxb
+-- Compiling module alt_aeq_s4
+-- Compiling module alt_eyemon
+-- Compiling module alt_dfe
+-- Compiling module signal_gen
+-- Compiling module jtag_tap_controller
+-- Compiling module dummy_hub
+-- Compiling module sld_virtual_jtag
+-- Compiling module sld_signaltap
+-- Compiling module altstratixii_oct
+-- Compiling module altparallel_flash_loader
+-- Compiling module altserial_flash_loader
+-- Compiling module altsource_probe
+
+Top level modules:
+	lcell
+	altpll
+	altlvds_rx
+	altlvds_tx
+	dcfifo
+	altera_pll
+	altaccumulate
+	altmult_accum
+	altmult_add
+	altfp_mult
+	altsqrt
+	altclklock
+	altddio_bidir
+	altdpram
+	alt3pram
+	parallel_add
+	scfifo
+	altshift_taps
+	a_graycounter
+	altsquare
+	altera_std_synchronizer_bundle
+	alt_cal
+	alt_cal_mm
+	alt_cal_c3gxb
+	alt_aeq_s4
+	alt_eyemon
+	alt_dfe
+	sld_virtual_jtag
+	sld_signaltap
+	altstratixii_oct
+	altparallel_flash_loader
+	altserial_flash_loader
+	altsource_probe
+
+} {} {}} D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/simulation/modelsim/window.vt {1 {vlog -work work -nocovercells D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/simulation/modelsim/window.vt
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module window_vlg_tst
+
+Top level modules:
+	window_vlg_tst
+
+} {} {}} D:/altera/10.0/modelsim_ae/altera/verilog/src/altera_primitives.v {1 {vlog -work work -nocovercells D:/altera/10.0/modelsim_ae/altera/verilog/src/altera_primitives.v
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module global
+-- Compiling module carry
+-- Compiling module cascade
+-- Compiling module carry_sum
+-- Compiling module exp
+-- Compiling module soft
+-- Compiling module opndrn
+-- Compiling module row_global
+-- Compiling module TRI
+-- Compiling module lut_input
+-- Compiling module lut_output
+-- Compiling module latch
+-- Compiling module dlatch
+-- Compiling module prim_gdff
+-- Compiling module dff
+-- Compiling module dffe
+-- Compiling module dffea
+-- Compiling module dffeas
+-- Compiling module prim_gtff
+-- Compiling module tff
+-- Compiling module tffe
+-- Compiling module prim_gjkff
+-- Compiling module jkff
+-- Compiling module jkffe
+-- Compiling module prim_gsrff
+-- Compiling module srff
+-- Compiling module srffe
+-- Compiling module clklock
+-- Compiling module alt_inbuf
+-- Compiling module alt_outbuf
+-- Compiling module alt_outbuf_tri
+-- Compiling module alt_iobuf
+-- Compiling module alt_inbuf_diff
+-- Compiling module alt_outbuf_diff
+-- Compiling module alt_outbuf_tri_diff
+-- Compiling module alt_iobuf_diff
+-- Compiling module alt_bidir_diff
+-- Compiling module alt_bidir_buf
+-- Compiling module generic_pll
+-- Compiling module altera_functions
+-- Compiling UDP PRIM_GDFF_LOW
+-- Compiling UDP PRIM_GDFF_HIGH
+
+Top level modules:
+	global
+	carry
+	cascade
+	carry_sum
+	exp
+	soft
+	opndrn
+	row_global
+	TRI
+	lut_input
+	lut_output
+	latch
+	dlatch
+	dff
+	dffe
+	dffea
+	dffeas
+	tff
+	tffe
+	jkff
+	jkffe
+	srff
+	srffe
+	clklock
+	alt_inbuf
+	alt_outbuf
+	alt_outbuf_tri
+	alt_iobuf
+	alt_inbuf_diff
+	alt_outbuf_diff
+	alt_outbuf_tri_diff
+	alt_iobuf_diff
+	alt_bidir_diff
+	alt_bidir_buf
+	generic_pll
+
+} {} {}} D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/mult12_12_bb.v {1 {vlog -work work -nocovercells D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/mult12_12_bb.v
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module mult12_12
+
+Top level modules:
+	mult12_12
+
+} {} {}} D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/fft256_tb.v {1 {vlog -work work -nocovercells D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/fft256_tb.v
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module fft256_tb
+
+Top level modules:
+	fft256_tb
+
+} {} {}} D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/dram16_256_bb.v {1 {vlog -work work -nocovercells D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/dram16_256_bb.v
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module dram16_256
+
+Top level modules:
+	dram16_256
+
+} {} {}} D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/shifter16_2048_bb.v {1 {vlog -work work -nocovercells D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/shifter16_2048_bb.v
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module shifter16_2048
+
+Top level modules:
+	shifter16_2048
+
+} {} {}} D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/fft256.v {1 {vlog -work work -nocovercells D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/fft256.v
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module fft256
+
+Top level modules:
+	fft256
+
+} {} {}} D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/simulation/modelsim/TransformFilter_8_1200mv_85c_slow.vo {1 {vlog -work work -nocovercells D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/simulation/modelsim/TransformFilter_8_1200mv_85c_slow.vo
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module TransformFilter
+
+Top level modules:
+	TransformFilter
+
+} {} {}} D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/simulation/modelsim/TransformFilter.vo {1 {vlog -work work -nocovercells D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/simulation/modelsim/TransformFilter.vo
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module TransformFilter
+
+Top level modules:
+	TransformFilter
+
+} {} {}} D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/mult12_12.v {1 {vlog -work work -nocovercells D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/mult12_12.v
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module mult12_12
+
+Top level modules:
+	mult12_12
+
+} {} {}} D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/dram16_256.v {1 {vlog -work work -nocovercells D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/dram16_256.v
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module dram16_256
+
+Top level modules:
+	dram16_256
+
+} {} {}} D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/rom12_256_bb.v {1 {vlog -work work -nocovercells D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/rom12_256_bb.v
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module rom12_256
+
+Top level modules:
+	rom12_256
+
+} {} {}} D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/shifter16_256.v {1 {vlog -work work -nocovercells D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/shifter16_256.v
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module shifter16_256
+
+Top level modules:
+	shifter16_256
+
+} {} {}} D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/shiter16_128.v {1 {vlog -work work -nocovercells D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/shiter16_128.v
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module shiter16_128
+
+Top level modules:
+	shiter16_128
+
+} {} {}} D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/shifter16_2048.v {1 {vlog -work work -nocovercells D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/shifter16_2048.v
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module shifter16_2048
+
+Top level modules:
+	shifter16_2048
+
+} {} {}} D:/altera/10.0/modelsim_ae/altera/verilog/src/sgate.v {1 {vlog -work work -nocovercells D:/altera/10.0/modelsim_ae/altera/verilog/src/sgate.v
+Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+-- Compiling module oper_add
+-- Compiling module oper_addsub
+-- Compiling module mux21
+-- Compiling module io_buf_tri
+-- Compiling module io_buf_opdrn
+-- Compiling module oper_mult
+-- Compiling module tri_bus
+-- Compiling module oper_div
+-- Compiling module oper_mod
+-- Compiling module oper_left_shift
+-- Compiling module oper_right_shift
+-- Compiling module oper_rotate_left
+-- Compiling module oper_rotate_right
+-- Compiling module oper_less_than
+-- Compiling module oper_mux
+-- Compiling module oper_selector
+-- Compiling module oper_decoder
+-- Compiling module oper_bus_mux
+-- Compiling module oper_latch
+
+Top level modules:
+	oper_add
+	oper_addsub
+	mux21
+	io_buf_tri
+	io_buf_opdrn
+	oper_mult
+	tri_bus
+	oper_div
+	oper_mod
+	oper_left_shift
+	oper_right_shift
+	oper_rotate_left
+	oper_rotate_right
+	oper_less_than
+	oper_mux
+	oper_selector
+	oper_decoder
+	oper_bus_mux
+	oper_latch
+
+} {} {}}

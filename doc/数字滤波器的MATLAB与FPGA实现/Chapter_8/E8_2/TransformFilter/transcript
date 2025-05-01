@@ -1,0 +1,33 @@
+# Error: ¾¾·Î¡
+#        Unable to replace existing ini file (D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/TransfromFilter_simulate.mpf).  File can not be renamed.
+# Compile of dram16_256.v was successful.
+# Compile of dram16_256_bb.v was successful.
+# Compile of fft256.v was successful.
+# Compile of fft256.vo was successful.
+# Compile of fft256_bb.v was successful.
+# Compile of fft256_syn.v was successful.
+# Compile of fft256_tb.v was successful.
+# Compile of fft256_tb.vhd was successful.
+# Compile of mult12_12.v was successful.
+# Compile of mult12_12_bb.v was successful.
+# Compile of rom12_256.v was successful.
+# Compile of rom12_256_bb.v was successful.
+# Compile of shifter12_128.v was successful.
+# Compile of shifter12_128_bb.v was successful.
+# Compile of shifter16_256.v was successful.
+# Compile of shifter16_256_bb.v was successful.
+# Compile of shifter16_2048.v was successful.
+# Compile of shifter16_2048_bb.v was successful.
+# Compile of shiter16_128.v was successful.
+# Compile of shiter16_128_bb.v was successful.
+# Compile of TransformFilter.vo was successful.
+# Compile of TransformFilter.vt was successful.
+# Compile of TransformFilter_8_1200mv_0c_slow.vo was successful.
+# Compile of TransformFilter_8_1200mv_85c_slow.vo was successful.
+# Compile of TransformFilter_min_1200mv_0c_fast.vo was successful.
+# Compile of window.vt was successful.
+# Compile of 220model.v was successful.
+# Compile of altera_mf.v was successful.
+# Compile of sgate.v was successful.
+# 29 compiles, 0 failed with no errors. 
+# Load canceled
