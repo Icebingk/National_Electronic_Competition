@@ -24,7 +24,7 @@ initial begin
     DCLK = CPOL;
     #20 rst = 0; 
     #100 nCS = 0;
-    #51000 nCS = 1;
+    #5800 nCS = 1;
 
 end
 

@@ -18,19 +18,44 @@ module SPI_control (
     output MISO,
     input nCS,
 
-    output wire [2:0] mode
+    output reg [2:0] mode
 );
 reg [7:0] data_in = 8'b0;
 reg data_in_vld = 1'b0;
 wire [7:0] data_out;
-reg  [7:0] data_out_r[9:0];
+reg  [7:0] data_out_r[15:0];// 16个数据寄存器
 wire data_out_vld;
 reg [31:0] seg_number_in;
 reg [3:0]  data_out_cnt;
 reg [25:0] time_cnt;
 reg time_cnt_flag;
-reg [2:0] seg_cnt;
-assign mode = 3'd3;
+reg [4:0] seg_cnt;
+
+reg once;
+
+always @(posedge clk or negedge rst) begin
+    if (rst)begin
+        once <= 1'b0;
+    end else begin
+        if (data_out_vld)begin
+            once <= 1'b1;
+        end else begin
+            once <= once;
+        end
+    end
+end
+
+always @(posedge clk or negedge rst) begin
+    if (rst)begin
+        mode <= 3'd0;
+    end else begin
+        if (!once)begin
+            mode <= 3'd3;
+        end else begin
+            mode <= 3'd0;
+        end
+    end
+end
 
 always@(posedge clk or posedge rst) begin
     if (rst) begin
@@ -45,27 +70,25 @@ always@(posedge clk or posedge rst) begin
     end
 end
 
-genvar i;
-generate
-    for (i = 0; i < 10; i = i + 1)begin
-        always @(posedge clk or posedge rst) begin
-            if (rst) begin
-                data_out_r[i] <= 8'b0;
-            end else if (data_out_vld) begin
-                if (i == data_out_cnt) begin
-                    data_out_r[i] <= data_out;
-                end
-            end else begin
-                data_out_r[i] <= data_out_r[i];
-            end
+integer i;
+always @(posedge clk or posedge rst) begin
+    if (rst) begin
+        for (i = 0; i < 16; i = i + 1) begin
+            data_out_r[i] <= 8'b0;
+        end
+    end else if (data_out_vld) begin
+        data_out_r[data_out_cnt] <= data_out;
+    end else begin
+        for (i = 0; i < 16; i = i + 1) begin
+            data_out_r[i] <= data_out_r[i];
         end
     end
-endgenerate
+end
 
 always @(posedge clk or posedge rst) begin
     if (rst)begin
         data_out_cnt <= 4'b0;
-    end else if (data_out_cnt == 4'd10)begin
+    end else if (data_out_cnt == 4'd15)begin
         data_out_cnt <= 4'b0;
     end else if (data_out_vld) begin
         data_out_cnt <= data_out_cnt + 1;
@@ -78,8 +101,8 @@ always @(posedge clk or posedge rst) begin
     if (rst) begin
         seg_cnt <= 3'b0;
     end else if (time_cnt_flag) begin
-        if (seg_cnt == 3'd6) begin
-            seg_cnt <= 3'b0;
+        if (seg_cnt == 5'd11) begin// 左移11次，共15个数据
+            seg_cnt <= 5'b0;
         end else begin
             seg_cnt <= seg_cnt + 1;
         end

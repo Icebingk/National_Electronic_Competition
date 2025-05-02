@@ -25,35 +25,46 @@ module SPI_slave(
     input   wire                    CPHA // 时钟相位（0：第一个边沿采样，1：第二个边沿采样）
 );
 
-localparam              IDLE            = 0,//空闲状态
-                        START           = 1,
-                        TRANS           = 2,
-                        WAIT            = 3,
-                        OVER            = 4;
-//reg define
-reg [`DATA_WIDTH-1:0]   MOSI_shift;//
+// 状态定义
+localparam  IDLE  = 0,
+            START = 1,
+            TRANS = 2,
+            WAIT  = 3,
+            OVER  = 4;
+
+// 寄存器定义
+reg [`DATA_WIDTH-1:0]   MOSI_shift;
 reg [`DATA_WIDTH-1:0]   MISO_shift;
-reg [`STATE_WIDTH-1:0]  state,next_state;
-reg                     DCLK_reg,DCLK_reg2;//时钟信号寄存器
-reg                     MOSI_reg, MOSI_reg2;//添加MOSI同步寄存器
-reg                     nCS_reg, nCS_reg2;//添加nCS同步寄存器
-wire                    DCLK_edge_up;//时钟边沿检测，上升沿
-wire                    DCLK_edge_down;//时钟边沿检测，下降沿
-reg [`DATA_ADDR-1:0]    data_cnt;//数据计数器
-wire[1:0]               CPHA_CPOL;//时钟相位和极性
-//
-assign MISO = MISO_shift[`DATA_WIDTH-1];//输出数据
-assign CPHA_CPOL = {CPHA,CPOL};//时钟相位和极性
-//时钟检测
-assign DCLK_edge_up = ~DCLK_reg2 & DCLK_reg;//上升沿检测
-assign DCLK_edge_down = DCLK_reg2 & ~DCLK_reg;//下降沿检测
-// assign DCLK_edge_up = ~DCLK_reg & DCLK;
-// assign DCLK_edge_down = DCLK_reg & ~DCLK;
-//状态变化
-wire IDLE_START = (state == IDLE) && (nCS == 0);
-wire START_TRANS = (state == START) && ((^CPHA_CPOL)?DCLK_edge_down:DCLK_edge_up);//高电平有效则检测上升沿，低电平有效则检测下降沿
-wire TRANS_WAIT = (state == TRANS) && (data_cnt == `DATA_WIDTH - 1);//数据计数器
-wire WAIT_OVER = (state == WAIT) && ((!(^CPHA_CPOL) && DCLK_edge_up) || ((^CPHA_CPOL) && DCLK_edge_down));
+reg [`STATE_WIDTH-1:0]  state, next_state;
+reg                     DCLK_reg, DCLK_reg2;
+reg                     MOSI_reg, MOSI_reg2;
+reg                     nCS_reg, nCS_reg2;
+reg [`DATA_ADDR-1:0]    data_cnt;
+
+// 线网定义
+wire                    DCLK_edge_up;
+wire                    DCLK_edge_down;
+wire[1:0]               CPHA_CPOL;
+wire                    sample_edge;
+wire                    shift_edge;
+
+// 基础信号赋值
+assign MISO = MISO_shift[`DATA_WIDTH-1];
+assign CPHA_CPOL = {CPHA, CPOL};
+
+// 边沿检测
+assign DCLK_edge_up = ~DCLK_reg2 & DCLK_reg;
+assign DCLK_edge_down = DCLK_reg2 & ~DCLK_reg;
+
+// 根据SPI模式确定采样和移位的边沿
+assign sample_edge = (CPHA == CPOL) ? DCLK_edge_up : DCLK_edge_down;
+assign shift_edge = (CPHA == CPOL) ? DCLK_edge_down : DCLK_edge_up;
+
+// 状态转移条件
+wire IDLE_START = (state == IDLE) && (nCS_reg2 == 0);
+wire START_TRANS = (state == START) && sample_edge;
+wire TRANS_WAIT = (state == TRANS) && (data_cnt == `DATA_WIDTH - 1);
+wire WAIT_OVER = (state == WAIT) && sample_edge;
 
 // 使用两级寄存器同步外部信号
 always @(posedge clk or negedge rst_n) begin
@@ -65,29 +76,17 @@ always @(posedge clk or negedge rst_n) begin
         nCS_reg <= 1'b1;
         nCS_reg2 <= 1'b1;
     end else begin
-        // 双触发器同步DCLK
+        // 双触发器同步外部信号
         DCLK_reg <= DCLK;
         DCLK_reg2 <= DCLK_reg;
-        
-        // 双触发器同步MOSI
         MOSI_reg <= MOSI;
         MOSI_reg2 <= MOSI_reg;
-        
-        // 双触发器同步nCS
         nCS_reg <= nCS;
         nCS_reg2 <= nCS_reg;
     end
 end
 
-// always @(posedge clk or negedge rst_n) begin
-//     if (!rst_n) begin
-//         DCLK_reg <= CPOL;
-//     end else begin
-//         DCLK_reg <= DCLK;
-//     end
-// end
-
-//状态机
+// 状态机更新
 always @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
         state <= IDLE;
@@ -95,152 +94,63 @@ always @(posedge clk or negedge rst_n) begin
         state <= next_state;
     end
 end
-//状态机
+
+// 状态机转换逻辑
 always @(*) begin
     case (state)
-        IDLE: begin
-            if (IDLE_START) begin
-                next_state = START;
-            end else if (nCS)begin
-                next_state = IDLE;
-            end else begin
-                next_state = IDLE;
-            end
-        end
-        START:begin
-            if (START_TRANS)begin
-                next_state = TRANS;
-            end else if (nCS)begin
-                next_state = IDLE;
-            end else begin
-                next_state = START;
-            end
-        end
-        TRANS:begin
-            if (TRANS_WAIT)begin
-                next_state = WAIT;
-            end else if (nCS)begin
-                next_state = IDLE;
-            end else begin
-                next_state = TRANS;
-            end
-        end
-        WAIT:begin
-            if (WAIT_OVER)begin
-                next_state = OVER;
-            end else if (nCS)begin
-                next_state = IDLE;
-            end else begin
-                next_state = WAIT;
-            end
-        end
-        OVER:begin
-            next_state = IDLE;
-        end
+        IDLE:   next_state = IDLE_START ? START : IDLE;
+        START:  next_state = nCS_reg2 ? IDLE : (START_TRANS ? TRANS : START);
+        TRANS:  next_state = nCS_reg2 ? IDLE : (TRANS_WAIT ? WAIT : TRANS);
+        WAIT:   next_state = nCS_reg2 ? IDLE : (WAIT_OVER ? OVER : WAIT);
+        OVER:   next_state = nCS_reg2 ? IDLE : START;// 修改输出数据处理
         default: next_state = IDLE;
     endcase
 end
 
-always @(posedge  clk or negedge rst_n) begin
+// 数据计数器
+always @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
-        data_cnt <= 3'd0;
-    end else if (state == WAIT)begin
-        data_cnt <= data_cnt;
-    end else if(state == TRANS || state == START) begin 
-        if (!(^CPHA_CPOL) && DCLK_edge_up) begin
-            data_cnt <= data_cnt + 1;
-        end else if ((^CPHA_CPOL) && DCLK_edge_down) begin
-            data_cnt <= data_cnt + 1;
-        end else begin
-            data_cnt <= data_cnt;
-        end
-    end else begin
-        data_cnt <= 3'd0;
+        data_cnt <= 0;
+    end else if ((state == TRANS || state == START) && sample_edge) begin
+        data_cnt <= data_cnt + 1;
+    end else if (state == IDLE || state == OVER) begin
+        data_cnt <= 0;
     end
 end
 
-//发送数据
+// 发送数据处理
 always @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin 
-		MISO_shift <= {`DATA_WIDTH{1'b0}};
-    end else if (state == IDLE && data_in_vld)begin
-       MISO_shift <= data_in;
-    end else if ((state == TRANS) || (state ==  WAIT))begin
-        if (!(^CPHA_CPOL) && DCLK_edge_down)begin
-            MISO_shift <= {MISO_shift[`DATA_WIDTH-2:0],MISO_shift[`DATA_WIDTH-1]};
-        end else if ((^CPHA_CPOL) && DCLK_edge_up)begin
-            MISO_shift <= {MISO_shift[`DATA_WIDTH-2:0],MISO_shift[`DATA_WIDTH-1]};
-        end else begin
-            MISO_shift <= MISO_shift;
-        end
-    end else begin
-        MISO_shift <= MISO_shift;
+        MISO_shift <= 0;
+    end else if (state == IDLE && data_in_vld) begin
+        MISO_shift <= data_in;
+    end else if ((state == TRANS || state == WAIT) && shift_edge) begin
+        MISO_shift <= {MISO_shift[`DATA_WIDTH-2:0], MISO_shift[`DATA_WIDTH-1]};
     end
 end
 
-// //接收数据
-// always @(posedge clk or negedge rst_n) begin
-//     if (!rst_n)begin
-//         MOSI_shift <= {`DATA_WIDTH{1'b0}};
-//     end else if (state == OVER || state == IDLE)begin
-//         MOSI_shift <= {`DATA_WIDTH{1'b0}};
-//     end else if ((state == TRANS) || (state ==  WAIT) || (state == START))begin
-//         if (!(^CPHA_CPOL) && DCLK_edge_up)begin
-//             MOSI_shift <= {MOSI_shift[`DATA_WIDTH-2:0],MOSI};
-//         end else if ((^CPHA_CPOL) && DCLK_edge_down)begin
-//             MOSI_shift <= {MOSI_shift[`DATA_WIDTH-2:0],MOSI};
-//         end else begin
-//             MOSI_shift <= MOSI_shift;
-//         end
-//     end else begin
-//         MOSI_shift <= MOSI_shift;
-//     end
-// end
-
-// 接收数据部分修改使用同步后的MOSI信号
+// 接收数据处理
 always @(posedge clk or negedge rst_n) begin
-    if (!rst_n)begin
-        MOSI_shift <= {`DATA_WIDTH{1'b0}};
-    end else if (state == OVER || state == IDLE)begin
-        MOSI_shift <= {`DATA_WIDTH{1'b0}};
-    end else if ((state == TRANS) || (state ==  WAIT) || (state == START))begin
-        if (!(^CPHA_CPOL) && DCLK_edge_up)begin
-            MOSI_shift <= {MOSI_shift[`DATA_WIDTH-2:0], MOSI_reg2}; // 使用同步后的MOSI
-        end else if ((^CPHA_CPOL) && DCLK_edge_down)begin
-            MOSI_shift <= {MOSI_shift[`DATA_WIDTH-2:0], MOSI_reg2}; // 使用同步后的MOSI
-        end else begin
-            MOSI_shift <= MOSI_shift;
-        end
-    end else begin
-        MOSI_shift <= MOSI_shift;
+    if (!rst_n) begin
+        MOSI_shift <= 0;
+    end else if (state == IDLE || state == OVER) begin
+        MOSI_shift <= 0;
+    end else if ((state == START || state == TRANS || state == WAIT) && sample_edge) begin
+        MOSI_shift <= {MOSI_shift[`DATA_WIDTH-2:0], MOSI_reg2};
     end
 end
 
+// 输出数据处理
 always @(posedge clk or negedge rst_n) begin
-    if (!rst_n)begin
-        data_out <= {`DATA_WIDTH{1'b0}};
+    if (!rst_n) begin
+        data_out <= 0;
         data_out_vld <= 1'b0;
-    end else if (state == OVER)begin
+    end else if (state == OVER) begin
         data_out <= MOSI_shift;
         data_out_vld <= 1'b1;
     end else begin
-        data_out <= {`DATA_WIDTH{1'b0}};
         data_out_vld <= 1'b0;
     end
 end
-
-// ila_0 ila_0_inst(
-//     .clk(clk),
-//     .probe0(MOSI),
-//     .probe3(MOSI_reg),
-//     .probe1(MOSI_reg2),
-//     .probe2(DCLK),
-//     .probe4(DCLK_reg),
-//     .probe5(DCLK_reg2),
-//     .probe6(nCS),
-//     .probe7(nCS_reg),
-//     .probe8(nCS_reg2),
-//     .probe9(state)
-// );
 
 endmodule
