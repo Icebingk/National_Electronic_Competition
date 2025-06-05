@@ -3,13 +3,13 @@ clear;
 close all;
 
 %% 滤波器参数设定
-fs = 125e6;         % 采样频率: 125MHz
+fs = 20e6;         % 采样频率: 20MHz
 data_width = 12;    % 输入数据位宽
 coeff_width = 32;   % 系数量化位宽
 
 % 滤波器设计规格
-fc = 3e5;           % 截止频率: 300KHz (可根据需求调整)
-f_stop = 10e6;       % 阻带起始频率: 10MHz (可根据需求调整)
+fc = 4e5;           % 截止频率: 400KHz (可根据需求调整)
+f_stop = 5e6;       % 阻带起始频率: 1MHz (可根据需求调整)
 pass_ripple = 0.1;  % 通带纹波: 0.1dB
 stop_atten = 55;    % 阻带衰减: 55dB
 
