@@ -195,7 +195,7 @@ def interactive_mode() -> None:
         except Exception as e:
             print(f"处理出错: {e}")
             
-def main():
+def main():125
     """主函数"""
     if len(sys.argv) > 1 and sys.argv[1].lower() in ('-h', '--help'):
         print(__doc__)
