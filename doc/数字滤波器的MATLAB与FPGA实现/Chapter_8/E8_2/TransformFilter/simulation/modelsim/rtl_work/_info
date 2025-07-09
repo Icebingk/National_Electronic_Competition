@@ -1,0 +1,187 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\altera\FPGAprj\duyong_matlab_fpga_altera_verilog\Chapter_8\E8_2\TransformFilter\simulation\modelsim
+vdram16_256
+IK6AUA>Fe`EUza]5M9J;i^3
+ViWh;4==[bHmbdH_FfN>Dg3
+w1407033107
+8D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/dram16_256.v
+FD:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/dram16_256.v
+L0 39
+Z1 OV;L;6.5e;42
+r1
+31
+Z2 o-vlog01compat -work work -O0
+Z3 !s92 -vlog01compat -work work +incdir+D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter -O0
+!s100 ZI]V<FKoT41fcYNXc6klm3
+!s85 0
+!s101 -O0
+vfft256
+I=0hFDNbQT6TFQXD]3F<B53
+VnIRA[JlIAP62KG^U6`Ck[2
+w1407502401
+8D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/fft256.vo
+FD:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/fft256.vo
+L0 31
+R1
+r1
+31
+R2
+R3
+!s100 3n;BfHVRQ>:PYc5BV^WC?0
+!s85 0
+!s101 -O0
+vfftfilter
+I4QR`^8aibk_MMgTZV80TH2
+VOfb`h:c;89BT]HIU4[M8L1
+w1407600198
+8D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/source/fftfilter.v
+FD:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/source/fftfilter.v
+L0 2
+R1
+r1
+31
+R2
+Z4 !s92 -vlog01compat -work work +incdir+D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/source -O0
+!s100 M8IYCf9nBKk<IMhQN@R5G2
+!s85 0
+!s101 -O0
+vifftout
+IDzPNR[_cYjGcCo3R<7G;=2
+V:oRbA1baNd7fXgL6ol]i^3
+w1407574099
+8D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/source/ifftout.v
+FD:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/source/ifftout.v
+L0 2
+R1
+r1
+31
+R2
+R4
+!s100 ?F^?Q;O4hR]URg1R5`ZCR0
+!s85 0
+!s101 -O0
+vmult12_12
+ImleENF[4AkF[28UGKHdSg3
+VzJeo[jfY<z]bWDUV0f_So2
+w1407030858
+8D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/mult12_12.v
+FD:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/mult12_12.v
+L0 39
+R1
+r1
+31
+R2
+R3
+!s100 K>JAmEE8`UeLnN^7LQ_V;2
+!s85 0
+!s101 -O0
+vrom12_256
+I]`cI:nWg]i4Z>K>c1;ajC2
+V3zX3T1AaB>L2dld4hRo4=3
+w1407040344
+8D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/rom12_256.v
+FD:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/rom12_256.v
+L0 39
+R1
+r1
+31
+R2
+R3
+!s100 TjehOgQ8:XY@HbcmXUa<X0
+!s85 0
+!s101 -O0
+vshifter12_128
+I`E^Ka1_O]2ibIY?Q0[5[<3
+V@K=b4=?OUNjLbjEQDgg511
+w1406994405
+8D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/shifter12_128.v
+FD:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/shifter12_128.v
+L0 39
+R1
+r1
+31
+R2
+R3
+!s100 =oeT^z6F3UJULJf6j8KXB2
+!s85 0
+!s101 -O0
+vshifter16_2048
+IHOBTE5=jB0b66>@Xl6z:Q0
+VCLdT1<k`PNoZBmM?o20Mm0
+w1406994792
+8D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/shifter16_2048.v
+FD:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/shifter16_2048.v
+L0 39
+R1
+r1
+31
+R2
+R3
+!s100 ^9@o>^>Y==NzjQ4DS9VIN3
+!s85 0
+!s101 -O0
+vshifter16_256
+IgYm8Y4>`:LZhECWQgRCm02
+VP_G:V0Zf3KIVUJIhfG;O61
+w1407166853
+8D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/shifter16_256.v
+FD:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/shifter16_256.v
+L0 39
+R1
+r1
+31
+R2
+R3
+!s100 _dHAc_l9WSR7[7f0VFjYT3
+!s85 0
+!s101 -O0
+vTransformFilter
+IncLeH_PPY97_M>Bg`flA32
+V?BfHaWPlAi]MP^G3[7Ad31
+w1407600201
+8D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/source/TransformFilter.v
+FD:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/source/TransformFilter.v
+L0 2
+R1
+r1
+31
+R2
+n@transform@filter
+R4
+!s100 9384nRT`H6G>L0<ZVV`8Q1
+!s85 0
+!s101 -O0
+vTransformFilter_vlg_tst
+!s100 >miWazGzJXlNdL1`_oG^@1
+I8=A7c1ZC=MEi9CSf`<Um70
+V46@9eBVUZ?L`>[gj6OWb]1
+w1459345347
+8D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/simulation/modelsim/TransformFilter.vt
+FD:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/simulation/modelsim/TransformFilter.vt
+L0 28
+R1
+r1
+!s85 0
+31
+!s101 -O0
+R2
+!s92 -vlog01compat -work work +incdir+D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/simulation/modelsim -O0
+n@transform@filter_vlg_tst
+vwindow
+Ik]>>TJ:_3jO=hngAcca1@1
+V?C_lTPP:QCGNHGa0@7OTe0
+w1407418221
+8D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/source/window.v
+FD:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/source/window.v
+L0 2
+R1
+r1
+31
+R2
+R4
+!s100 KOc_>=fa_CWG8GQH>nU<Z2
+!s85 0
+!s101 -O0

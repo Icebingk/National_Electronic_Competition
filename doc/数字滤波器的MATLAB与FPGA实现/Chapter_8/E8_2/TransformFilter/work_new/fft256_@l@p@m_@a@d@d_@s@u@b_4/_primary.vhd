@@ -1,0 +1,42 @@
+library verilog;
+use verilog.vl_types.all;
+entity fft256_LPM_ADD_SUB_4 is
+    port(
+        pipeline_dffe_2 : out    vl_logic;
+        pipeline_dffe_3 : out    vl_logic;
+        pipeline_dffe_4 : out    vl_logic;
+        pipeline_dffe_5 : out    vl_logic;
+        pipeline_dffe_6 : out    vl_logic;
+        pipeline_dffe_7 : out    vl_logic;
+        pipeline_dffe_8 : out    vl_logic;
+        pipeline_dffe_9 : out    vl_logic;
+        pipeline_dffe_10: out    vl_logic;
+        pipeline_dffe_11: out    vl_logic;
+        pipeline_dffe_12: out    vl_logic;
+        pipeline_dffe_13: out    vl_logic;
+        pipeline_dffe_14: out    vl_logic;
+        pipeline_dffe_15: out    vl_logic;
+        pipeline_dffe_16: out    vl_logic;
+        pipeline_dffe_17: out    vl_logic;
+        butterfly_st_imag_2: in     vl_logic;
+        butterfly_st_imag_1: in     vl_logic;
+        butterfly_st_imag_0: in     vl_logic;
+        butterfly_st_imag_17: in     vl_logic;
+        butterfly_st_imag_3: in     vl_logic;
+        butterfly_st_imag_4: in     vl_logic;
+        butterfly_st_imag_5: in     vl_logic;
+        butterfly_st_imag_6: in     vl_logic;
+        butterfly_st_imag_7: in     vl_logic;
+        butterfly_st_imag_8: in     vl_logic;
+        butterfly_st_imag_9: in     vl_logic;
+        butterfly_st_imag_10: in     vl_logic;
+        butterfly_st_imag_11: in     vl_logic;
+        butterfly_st_imag_12: in     vl_logic;
+        butterfly_st_imag_13: in     vl_logic;
+        butterfly_st_imag_14: in     vl_logic;
+        butterfly_st_imag_15: in     vl_logic;
+        butterfly_st_imag_16: in     vl_logic;
+        clken           : in     vl_logic;
+        clock           : in     vl_logic
+    );
+end fft256_LPM_ADD_SUB_4;

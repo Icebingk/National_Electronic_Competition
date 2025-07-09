@@ -1,0 +1,36 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\altera\FPGAprj\duyong_matlab_fpga_altera_verilog\Chapter_8\E8_2\TransformFilter\simulation\modelsim
+vTransformFilter_vlg_tst
+!s100 RCl1aFgGn;d?`>3ao]lYX2
+IKk935LDX]jkMNbc54IObO1
+V46@9eBVUZ?L`>[gj6OWb]1
+w1407584653
+8D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/simulation/modelsim/TransformFilter.vt
+FD:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/simulation/modelsim/TransformFilter.vt
+L0 28
+Z1 OV;L;6.5e;42
+r1
+!s85 0
+31
+!s101 -O0
+Z2 o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+D:/altera/FPGAprj/duyong_matlab_fpga_altera_verilog/Chapter_8/E8_2/TransformFilter/simulation/modelsim -O0
+n@transform@filter_vlg_tst
+vwindow
+IlKF74AVkSC2mY8=?fjNi`3
+V?C_lTPP:QCGNHGa0@7OTe0
+w1407044144
+8TransformFilter_8_1200mv_85c_slow.vo
+FTransformFilter_8_1200mv_85c_slow.vo
+L0 31
+R1
+r1
+31
+R2
+!s100 IoKF^@hZKZ23`^eH4GRYG1
+!s85 0
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+. -O0

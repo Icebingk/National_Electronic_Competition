@@ -1,0 +1,42 @@
+library verilog;
+use verilog.vl_types.all;
+entity fft256_LPM_MULT_1 is
+    port(
+        dataa           : in     vl_logic_vector(16 downto 0);
+        datab           : in     vl_logic_vector(16 downto 0);
+        clken           : in     vl_logic;
+        dffe3a_16       : out    vl_logic;
+        dffe3a_15       : out    vl_logic;
+        dffe3a_14       : out    vl_logic;
+        dffe3a_13       : out    vl_logic;
+        dffe3a_12       : out    vl_logic;
+        dffe3a_11       : out    vl_logic;
+        dffe3a_10       : out    vl_logic;
+        dffe3a_9        : out    vl_logic;
+        dffe3a_8        : out    vl_logic;
+        dffe3a_7        : out    vl_logic;
+        dffe3a_6        : out    vl_logic;
+        dffe3a_5        : out    vl_logic;
+        dffe3a_4        : out    vl_logic;
+        dffe3a_3        : out    vl_logic;
+        dffe3a_2        : out    vl_logic;
+        dffe3a_1        : out    vl_logic;
+        dffe3a_0        : out    vl_logic;
+        dffe3a_31       : out    vl_logic;
+        dffe3a_30       : out    vl_logic;
+        dffe3a_29       : out    vl_logic;
+        dffe3a_28       : out    vl_logic;
+        dffe3a_27       : out    vl_logic;
+        dffe3a_26       : out    vl_logic;
+        dffe3a_25       : out    vl_logic;
+        dffe3a_24       : out    vl_logic;
+        dffe3a_23       : out    vl_logic;
+        dffe3a_22       : out    vl_logic;
+        dffe3a_21       : out    vl_logic;
+        dffe3a_20       : out    vl_logic;
+        dffe3a_19       : out    vl_logic;
+        dffe3a_18       : out    vl_logic;
+        dffe3a_17       : out    vl_logic;
+        clock           : in     vl_logic
+    );
+end fft256_LPM_MULT_1;

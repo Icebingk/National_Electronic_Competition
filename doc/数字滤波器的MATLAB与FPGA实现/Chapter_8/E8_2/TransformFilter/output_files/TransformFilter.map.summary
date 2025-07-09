@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Mar 31 08:33:30 2016
+Quartus II Version : 10.0 Build 262 08/18/2010 SP 1 SJ Full Version
+Revision Name : TransformFilter
+Top-level Entity Name : TransformFilter
+Family : Cyclone IV E
+Total logic elements : 4,222
+    Total combinational functions : 3,153
+    Dedicated logic registers : 3,273
+Total registers : 3273
+Total pins : 31
+Total virtual pins : 0
+Total memory bits : 80,648
+Embedded Multiplier 9-bit elements : 24
+Total PLLs : 0
