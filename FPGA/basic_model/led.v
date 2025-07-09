@@ -1,5 +1,12 @@
-// File Name: led.v
-// Description: LED灯闪烁
+/*==============================================
+* Function Name  : led.v
+* Description    : 这个模块实现了LED灯的循环点亮效果。
+*                  每隔一段时间，点亮一个LED灯，依次循环点亮LD1到LD8。
+* input port     : clk(系统时钟), rst_n(复位信号)
+* output port    : led(LED输出信号，控制8个LED，低电平点亮)
+* Author         : ADBD
+//==============================================*/
+
 module led(
     input   wire                clk,		//时钟信号
     input   wire                rst_n,		//复位信号

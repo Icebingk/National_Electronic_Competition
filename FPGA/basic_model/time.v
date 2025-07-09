@@ -1,3 +1,14 @@
+/*==============================================
+* Function Name  : timer.v
+* Description    : 定时器模块，提供定时脉冲和分频时钟输出。
+*                  该模块可以设置定时间隔，并在达到该间隔时产生一个定时脉冲。
+*                  同时，模块还提供一个分频后的时钟输出。
+* input port     : clk(系统时钟), rst_n(复位信号)
+*                  enable(定时器使能), interval(定时间隔值)
+* output port    : timer_pulse(定时脉冲输出), timer_out(分频时钟输出)
+*                  n_num(剩余时间，单位为秒)
+* Author         : ADBD
+//==============================================*/
 module timer (
     input  wire         clk,         // 系统时钟
     input  wire         rst_n,       // 低电平复位

@@ -1,4 +1,10 @@
-//组合逻辑
+/*==============================================
+* Function Name  : decoder.v
+* Description    : 3-8译码器，纯组合逻辑
+* input port     : A(三位输入)，EN(使能端)
+* output port    : Y(八位输出端)
+* Author         : ADBD
+//==============================================*/
 module decoder(
     input   wire    [2:0]   A,      //输入端: S1 S2 S3
     input   wire            EN,     //使能端: S4

@@ -6,9 +6,6 @@ module add_32bit (
 	output [11:0] adder
 );
 
-
-
-
 reg  [31:0] add;
 
 always @(posedge clk) begin

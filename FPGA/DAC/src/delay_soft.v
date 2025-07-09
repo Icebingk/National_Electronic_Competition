@@ -1,9 +1,11 @@
 /*==============================================
-* Function Name  : delay_soft
-* Description    : 软件延时去抖动，去除毛刺
-* Remark         : 
-* Author         : 
+* Function Name  : delay_soft.v
+* Description    : 该模块用于延时处理，主要用于软延时。
+* input port     : clk(系统时钟), kin(输入信号)
+* output port    : kout(延时输出信号)
+* Author         : ADBD
 //==============================================*/
+
 module delay_soft(
 	input clk,kin,
 	output reg kout

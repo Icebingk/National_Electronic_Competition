@@ -1,3 +1,12 @@
+/*==============================================
+* Function Name  : key_con.v
+* Description    : 
+*
+* input port     :
+* output port    :
+* Author         :
+//==============================================*/
+
 module key_con (
 	input            clk,
 	input            rst_n,

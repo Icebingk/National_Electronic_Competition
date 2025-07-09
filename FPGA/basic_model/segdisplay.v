@@ -1,3 +1,15 @@
+/*==============================================
+* Function Name  : segdisplay.v
+* Description    : 该模块实现了8位数码管的显示功能，支持小数点控制。
+*                  每个数码管可以显示0-9的数字或A-F的字符
+* input port     : clk(系统时钟), rst_n(复位信号),
+*                  seg_number_in(8个数码管的数据输入，32位宽)
+*                  decimal_point(小数点控制信号，8位宽，对应8个数码管)
+* output port    : seg_dp(小数点控制信号),
+*                  seg_number(数码管的数据输出，7位宽)
+*                  seg_choice(数码管的选择信号，8位宽)
+* Author         : ADBD
+//==============================================*/
 module segdisplay
 (
 	input	wire 			clk							,

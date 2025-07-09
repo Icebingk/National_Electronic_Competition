@@ -1,3 +1,19 @@
+/*==============================================
+* Function Name  : sram_controller.v
+* Description    : 该模块实现了SRAM的读写控制。通过状态机控制SRAM的读写操作，支持单工读写模式。
+*                  在写操作时，先将数据写入SRAM，然后在读操作时
+* input port     : clk(系统时钟), rst_n(复位信号),
+*                  wr_request(写请求信号，低电平有效), rd_request(读请求信号，低电平有效),
+*                  addr_in(地址输入，17位宽), wr_data(写数据，8位宽)
+*                  其中wr_request和rd_request是互斥的，不能同时为低电平。
+*                  addr_in和wr_data在写操作时有效，addr_in在读操作时有效。
+*                  在读操作时，rd_data会在REA1状态下被更新。
+* output port    : we(写使能信号，低电平有效),
+*                  oe(读使能信号，低电平有效), ce(片选信号，低电平有效),
+*                  data(数据线，8位宽，双向)，addr_out(地址输出，17位宽)
+*                  rd_data(读数据，8位宽)
+* Author         : ADBD
+//==============================================*/
 module sram_controller(
 	input	wire 					clk				,	//时钟
 	input 	wire					rst_n			,	//复位信号

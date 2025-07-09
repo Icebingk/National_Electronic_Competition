@@ -1,8 +1,6 @@
 // DAC波形发生器 - 基于13位地址ROM的14位DAC控制器
-`define SYSTEM_CLK         125000000     // 系统时钟频率(Hz)
 `define DAC_BITS           14            // DAC分辨率
 `define PHASE_ADDR_BITS    12            // 相位地址位宽
-`define DEFAULT_CENTER     (2**(`DAC_BITS-1)) // 波形中心点值
 
 // 第一路波形 (MHz级)
 `define FREQ_CTRL_1_MHZ 32'd343597383 // 10.00MHz@125.00MHz时钟
@@ -138,15 +136,9 @@ module dac_generator_integrated (
     always @(posedge dac_clk or negedge rst) begin
         if (!rst) begin
             phase_acc1 <= 32'd0;
-        end else begin
-            phase_acc1 <= phase_acc1 + freq_ctrl1;
-        end
-    end
-
-    always @(posedge dac_clk or negedge rst) begin
-        if (!rst) begin
             phase_acc2 <= 32'd0;
         end else begin
+            phase_acc1 <= phase_acc1 + freq_ctrl1;
             phase_acc2 <= phase_acc2 + freq_ctrl2;
         end
     end
@@ -273,8 +265,33 @@ module dac_generator_integrated (
             sin_comp_mult1_reg <= 0;
             sin_comp_mult2_reg <= 0;
         end else begin
-            sin_comp_mult1_reg <= sin_data1 * amplitude_comp1;
-            sin_comp_mult2_reg <= sin_data2 * amplitude_comp2;
+            // 计算 sin_data * amplitude_comp
+            // 例如 amplitude_comp = 10 (1.0x)时: sin_data*10 = (sin_data<<3) + (sin_data<<1)
+            case(amplitude_comp1)
+                5'd10: sin_comp_mult1_reg <= (sin_data1 << 3) + (sin_data1 << 1); // *10
+                5'd11: sin_comp_mult1_reg <= (sin_data1 << 3) + (sin_data1 << 1) + sin_data1; // *11
+                5'd12: sin_comp_mult1_reg <= (sin_data1 << 3) + (sin_data1 << 2); // *12
+                5'd13: sin_comp_mult1_reg <= (sin_data1 << 3) + (sin_data1 << 2) + sin_data1; // *13
+                5'd14: sin_comp_mult1_reg <= (sin_data1 << 3) + (sin_data1 << 2) + (sin_data1 << 1); // *14
+                5'd15: sin_comp_mult1_reg <= (sin_data1 << 4) - sin_data1; // *15
+                5'd16: sin_comp_mult1_reg <= (sin_data1 << 4); // *16
+                5'd17: sin_comp_mult1_reg <= (sin_data1 << 4) + sin_data1; // *17
+                default: sin_comp_mult1_reg <= (sin_data1 << 3) + (sin_data1 << 1); // *10
+            endcase
+            
+            case(amplitude_comp2)
+                5'd10: sin_comp_mult2_reg <= (sin_data2 << 3) + (sin_data2 << 1); // *10
+                5'd11: sin_comp_mult2_reg <= (sin_data2 << 3) + (sin_data2 << 1) + sin_data2; // *11
+                5'd12: sin_comp_mult2_reg <= (sin_data2 << 3) + (sin_data2 << 2); // *12
+                5'd13: sin_comp_mult2_reg <= (sin_data2 << 3) + (sin_data2 << 2) + sin_data2; // *13
+                5'd14: sin_comp_mult2_reg <= (sin_data2 << 3) + (sin_data2 << 2) + (sin_data2 << 1); // *14
+                5'd15: sin_comp_mult2_reg <= (sin_data2 << 4) - sin_data2; // *15
+                5'd16: sin_comp_mult2_reg <= (sin_data2 << 4); // *16
+                5'd17: sin_comp_mult2_reg <= (sin_data2 << 4) + sin_data2; // *17
+                5'd18: sin_comp_mult2_reg <= (sin_data2 << 4) + (sin_data2 << 1); // *18
+                5'd19: sin_comp_mult2_reg <= (sin_data2 << 4) + (sin_data2 << 1) + sin_data2; // *19
+                default: sin_comp_mult2_reg <= (sin_data2 << 3) + (sin_data2 << 1); // *10
+            endcase
         end
     end
 
@@ -283,20 +300,16 @@ module dac_generator_integrated (
             sin_compensated1_reg <= 0;
             sin_compensated2_reg <= 0;
         end else begin
-            if (sin_comp_mult1_reg / 10 > 14'h3FFF) begin
+            if ((sin_comp_mult1_reg >> 3) - (sin_comp_mult1_reg >> 6) > 14'h3FFF) begin
                 sin_compensated1_reg <= 14'h3FFF;
-            end else if (sin_comp_mult1_reg / 10 < 14'h8) begin
-                sin_compensated1_reg <= 14'h8; // 最小值限制
             end else begin
-                sin_compensated1_reg <= sin_comp_mult1_reg / 10;
+                sin_compensated1_reg <= (sin_comp_mult1_reg >> 3) - (sin_comp_mult1_reg >> 6);
             end
             
-            if (sin_comp_mult2_reg / 10 > 14'h3FFF) begin
+            if ((sin_comp_mult2_reg >> 3) - (sin_comp_mult2_reg >> 6) > 14'h3FFF) begin
                 sin_compensated2_reg <= 14'h3FFF;
-            end else if (sin_comp_mult2_reg / 10 < 14'h8) begin
-                sin_compensated2_reg <= 14'h8; // 最小值限制
             end else begin
-                sin_compensated2_reg <= sin_comp_mult2_reg / 10;
+                sin_compensated2_reg <= (sin_comp_mult2_reg >> 3) - (sin_comp_mult2_reg >> 6);
             end
         end
     end
@@ -378,8 +391,8 @@ module dac_generator_integrated (
     // 原PLLM模块功能集成
     clk_double clk_double_inst (
         .clk_in1(sys_clk),
-        .resetn(rst),            // 
-        .clk_out1(dac_clk),         // 系统时钟
+        .resetn(rst),               // 
+        .clk_out1(dac_clk),         // 系统时钟125MHz
         .locked(pll_locked)
     );
 
