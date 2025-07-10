@@ -42,9 +42,15 @@ Section Cross References
     main.o(i.main) refers to main.o(i.MX_USART1_UART_Init) for MX_USART1_UART_Init
     main.o(i.main) refers to soft_i2c.o(i.Soft_I2C_Init) for Soft_I2C_Init
     main.o(i.main) refers to stm32f4xx_hal_gpio.o(i.HAL_GPIO_WritePin) for HAL_GPIO_WritePin
-    main.o(i.main) refers to soft_i2c.o(i.Soft_I2C_Reads_Bytes) for Soft_I2C_Reads_Bytes
-    main.o(i.main) refers to printf5.o(i.__0printf$5) for __2printf
+    main.o(i.main) refers to soft_i2c.o(i.Soft_I2C_Start) for Soft_I2C_Start
+    main.o(i.main) refers to soft_i2c.o(i.Soft_I2C_Send_Byte) for Soft_I2C_Send_Byte
+    main.o(i.main) refers to soft_i2c.o(i.Soft_I2C_Wait_Ack) for Soft_I2C_Wait_Ack
+    main.o(i.main) refers to soft_i2c.o(i.Soft_I2C_Stop) for Soft_I2C_Stop
     main.o(i.main) refers to stm32f4xx_hal.o(i.HAL_Delay) for HAL_Delay
+    main.o(i.main) refers to soft_i2c.o(i.Soft_I2C_Read_Byte) for Soft_I2C_Read_Byte
+    main.o(i.main) refers to soft_i2c.o(i.Soft_I2C_Ack) for Soft_I2C_Ack
+    main.o(i.main) refers to soft_i2c.o(i.Soft_I2C_NAck) for Soft_I2C_NAck
+    main.o(i.main) refers to printf5.o(i.__0printf$5) for __2printf
     stm32f4xx_it.o(i.SysTick_Handler) refers to stm32f4xx_hal.o(i.HAL_IncTick) for HAL_IncTick
     stm32f4xx_it.o(i.USART1_IRQHandler) refers to stm32f4xx_hal_uart.o(i.HAL_UART_IRQHandler) for HAL_UART_IRQHandler
     stm32f4xx_it.o(i.USART1_IRQHandler) refers to main.o(.bss) for huart1
@@ -105,8 +111,6 @@ Section Cross References
     soft_i2c.o(i.Soft_I2C_Wait_Ack) refers to soft_i2c.o(i.Soft_I2C_SDA_High) for Soft_I2C_SDA_High
     soft_i2c.o(i.Soft_I2C_Wait_Ack) refers to soft_i2c.o(i.Soft_I2C_Delay) for Soft_I2C_Delay
     soft_i2c.o(i.Soft_I2C_Wait_Ack) refers to soft_i2c.o(i.Soft_I2C_SCL_High) for Soft_I2C_SCL_High
-    soft_i2c.o(i.Soft_I2C_Wait_Ack) refers to soft_i2c.o(i.Soft_I2C_Stop) for Soft_I2C_Stop
-    soft_i2c.o(i.Soft_I2C_Wait_Ack) refers to soft_i2c.o(i.Soft_I2C_SDA_Read) for Soft_I2C_SDA_Read
     soft_i2c.o(i.Soft_I2C_Wait_Ack) refers to soft_i2c.o(i.Soft_I2C_SCL_Low) for Soft_I2C_SCL_Low
     soft_i2c.o(i.Soft_I2C_Writes_Byte) refers to soft_i2c.o(i.Soft_I2C_Writes_Bytes) for Soft_I2C_Writes_Bytes
     soft_i2c.o(i.Soft_I2C_Writes_Bytes) refers to soft_i2c.o(i.Soft_I2C_Start) for Soft_I2C_Start
@@ -631,6 +635,7 @@ Removing Unused input sections from the image.
     Removing soft_i2c.o(.revsh_text), (4 bytes).
     Removing soft_i2c.o(.rrx_text), (6 bytes).
     Removing soft_i2c.o(i.Soft_I2C_Reads_Byte), (28 bytes).
+    Removing soft_i2c.o(i.Soft_I2C_Reads_Bytes), (122 bytes).
     Removing soft_i2c.o(i.Soft_I2C_Writes_Byte), (20 bytes).
     Removing soft_i2c.o(i.Soft_I2C_Writes_Bytes), (88 bytes).
     Removing stm32f4xx_hal_i2s.o(.rev16_text), (4 bytes).
@@ -917,7 +922,7 @@ Removing Unused input sections from the image.
     Removing cdrcmple.o(.text), (48 bytes).
     Removing depilogue.o(.text), (186 bytes).
 
-302 unused section(s) (total 24984 bytes) removed from the image.
+303 unused section(s) (total 25106 bytes) removed from the image.
 
 ==============================================================================
 
@@ -949,35 +954,35 @@ Image Symbol Table
     ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c 0x00000000   Number         0  stm32f4xx_hal_tim.o ABSOLUTE
     ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c 0x00000000   Number         0  stm32f4xx_hal_tim_ex.o ABSOLUTE
     ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c 0x00000000   Number         0  stm32f4xx_hal_uart.o ABSOLUTE
-    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
     ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
-    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
     ../clib/microlib/printf/stubs.s          0x00000000   Number         0  stubs.o ABSOLUTE
     ../clib/microlib/stdio/streams.c         0x00000000   Number         0  stdout.o ABSOLUTE
     ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
@@ -1105,50 +1110,49 @@ Image Symbol Table
     i.Soft_I2C_Init                          0x08001f1a   Section        0  soft_i2c.o(i.Soft_I2C_Init)
     i.Soft_I2C_NAck                          0x08001f26   Section        0  soft_i2c.o(i.Soft_I2C_NAck)
     i.Soft_I2C_Read_Byte                     0x08001f4a   Section        0  soft_i2c.o(i.Soft_I2C_Read_Byte)
-    i.Soft_I2C_Reads_Bytes                   0x08001f84   Section        0  soft_i2c.o(i.Soft_I2C_Reads_Bytes)
-    i.Soft_I2C_SCL_High                      0x08002000   Section        0  soft_i2c.o(i.Soft_I2C_SCL_High)
-    i.Soft_I2C_SCL_Low                       0x08002014   Section        0  soft_i2c.o(i.Soft_I2C_SCL_Low)
-    i.Soft_I2C_SDA_High                      0x08002028   Section        0  soft_i2c.o(i.Soft_I2C_SDA_High)
-    i.Soft_I2C_SDA_Low                       0x0800203c   Section        0  soft_i2c.o(i.Soft_I2C_SDA_Low)
-    i.Soft_I2C_SDA_Read                      0x08002050   Section        0  soft_i2c.o(i.Soft_I2C_SDA_Read)
-    i.Soft_I2C_Send_Byte                     0x08002060   Section        0  soft_i2c.o(i.Soft_I2C_Send_Byte)
-    i.Soft_I2C_Start                         0x0800209e   Section        0  soft_i2c.o(i.Soft_I2C_Start)
-    i.Soft_I2C_Stop                          0x080020be   Section        0  soft_i2c.o(i.Soft_I2C_Stop)
-    i.Soft_I2C_Wait_Ack                      0x080020de   Section        0  soft_i2c.o(i.Soft_I2C_Wait_Ack)
-    i.SysTick_Handler                        0x08002118   Section        0  stm32f4xx_it.o(i.SysTick_Handler)
-    i.SystemClock_Config                     0x08002120   Section        0  main.o(i.SystemClock_Config)
-    i.SystemInit                             0x080021d8   Section        0  system_stm32f4xx.o(i.SystemInit)
-    i.UART_DMAAbortOnError                   0x080021ec   Section        0  stm32f4xx_hal_uart.o(i.UART_DMAAbortOnError)
-    UART_DMAAbortOnError                     0x080021ed   Thumb Code    18  stm32f4xx_hal_uart.o(i.UART_DMAAbortOnError)
-    i.UART_EndRxTransfer                     0x080021fe   Section        0  stm32f4xx_hal_uart.o(i.UART_EndRxTransfer)
-    UART_EndRxTransfer                       0x080021ff   Thumb Code   108  stm32f4xx_hal_uart.o(i.UART_EndRxTransfer)
-    i.UART_EndTransmit_IT                    0x0800226a   Section        0  stm32f4xx_hal_uart.o(i.UART_EndTransmit_IT)
-    UART_EndTransmit_IT                      0x0800226b   Thumb Code    32  stm32f4xx_hal_uart.o(i.UART_EndTransmit_IT)
-    i.UART_Receive_IT                        0x0800228a   Section        0  stm32f4xx_hal_uart.o(i.UART_Receive_IT)
-    UART_Receive_IT                          0x0800228b   Thumb Code   252  stm32f4xx_hal_uart.o(i.UART_Receive_IT)
-    i.UART_SetConfig                         0x08002388   Section        0  stm32f4xx_hal_uart.o(i.UART_SetConfig)
-    UART_SetConfig                           0x08002389   Thumb Code   546  stm32f4xx_hal_uart.o(i.UART_SetConfig)
-    i.UART_Transmit_IT                       0x080025b4   Section        0  stm32f4xx_hal_uart.o(i.UART_Transmit_IT)
-    UART_Transmit_IT                         0x080025b5   Thumb Code    96  stm32f4xx_hal_uart.o(i.UART_Transmit_IT)
-    i.UART_WaitOnFlagUntilTimeout            0x08002614   Section        0  stm32f4xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout)
-    UART_WaitOnFlagUntilTimeout              0x08002615   Thumb Code   140  stm32f4xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout)
-    i.USART1_IRQHandler                      0x080026a0   Section        0  stm32f4xx_it.o(i.USART1_IRQHandler)
-    i.UsageFault_Handler                     0x080026b0   Section        0  stm32f4xx_it.o(i.UsageFault_Handler)
-    i.__0printf$5                            0x080026b4   Section        0  printf5.o(i.__0printf$5)
-    i.__NVIC_GetPriorityGrouping             0x080026d4   Section        0  stm32f4xx_hal_cortex.o(i.__NVIC_GetPriorityGrouping)
-    __NVIC_GetPriorityGrouping               0x080026d5   Thumb Code    10  stm32f4xx_hal_cortex.o(i.__NVIC_GetPriorityGrouping)
-    i.__NVIC_SetPriority                     0x080026e4   Section        0  stm32f4xx_hal_cortex.o(i.__NVIC_SetPriority)
-    __NVIC_SetPriority                       0x080026e5   Thumb Code    32  stm32f4xx_hal_cortex.o(i.__NVIC_SetPriority)
-    i.__scatterload_copy                     0x0800270c   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x0800271a   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x0800271c   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i._printf_core                           0x0800272c   Section        0  printf5.o(i._printf_core)
-    _printf_core                             0x0800272d   Thumb Code   658  printf5.o(i._printf_core)
-    i.delay_us                               0x080029ec   Section        0  soft_i2c.o(i.delay_us)
-    delay_us                                 0x080029ed   Thumb Code    38  soft_i2c.o(i.delay_us)
-    i.fputc                                  0x08002a20   Section        0  main.o(i.fputc)
-    i.main                                   0x08002a3c   Section        0  main.o(i.main)
-    .constdata                               0x08002a9c   Section       24  system_stm32f4xx.o(.constdata)
+    i.Soft_I2C_SCL_High                      0x08001f84   Section        0  soft_i2c.o(i.Soft_I2C_SCL_High)
+    i.Soft_I2C_SCL_Low                       0x08001f98   Section        0  soft_i2c.o(i.Soft_I2C_SCL_Low)
+    i.Soft_I2C_SDA_High                      0x08001fac   Section        0  soft_i2c.o(i.Soft_I2C_SDA_High)
+    i.Soft_I2C_SDA_Low                       0x08001fc0   Section        0  soft_i2c.o(i.Soft_I2C_SDA_Low)
+    i.Soft_I2C_SDA_Read                      0x08001fd4   Section        0  soft_i2c.o(i.Soft_I2C_SDA_Read)
+    i.Soft_I2C_Send_Byte                     0x08001fe4   Section        0  soft_i2c.o(i.Soft_I2C_Send_Byte)
+    i.Soft_I2C_Start                         0x08002022   Section        0  soft_i2c.o(i.Soft_I2C_Start)
+    i.Soft_I2C_Stop                          0x08002042   Section        0  soft_i2c.o(i.Soft_I2C_Stop)
+    i.Soft_I2C_Wait_Ack                      0x08002062   Section        0  soft_i2c.o(i.Soft_I2C_Wait_Ack)
+    i.SysTick_Handler                        0x08002082   Section        0  stm32f4xx_it.o(i.SysTick_Handler)
+    i.SystemClock_Config                     0x0800208c   Section        0  main.o(i.SystemClock_Config)
+    i.SystemInit                             0x08002144   Section        0  system_stm32f4xx.o(i.SystemInit)
+    i.UART_DMAAbortOnError                   0x08002158   Section        0  stm32f4xx_hal_uart.o(i.UART_DMAAbortOnError)
+    UART_DMAAbortOnError                     0x08002159   Thumb Code    18  stm32f4xx_hal_uart.o(i.UART_DMAAbortOnError)
+    i.UART_EndRxTransfer                     0x0800216a   Section        0  stm32f4xx_hal_uart.o(i.UART_EndRxTransfer)
+    UART_EndRxTransfer                       0x0800216b   Thumb Code   108  stm32f4xx_hal_uart.o(i.UART_EndRxTransfer)
+    i.UART_EndTransmit_IT                    0x080021d6   Section        0  stm32f4xx_hal_uart.o(i.UART_EndTransmit_IT)
+    UART_EndTransmit_IT                      0x080021d7   Thumb Code    32  stm32f4xx_hal_uart.o(i.UART_EndTransmit_IT)
+    i.UART_Receive_IT                        0x080021f6   Section        0  stm32f4xx_hal_uart.o(i.UART_Receive_IT)
+    UART_Receive_IT                          0x080021f7   Thumb Code   252  stm32f4xx_hal_uart.o(i.UART_Receive_IT)
+    i.UART_SetConfig                         0x080022f4   Section        0  stm32f4xx_hal_uart.o(i.UART_SetConfig)
+    UART_SetConfig                           0x080022f5   Thumb Code   546  stm32f4xx_hal_uart.o(i.UART_SetConfig)
+    i.UART_Transmit_IT                       0x08002520   Section        0  stm32f4xx_hal_uart.o(i.UART_Transmit_IT)
+    UART_Transmit_IT                         0x08002521   Thumb Code    96  stm32f4xx_hal_uart.o(i.UART_Transmit_IT)
+    i.UART_WaitOnFlagUntilTimeout            0x08002580   Section        0  stm32f4xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout)
+    UART_WaitOnFlagUntilTimeout              0x08002581   Thumb Code   140  stm32f4xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout)
+    i.USART1_IRQHandler                      0x0800260c   Section        0  stm32f4xx_it.o(i.USART1_IRQHandler)
+    i.UsageFault_Handler                     0x0800261c   Section        0  stm32f4xx_it.o(i.UsageFault_Handler)
+    i.__0printf$5                            0x08002620   Section        0  printf5.o(i.__0printf$5)
+    i.__NVIC_GetPriorityGrouping             0x08002640   Section        0  stm32f4xx_hal_cortex.o(i.__NVIC_GetPriorityGrouping)
+    __NVIC_GetPriorityGrouping               0x08002641   Thumb Code    10  stm32f4xx_hal_cortex.o(i.__NVIC_GetPriorityGrouping)
+    i.__NVIC_SetPriority                     0x08002650   Section        0  stm32f4xx_hal_cortex.o(i.__NVIC_SetPriority)
+    __NVIC_SetPriority                       0x08002651   Thumb Code    32  stm32f4xx_hal_cortex.o(i.__NVIC_SetPriority)
+    i.__scatterload_copy                     0x08002678   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x08002686   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08002688   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i._printf_core                           0x08002698   Section        0  printf5.o(i._printf_core)
+    _printf_core                             0x08002699   Thumb Code   658  printf5.o(i._printf_core)
+    i.delay_us                               0x08002958   Section        0  soft_i2c.o(i.delay_us)
+    delay_us                                 0x08002959   Thumb Code    38  soft_i2c.o(i.delay_us)
+    i.fputc                                  0x0800298c   Section        0  main.o(i.fputc)
+    i.main                                   0x080029a8   Section        0  main.o(i.main)
+    .constdata                               0x08002a74   Section       24  system_stm32f4xx.o(.constdata)
     .data                                    0x20000000   Section        4  soft_i2c.o(.data)
     delay_count                              0x20000000   Data           4  soft_i2c.o(.data)
     .data                                    0x20000004   Section        9  stm32f4xx_hal.o(.data)
@@ -1367,33 +1371,32 @@ Image Symbol Table
     Soft_I2C_Init                            0x08001f1b   Thumb Code    12  soft_i2c.o(i.Soft_I2C_Init)
     Soft_I2C_NAck                            0x08001f27   Thumb Code    36  soft_i2c.o(i.Soft_I2C_NAck)
     Soft_I2C_Read_Byte                       0x08001f4b   Thumb Code    58  soft_i2c.o(i.Soft_I2C_Read_Byte)
-    Soft_I2C_Reads_Bytes                     0x08001f85   Thumb Code   122  soft_i2c.o(i.Soft_I2C_Reads_Bytes)
-    Soft_I2C_SCL_High                        0x08002001   Thumb Code    14  soft_i2c.o(i.Soft_I2C_SCL_High)
-    Soft_I2C_SCL_Low                         0x08002015   Thumb Code    14  soft_i2c.o(i.Soft_I2C_SCL_Low)
-    Soft_I2C_SDA_High                        0x08002029   Thumb Code    14  soft_i2c.o(i.Soft_I2C_SDA_High)
-    Soft_I2C_SDA_Low                         0x0800203d   Thumb Code    14  soft_i2c.o(i.Soft_I2C_SDA_Low)
-    Soft_I2C_SDA_Read                        0x08002051   Thumb Code    12  soft_i2c.o(i.Soft_I2C_SDA_Read)
-    Soft_I2C_Send_Byte                       0x08002061   Thumb Code    62  soft_i2c.o(i.Soft_I2C_Send_Byte)
-    Soft_I2C_Start                           0x0800209f   Thumb Code    32  soft_i2c.o(i.Soft_I2C_Start)
-    Soft_I2C_Stop                            0x080020bf   Thumb Code    32  soft_i2c.o(i.Soft_I2C_Stop)
-    Soft_I2C_Wait_Ack                        0x080020df   Thumb Code    58  soft_i2c.o(i.Soft_I2C_Wait_Ack)
-    SysTick_Handler                          0x08002119   Thumb Code     8  stm32f4xx_it.o(i.SysTick_Handler)
-    SystemClock_Config                       0x08002121   Thumb Code   174  main.o(i.SystemClock_Config)
-    SystemInit                               0x080021d9   Thumb Code    14  system_stm32f4xx.o(i.SystemInit)
-    USART1_IRQHandler                        0x080026a1   Thumb Code    10  stm32f4xx_it.o(i.USART1_IRQHandler)
-    UsageFault_Handler                       0x080026b1   Thumb Code     4  stm32f4xx_it.o(i.UsageFault_Handler)
-    __0printf$5                              0x080026b5   Thumb Code    22  printf5.o(i.__0printf$5)
-    __1printf$5                              0x080026b5   Thumb Code     0  printf5.o(i.__0printf$5)
-    __2printf                                0x080026b5   Thumb Code     0  printf5.o(i.__0printf$5)
-    __scatterload_copy                       0x0800270d   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x0800271b   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x0800271d   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    fputc                                    0x08002a21   Thumb Code    22  main.o(i.fputc)
-    main                                     0x08002a3d   Thumb Code    80  main.o(i.main)
-    AHBPrescTable                            0x08002a9c   Data          16  system_stm32f4xx.o(.constdata)
-    APBPrescTable                            0x08002aac   Data           8  system_stm32f4xx.o(.constdata)
-    Region$$Table$$Base                      0x08002ab4   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08002ad4   Number         0  anon$$obj.o(Region$$Table)
+    Soft_I2C_SCL_High                        0x08001f85   Thumb Code    14  soft_i2c.o(i.Soft_I2C_SCL_High)
+    Soft_I2C_SCL_Low                         0x08001f99   Thumb Code    14  soft_i2c.o(i.Soft_I2C_SCL_Low)
+    Soft_I2C_SDA_High                        0x08001fad   Thumb Code    14  soft_i2c.o(i.Soft_I2C_SDA_High)
+    Soft_I2C_SDA_Low                         0x08001fc1   Thumb Code    14  soft_i2c.o(i.Soft_I2C_SDA_Low)
+    Soft_I2C_SDA_Read                        0x08001fd5   Thumb Code    12  soft_i2c.o(i.Soft_I2C_SDA_Read)
+    Soft_I2C_Send_Byte                       0x08001fe5   Thumb Code    62  soft_i2c.o(i.Soft_I2C_Send_Byte)
+    Soft_I2C_Start                           0x08002023   Thumb Code    32  soft_i2c.o(i.Soft_I2C_Start)
+    Soft_I2C_Stop                            0x08002043   Thumb Code    32  soft_i2c.o(i.Soft_I2C_Stop)
+    Soft_I2C_Wait_Ack                        0x08002063   Thumb Code    32  soft_i2c.o(i.Soft_I2C_Wait_Ack)
+    SysTick_Handler                          0x08002083   Thumb Code     8  stm32f4xx_it.o(i.SysTick_Handler)
+    SystemClock_Config                       0x0800208d   Thumb Code   174  main.o(i.SystemClock_Config)
+    SystemInit                               0x08002145   Thumb Code    14  system_stm32f4xx.o(i.SystemInit)
+    USART1_IRQHandler                        0x0800260d   Thumb Code    10  stm32f4xx_it.o(i.USART1_IRQHandler)
+    UsageFault_Handler                       0x0800261d   Thumb Code     4  stm32f4xx_it.o(i.UsageFault_Handler)
+    __0printf$5                              0x08002621   Thumb Code    22  printf5.o(i.__0printf$5)
+    __1printf$5                              0x08002621   Thumb Code     0  printf5.o(i.__0printf$5)
+    __2printf                                0x08002621   Thumb Code     0  printf5.o(i.__0printf$5)
+    __scatterload_copy                       0x08002679   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x08002687   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08002689   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    fputc                                    0x0800298d   Thumb Code    22  main.o(i.fputc)
+    main                                     0x080029a9   Thumb Code   184  main.o(i.main)
+    AHBPrescTable                            0x08002a74   Data          16  system_stm32f4xx.o(.constdata)
+    APBPrescTable                            0x08002a84   Data           8  system_stm32f4xx.o(.constdata)
+    Region$$Table$$Base                      0x08002a8c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08002aac   Number         0  anon$$obj.o(Region$$Table)
     uwTick                                   0x20000004   Data           4  stm32f4xx_hal.o(.data)
     uwTickPrio                               0x20000008   Data           4  stm32f4xx_hal.o(.data)
     uwTickFreq                               0x2000000c   Data           1  stm32f4xx_hal.o(.data)
@@ -1411,9 +1414,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000189
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00002aec, Max: 0x00080000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00002ac4, Max: 0x00080000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00002ad4, Max: 0x00080000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00002aac, Max: 0x00080000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1495,59 +1498,58 @@ Memory Map of the image
     0x08001f1a   0x08001f1a   0x0000000c   Code   RO          408    i.Soft_I2C_Init     soft_i2c.o
     0x08001f26   0x08001f26   0x00000024   Code   RO          409    i.Soft_I2C_NAck     soft_i2c.o
     0x08001f4a   0x08001f4a   0x0000003a   Code   RO          410    i.Soft_I2C_Read_Byte  soft_i2c.o
-    0x08001f84   0x08001f84   0x0000007a   Code   RO          412    i.Soft_I2C_Reads_Bytes  soft_i2c.o
-    0x08001ffe   0x08001ffe   0x00000002   PAD
-    0x08002000   0x08002000   0x00000014   Code   RO          413    i.Soft_I2C_SCL_High  soft_i2c.o
-    0x08002014   0x08002014   0x00000014   Code   RO          414    i.Soft_I2C_SCL_Low  soft_i2c.o
-    0x08002028   0x08002028   0x00000014   Code   RO          415    i.Soft_I2C_SDA_High  soft_i2c.o
-    0x0800203c   0x0800203c   0x00000014   Code   RO          416    i.Soft_I2C_SDA_Low  soft_i2c.o
-    0x08002050   0x08002050   0x00000010   Code   RO          417    i.Soft_I2C_SDA_Read  soft_i2c.o
-    0x08002060   0x08002060   0x0000003e   Code   RO          418    i.Soft_I2C_Send_Byte  soft_i2c.o
-    0x0800209e   0x0800209e   0x00000020   Code   RO          419    i.Soft_I2C_Start    soft_i2c.o
-    0x080020be   0x080020be   0x00000020   Code   RO          420    i.Soft_I2C_Stop     soft_i2c.o
-    0x080020de   0x080020de   0x0000003a   Code   RO          421    i.Soft_I2C_Wait_Ack  soft_i2c.o
-    0x08002118   0x08002118   0x00000008   Code   RO          190    i.SysTick_Handler   stm32f4xx_it.o
-    0x08002120   0x08002120   0x000000b8   Code   RO           17    i.SystemClock_Config  main.o
-    0x080021d8   0x080021d8   0x00000014   Code   RO         2432    i.SystemInit        system_stm32f4xx.o
-    0x080021ec   0x080021ec   0x00000012   Code   RO         2101    i.UART_DMAAbortOnError  stm32f4xx_hal_uart.o
-    0x080021fe   0x080021fe   0x0000006c   Code   RO         2111    i.UART_EndRxTransfer  stm32f4xx_hal_uart.o
-    0x0800226a   0x0800226a   0x00000020   Code   RO         2112    i.UART_EndTransmit_IT  stm32f4xx_hal_uart.o
-    0x0800228a   0x0800228a   0x000000fc   Code   RO         2114    i.UART_Receive_IT   stm32f4xx_hal_uart.o
-    0x08002386   0x08002386   0x00000002   PAD
-    0x08002388   0x08002388   0x0000022c   Code   RO         2115    i.UART_SetConfig    stm32f4xx_hal_uart.o
-    0x080025b4   0x080025b4   0x00000060   Code   RO         2118    i.UART_Transmit_IT  stm32f4xx_hal_uart.o
-    0x08002614   0x08002614   0x0000008c   Code   RO         2119    i.UART_WaitOnFlagUntilTimeout  stm32f4xx_hal_uart.o
-    0x080026a0   0x080026a0   0x00000010   Code   RO          191    i.USART1_IRQHandler  stm32f4xx_it.o
-    0x080026b0   0x080026b0   0x00000004   Code   RO          192    i.UsageFault_Handler  stm32f4xx_it.o
-    0x080026b4   0x080026b4   0x00000020   Code   RO         2605    i.__0printf$5       mc_w.l(printf5.o)
-    0x080026d4   0x080026d4   0x00000010   Code   RO         1627    i.__NVIC_GetPriorityGrouping  stm32f4xx_hal_cortex.o
-    0x080026e4   0x080026e4   0x00000028   Code   RO         1628    i.__NVIC_SetPriority  stm32f4xx_hal_cortex.o
-    0x0800270c   0x0800270c   0x0000000e   Code   RO         2773    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x0800271a   0x0800271a   0x00000002   Code   RO         2774    i.__scatterload_null  mc_w.l(handlers.o)
-    0x0800271c   0x0800271c   0x0000000e   Code   RO         2775    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x0800272a   0x0800272a   0x00000002   PAD
-    0x0800272c   0x0800272c   0x000002c0   Code   RO         2612    i._printf_core      mc_w.l(printf5.o)
-    0x080029ec   0x080029ec   0x00000034   Code   RO          424    i.delay_us          soft_i2c.o
-    0x08002a20   0x08002a20   0x0000001c   Code   RO           19    i.fputc             main.o
-    0x08002a3c   0x08002a3c   0x00000060   Code   RO           20    i.main              main.o
-    0x08002a9c   0x08002a9c   0x00000018   Data   RO         2433    .constdata          system_stm32f4xx.o
-    0x08002ab4   0x08002ab4   0x00000020   Data   RO         2771    Region$$Table       anon$$obj.o
+    0x08001f84   0x08001f84   0x00000014   Code   RO          413    i.Soft_I2C_SCL_High  soft_i2c.o
+    0x08001f98   0x08001f98   0x00000014   Code   RO          414    i.Soft_I2C_SCL_Low  soft_i2c.o
+    0x08001fac   0x08001fac   0x00000014   Code   RO          415    i.Soft_I2C_SDA_High  soft_i2c.o
+    0x08001fc0   0x08001fc0   0x00000014   Code   RO          416    i.Soft_I2C_SDA_Low  soft_i2c.o
+    0x08001fd4   0x08001fd4   0x00000010   Code   RO          417    i.Soft_I2C_SDA_Read  soft_i2c.o
+    0x08001fe4   0x08001fe4   0x0000003e   Code   RO          418    i.Soft_I2C_Send_Byte  soft_i2c.o
+    0x08002022   0x08002022   0x00000020   Code   RO          419    i.Soft_I2C_Start    soft_i2c.o
+    0x08002042   0x08002042   0x00000020   Code   RO          420    i.Soft_I2C_Stop     soft_i2c.o
+    0x08002062   0x08002062   0x00000020   Code   RO          421    i.Soft_I2C_Wait_Ack  soft_i2c.o
+    0x08002082   0x08002082   0x00000008   Code   RO          190    i.SysTick_Handler   stm32f4xx_it.o
+    0x0800208a   0x0800208a   0x00000002   PAD
+    0x0800208c   0x0800208c   0x000000b8   Code   RO           17    i.SystemClock_Config  main.o
+    0x08002144   0x08002144   0x00000014   Code   RO         2432    i.SystemInit        system_stm32f4xx.o
+    0x08002158   0x08002158   0x00000012   Code   RO         2101    i.UART_DMAAbortOnError  stm32f4xx_hal_uart.o
+    0x0800216a   0x0800216a   0x0000006c   Code   RO         2111    i.UART_EndRxTransfer  stm32f4xx_hal_uart.o
+    0x080021d6   0x080021d6   0x00000020   Code   RO         2112    i.UART_EndTransmit_IT  stm32f4xx_hal_uart.o
+    0x080021f6   0x080021f6   0x000000fc   Code   RO         2114    i.UART_Receive_IT   stm32f4xx_hal_uart.o
+    0x080022f2   0x080022f2   0x00000002   PAD
+    0x080022f4   0x080022f4   0x0000022c   Code   RO         2115    i.UART_SetConfig    stm32f4xx_hal_uart.o
+    0x08002520   0x08002520   0x00000060   Code   RO         2118    i.UART_Transmit_IT  stm32f4xx_hal_uart.o
+    0x08002580   0x08002580   0x0000008c   Code   RO         2119    i.UART_WaitOnFlagUntilTimeout  stm32f4xx_hal_uart.o
+    0x0800260c   0x0800260c   0x00000010   Code   RO          191    i.USART1_IRQHandler  stm32f4xx_it.o
+    0x0800261c   0x0800261c   0x00000004   Code   RO          192    i.UsageFault_Handler  stm32f4xx_it.o
+    0x08002620   0x08002620   0x00000020   Code   RO         2605    i.__0printf$5       mc_w.l(printf5.o)
+    0x08002640   0x08002640   0x00000010   Code   RO         1627    i.__NVIC_GetPriorityGrouping  stm32f4xx_hal_cortex.o
+    0x08002650   0x08002650   0x00000028   Code   RO         1628    i.__NVIC_SetPriority  stm32f4xx_hal_cortex.o
+    0x08002678   0x08002678   0x0000000e   Code   RO         2773    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08002686   0x08002686   0x00000002   Code   RO         2774    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08002688   0x08002688   0x0000000e   Code   RO         2775    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08002696   0x08002696   0x00000002   PAD
+    0x08002698   0x08002698   0x000002c0   Code   RO         2612    i._printf_core      mc_w.l(printf5.o)
+    0x08002958   0x08002958   0x00000034   Code   RO          424    i.delay_us          soft_i2c.o
+    0x0800298c   0x0800298c   0x0000001c   Code   RO           19    i.fputc             main.o
+    0x080029a8   0x080029a8   0x000000cc   Code   RO           20    i.main              main.o
+    0x08002a74   0x08002a74   0x00000018   Data   RO         2433    .constdata          system_stm32f4xx.o
+    0x08002a8c   0x08002a8c   0x00000020   Data   RO         2771    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM2 (Exec base: 0x10000000, Load base: 0x08002aec, Size: 0x00000000, Max: 0x00010000, ABSOLUTE)
+    Execution Region RW_IRAM2 (Exec base: 0x10000000, Load base: 0x08002ac4, Size: 0x00000000, Max: 0x00010000, ABSOLUTE)
 
     **** No section assigned to this execution region ****
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08002ad4, Size: 0x000004a8, Max: 0x00020000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08002aac, Size: 0x000004a8, Max: 0x00020000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08002ad4   0x00000004   Data   RW          425    .data               soft_i2c.o
-    0x20000004   0x08002ad8   0x00000009   Data   RW         1791    .data               stm32f4xx_hal.o
-    0x2000000d   0x08002ae1   0x00000003   PAD
-    0x20000010   0x08002ae4   0x00000004   Data   RW         2434    .data               system_stm32f4xx.o
-    0x20000014   0x08002ae8   0x00000004   Data   RW         2747    .data               mc_w.l(stdout.o)
+    0x20000000   0x08002aac   0x00000004   Data   RW          425    .data               soft_i2c.o
+    0x20000004   0x08002ab0   0x00000009   Data   RW         1791    .data               stm32f4xx_hal.o
+    0x2000000d   0x08002ab9   0x00000003   PAD
+    0x20000010   0x08002abc   0x00000004   Data   RW         2434    .data               system_stm32f4xx.o
+    0x20000014   0x08002ac0   0x00000004   Data   RW         2747    .data               mc_w.l(stdout.o)
     0x20000018        -       0x00000090   Zero   RW           21    .bss                main.o
     0x200000a8        -       0x00000400   Zero   RW            1    STACK               startup_stm32f407xx.o
 
@@ -1559,8 +1561,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       682         68          0          0        144     669811   main.o
-       606         42          0          4          0       9824   soft_i2c.o
+       790         72          0          0        144     669923   main.o
+       458         42          0          4          0       8525   soft_i2c.o
         36          8        392          0       1024        876   startup_stm32f407xx.o
        212         36          0          9          0       9725   stm32f4xx_hal.o
        312         22          0          0          0      34623   stm32f4xx_hal_cortex.o
@@ -1576,7 +1578,7 @@ Image component sizes
         20          6         24          4          0       1255   system_stm32f4xx.o
 
     ----------------------------------------------------------------------
-      9496        446        448         20       1168    1396878   Object Totals
+      9456        450        448         20       1168    1395691   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          6          0          0          3          0          0   (incl. Padding)
 
@@ -1621,15 +1623,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     10516        518        448         24       1168    1389362   Grand Totals
-     10516        518        448         24       1168    1389362   ELF Image Totals
-     10516        518        448         24          0          0   ROM Totals
+     10476        522        448         24       1168    1388275   Grand Totals
+     10476        522        448         24       1168    1388275   ELF Image Totals
+     10476        522        448         24          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                10964 (  10.71kB)
+    Total RO  Size (Code + RO Data)                10924 (  10.67kB)
     Total RW  Size (RW Data + ZI Data)              1192 (   1.16kB)
-    Total ROM Size (Code + RO Data + RW Data)      10988 (  10.73kB)
+    Total ROM Size (Code + RO Data + RW Data)      10948 (  10.69kB)
 
 ==============================================================================
 

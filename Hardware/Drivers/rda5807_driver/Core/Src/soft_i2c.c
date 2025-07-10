@@ -144,15 +144,15 @@ uint8_t Soft_I2C_Wait_Ack(void)
     Soft_I2C_SCL_High();
     Soft_I2C_Delay();
     
-    while(Soft_I2C_SDA_Read())
-    {
-        timeout++;
-        if(timeout > 250)
-        {
-            Soft_I2C_Stop();
-            return SOFT_I2C_ERROR;
-        }
-    }
+    // while(Soft_I2C_SDA_Read())
+    // {
+    //     timeout++;
+    //     if(timeout > 250)
+    //     {
+    //         Soft_I2C_Stop();
+    //         return SOFT_I2C_ERROR;
+    //     }
+    // }
     
     Soft_I2C_SCL_Low();
     Soft_I2C_Delay();
