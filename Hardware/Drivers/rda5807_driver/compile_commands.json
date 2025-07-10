@@ -1,0 +1,5337 @@
+[
+    {
+        "directory": "MDK-ARM",
+        "file": "MDK-ARM/startup_stm32f407xx.s",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "MDK-ARM/startup_stm32f407xx.s",
+            "-o",
+            "build/rda5807_driver/MDK-ARM/startup_stm32f407xx.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/main.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/main.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/main.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_it.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_it.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_it.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_hal_msp.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_hal_msp.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_hal_msp.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/system_stm32f4xx.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/system_stm32f4xx.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/system_stm32f4xx.o"
+        ]
+    },
+    {
+        "directory": "MDK-ARM",
+        "file": "MDK-ARM/startup_stm32f407xx.s",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCLANG/bin/armclang.exe",
+            "-c",
+            "MDK-ARM/startup_stm32f407xx.s",
+            "-o",
+            "build/rda5807_driver/MDK-ARM/startup_stm32f407xx.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/main.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCLANG/bin/armclang.exe",
+            "-c",
+            "Core/Src/main.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/main.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_it.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCLANG/bin/armclang.exe",
+            "-c",
+            "Core/Src/stm32f4xx_it.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_it.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_hal_msp.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCLANG/bin/armclang.exe",
+            "-c",
+            "Core/Src/stm32f4xx_hal_msp.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_hal_msp.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCLANG/bin/armclang.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCLANG/bin/armclang.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCLANG/bin/armclang.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCLANG/bin/armclang.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCLANG/bin/armclang.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCLANG/bin/armclang.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCLANG/bin/armclang.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCLANG/bin/armclang.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCLANG/bin/armclang.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCLANG/bin/armclang.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCLANG/bin/armclang.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCLANG/bin/armclang.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCLANG/bin/armclang.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCLANG/bin/armclang.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCLANG/bin/armclang.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCLANG/bin/armclang.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCLANG/bin/armclang.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCLANG/bin/armclang.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/system_stm32f4xx.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCLANG/bin/armclang.exe",
+            "-c",
+            "Core/Src/system_stm32f4xx.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/system_stm32f4xx.o"
+        ]
+    },
+    {
+        "directory": "MDK-ARM",
+        "file": "MDK-ARM/startup_stm32f407xx.s",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "MDK-ARM/startup_stm32f407xx.s",
+            "-o",
+            "build/rda5807_driver/MDK-ARM/startup_stm32f407xx.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/main.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/main.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/main.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_it.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_it.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_it.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_hal_msp.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_hal_msp.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_hal_msp.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/system_stm32f4xx.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/system_stm32f4xx.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/system_stm32f4xx.o"
+        ]
+    },
+    {
+        "directory": "MDK-ARM",
+        "file": "MDK-ARM/startup_stm32f407xx.s",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "MDK-ARM/startup_stm32f407xx.s",
+            "-o",
+            "build/rda5807_driver/MDK-ARM/startup_stm32f407xx.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/main.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/main.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/main.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_it.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_it.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_it.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_hal_msp.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_hal_msp.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_hal_msp.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/system_stm32f4xx.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/system_stm32f4xx.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/system_stm32f4xx.o"
+        ]
+    },
+    {
+        "directory": "MDK-ARM",
+        "file": "MDK-ARM/startup_stm32f407xx.s",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "MDK-ARM/startup_stm32f407xx.s",
+            "-o",
+            "build/rda5807_driver/MDK-ARM/startup_stm32f407xx.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/main.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/main.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/main.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_it.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_it.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_it.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_hal_msp.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_hal_msp.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_hal_msp.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/system_stm32f4xx.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/system_stm32f4xx.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/system_stm32f4xx.o"
+        ]
+    },
+    {
+        "directory": "MDK-ARM",
+        "file": "MDK-ARM/startup_stm32f407xx.s",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "MDK-ARM/startup_stm32f407xx.s",
+            "-o",
+            "build/rda5807_driver/MDK-ARM/startup_stm32f407xx.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/main.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/main.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/main.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_it.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_it.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_it.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_hal_msp.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_hal_msp.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_hal_msp.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/system_stm32f4xx.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/system_stm32f4xx.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/system_stm32f4xx.o"
+        ]
+    },
+    {
+        "directory": "MDK-ARM",
+        "file": "MDK-ARM/startup_stm32f407xx.s",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "MDK-ARM/startup_stm32f407xx.s",
+            "-o",
+            "build/rda5807_driver/MDK-ARM/startup_stm32f407xx.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/main.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/main.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/main.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_it.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_it.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_it.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_hal_msp.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_hal_msp.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_hal_msp.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/system_stm32f4xx.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/system_stm32f4xx.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/system_stm32f4xx.o"
+        ]
+    },
+    {
+        "directory": "MDK-ARM",
+        "file": "MDK-ARM/startup_stm32f407xx.s",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "MDK-ARM/startup_stm32f407xx.s",
+            "-o",
+            "build/rda5807_driver/MDK-ARM/startup_stm32f407xx.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/main.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/main.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/main.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_it.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_it.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_it.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_hal_msp.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_hal_msp.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_hal_msp.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/system_stm32f4xx.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/system_stm32f4xx.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/system_stm32f4xx.o"
+        ]
+    },
+    {
+        "directory": "MDK-ARM",
+        "file": "MDK-ARM/startup_stm32f407xx.s",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "MDK-ARM/startup_stm32f407xx.s",
+            "-o",
+            "build/rda5807_driver/MDK-ARM/startup_stm32f407xx.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/main.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/main.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/main.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_it.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_it.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_it.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_hal_msp.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_hal_msp.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_hal_msp.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/system_stm32f4xx.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/system_stm32f4xx.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/system_stm32f4xx.o"
+        ]
+    },
+    {
+        "directory": "MDK-ARM",
+        "file": "MDK-ARM/startup_stm32f407xx.s",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "MDK-ARM/startup_stm32f407xx.s",
+            "-o",
+            "build/rda5807_driver/MDK-ARM/startup_stm32f407xx.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/main.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/main.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/main.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_it.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_it.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_it.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_hal_msp.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_hal_msp.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_hal_msp.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/system_stm32f4xx.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/system_stm32f4xx.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/system_stm32f4xx.o"
+        ]
+    },
+    {
+        "directory": "MDK-ARM",
+        "file": "MDK-ARM/startup_stm32f407xx.s",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "MDK-ARM/startup_stm32f407xx.s",
+            "-o",
+            "build/rda5807_driver/MDK-ARM/startup_stm32f407xx.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/main.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/main.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/main.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_it.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_it.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_it.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_hal_msp.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_hal_msp.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_hal_msp.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/system_stm32f4xx.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/system_stm32f4xx.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/system_stm32f4xx.o"
+        ]
+    },
+    {
+        "directory": "MDK-ARM",
+        "file": "MDK-ARM/startup_stm32f407xx.s",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "MDK-ARM/startup_stm32f407xx.s",
+            "-o",
+            "build/rda5807_driver/MDK-ARM/startup_stm32f407xx.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/main.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/main.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/main.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_it.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_it.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_it.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_hal_msp.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_hal_msp.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_hal_msp.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/system_stm32f4xx.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/system_stm32f4xx.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/system_stm32f4xx.o"
+        ]
+    },
+    {
+        "directory": "MDK-ARM",
+        "file": "MDK-ARM/startup_stm32f407xx.s",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "MDK-ARM/startup_stm32f407xx.s",
+            "-o",
+            "build/rda5807_driver/MDK-ARM/startup_stm32f407xx.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/main.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/main.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/main.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_it.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_it.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_it.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_hal_msp.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_hal_msp.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_hal_msp.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/system_stm32f4xx.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/system_stm32f4xx.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/system_stm32f4xx.o"
+        ]
+    },
+    {
+        "directory": "MDK-ARM",
+        "file": "MDK-ARM/startup_stm32f407xx.s",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "MDK-ARM/startup_stm32f407xx.s",
+            "-o",
+            "build/rda5807_driver/MDK-ARM/startup_stm32f407xx.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/main.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/main.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/main.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_it.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_it.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_it.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_hal_msp.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_hal_msp.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_hal_msp.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/system_stm32f4xx.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/system_stm32f4xx.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/system_stm32f4xx.o"
+        ]
+    },
+    {
+        "directory": "MDK-ARM",
+        "file": "MDK-ARM/startup_stm32f407xx.s",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "MDK-ARM/startup_stm32f407xx.s",
+            "-o",
+            "build/rda5807_driver/MDK-ARM/startup_stm32f407xx.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/main.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/main.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/main.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_it.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_it.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_it.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_hal_msp.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_hal_msp.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_hal_msp.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/system_stm32f4xx.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/system_stm32f4xx.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/system_stm32f4xx.o"
+        ]
+    },
+    {
+        "directory": "MDK-ARM",
+        "file": "MDK-ARM/startup_stm32f407xx.s",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "MDK-ARM/startup_stm32f407xx.s",
+            "-o",
+            "build/rda5807_driver/MDK-ARM/startup_stm32f407xx.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/main.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/main.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/main.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_it.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_it.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_it.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_hal_msp.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_hal_msp.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_hal_msp.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/system_stm32f4xx.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/system_stm32f4xx.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/system_stm32f4xx.o"
+        ]
+    },
+    {
+        "directory": "MDK-ARM",
+        "file": "MDK-ARM/startup_stm32f407xx.s",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "MDK-ARM/startup_stm32f407xx.s",
+            "-o",
+            "build/rda5807_driver/MDK-ARM/startup_stm32f407xx.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/main.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/main.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/main.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_it.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_it.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_it.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_hal_msp.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_hal_msp.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_hal_msp.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/system_stm32f4xx.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/system_stm32f4xx.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/system_stm32f4xx.o"
+        ]
+    },
+    {
+        "directory": "MDK-ARM",
+        "file": "MDK-ARM/startup_stm32f407xx.s",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "MDK-ARM/startup_stm32f407xx.s",
+            "-o",
+            "build/rda5807_driver/MDK-ARM/startup_stm32f407xx.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/main.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/main.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/main.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_it.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_it.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_it.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_hal_msp.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_hal_msp.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_hal_msp.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/system_stm32f4xx.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/system_stm32f4xx.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/system_stm32f4xx.o"
+        ]
+    },
+    {
+        "directory": "MDK-ARM",
+        "file": "MDK-ARM/startup_stm32f407xx.s",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "MDK-ARM/startup_stm32f407xx.s",
+            "-o",
+            "build/rda5807_driver/MDK-ARM/startup_stm32f407xx.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/main.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/main.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/main.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_it.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_it.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_it.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_hal_msp.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_hal_msp.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_hal_msp.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/system_stm32f4xx.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/system_stm32f4xx.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/system_stm32f4xx.o"
+        ]
+    },
+    {
+        "directory": "MDK-ARM",
+        "file": "MDK-ARM/startup_stm32f407xx.s",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "MDK-ARM/startup_stm32f407xx.s",
+            "-o",
+            "build/rda5807_driver/MDK-ARM/startup_stm32f407xx.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/main.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/main.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/main.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_it.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_it.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_it.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_hal_msp.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_hal_msp.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_hal_msp.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/system_stm32f4xx.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/system_stm32f4xx.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/system_stm32f4xx.o"
+        ]
+    },
+    {
+        "directory": "MDK-ARM",
+        "file": "MDK-ARM/startup_stm32f407xx.s",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "MDK-ARM/startup_stm32f407xx.s",
+            "-o",
+            "build/rda5807_driver/MDK-ARM/startup_stm32f407xx.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/main.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/main.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/main.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_it.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_it.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_it.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/stm32f4xx_hal_msp.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/stm32f4xx_hal_msp.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/stm32f4xx_hal_msp.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/soft_i2c.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/soft_i2c.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/soft_i2c.o"
+        ]
+    },
+    {
+        "directory": "Core/Inc",
+        "file": "Core/Inc/soft_i2c.h",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Inc/soft_i2c.h",
+            "-o",
+            "build/rda5807_driver/Core/Inc/soft_i2c.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+        ]
+    },
+    {
+        "directory": "Drivers/STM32F4xx_HAL_Driver/Src",
+        "file": "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+            "-o",
+            "build/rda5807_driver/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+        ]
+    },
+    {
+        "directory": "Core/Src",
+        "file": "Core/Src/system_stm32f4xx.c",
+        "arguments": [
+            "C:/Keil_v5/ARM/ARMCC/bin/armcc.exe",
+            "-c",
+            "Core/Src/system_stm32f4xx.c",
+            "-o",
+            "build/rda5807_driver/Core/Src/system_stm32f4xx.o"
+        ]
+    }
+]
