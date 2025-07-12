@@ -5,7 +5,7 @@ import os
 DAC_BITS = 14
 CENTER = 2**(DAC_BITS-1)      # 8192
 AMPLITUDE = CENTER - 1        # 8191
-ADDR_BITS = 12                # 13位地址
+ADDR_BITS = 12                # 12位地址
 ADDR_DEPTH = 2**ADDR_BITS     
 
 # 获取当前脚本所在文件夹

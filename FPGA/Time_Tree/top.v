@@ -7,6 +7,8 @@ module top(
     output clk_dac,         // DAC输出时钟
     output clk_fir,         // FIR滤波器时钟
     output locked,         // 时钟锁定信号
+
+    output [13:0] dac_out,  // DAC输出数据
     output ligtht           
 
 );
@@ -40,5 +42,12 @@ time_tree_dy  time_tree_dy_inst (
     .clk_fir(clk_fir),
     .locked(locked)
 );
+
+DAC_Generate  DAC_Generate_inst (
+    .sys_clk(sys_clk),
+    .rst_n(rst_n),
+    .dac_clk(clk_adc),
+    .dac_out(dac_out)
+  );
 
 endmodule

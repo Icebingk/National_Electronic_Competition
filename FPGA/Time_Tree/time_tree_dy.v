@@ -99,7 +99,7 @@ always@(posedge sys_clk or negedge rst_n)begin
         s_axi_wstrb <= 4'd0;
     end else if (axi_cstate == START) begin
         s_axi_awaddr <= 11'h208 +  (clk_choise * 12);// 确定时钟分频的寄存器地址
-        s_axi_wdata  <= {16'd0,frq_num_int, frq_num_float}; // 将整数和小数部分拼接成32位数据
+        s_axi_wdata  <= {16'd0,frq_num_float,frq_num_int}; // 将整数和小数部分拼接成32位数据
         s_axi_wstrb  <= 4'b0011;
     end else if (axi_cstate == LOAD)begin
         s_axi_awaddr <= 11'h25C;
