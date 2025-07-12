@@ -42,3 +42,4 @@ fm\main.o: ../Core/Inc/tim.h
 fm\main.o: ../Core/Inc/usart.h
 fm\main.o: ../Core/Inc/gpio.h
 fm\main.o: ../Core/Inc/QN8027.h
+fm\main.o: ../Core/Inc/soft_i2c.h

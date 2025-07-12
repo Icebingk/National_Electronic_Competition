@@ -3,6 +3,8 @@
 
 #include "main.h"
 #include "i2c.h"
+#include "soft_i2c.h"
+
 // QN8027 I2C通信函数
 void QN8027I2CRead(uint8_t* Data, uint8_t length);
 void QN8027I2CWrite(uint8_t* Data, uint8_t length);

@@ -37,3 +37,4 @@ fm\qn8027.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 fm\qn8027.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 fm\qn8027.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 fm\qn8027.o: ../Core/Inc/i2c.h
+fm\qn8027.o: ../Core/Inc/soft_i2c.h

@@ -108,22 +108,25 @@ int main(void)
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
-  MX_GPIO_Init();
-  MX_DMA_Init();
+////  MX_GPIO_Init();
+//  MX_DMA_Init();
   MX_I2C1_Init();
-  MX_TIM2_Init();
-  MX_DAC_Init();
-  MX_UART4_Init();
+//  MX_TIM2_Init();
+//  MX_DAC_Init();
+//  MX_UART4_Init();
   /* USER CODE BEGIN 2 */
 	// 启动DAC和定时器
-	HAL_TIM_Base_Start(&htim2);
-	HAL_DAC_Start_DMA(&hdac,DAC_CHANNEL_1,(uint32_t *)sin128,128,DAC_ALIGN_12B_R);
-	
-  QN8027ReadAllRegisters(QN8027InitReg); // 读取QN8027寄存器内容
-  HAL_UART_Transmit(&huart4, QN8027InitReg, 19, 1000); // 通过UART发送寄存器内容
-  QN8027Initialize(); 
-	QN8027ReadAllRegisters(QN8027InitReg); // 读取QN8027寄存器内容
-  HAL_UART_Transmit(&huart4, QN8027InitReg, 19, 1000); // 通过UART发送寄存器内容
+//	HAL_TIM_Base_Start(&htim2);
+//	HAL_DAC_Start_DMA(&hdac,DAC_CHANNEL_1,(uint32_t *)sin128,128,DAC_ALIGN_12B_R);
+	uint8_t a[1] = {0xAA};
+	HAL_I2C_Master_Transmit(&hi2c1,0x58,a , 1, 100);
+//  QN8027ReadAllRegisters(QN8027InitReg); // 读取QN8027寄存器内容
+//  HAL_UART_Transmit(&huart4, QN8027InitReg, 19, 1000); // 通过UART发送寄存器内容
+//	
+//  QN8027Initialize(); 
+//	
+//	QN8027ReadAllRegisters(QN8027InitReg); // 读取QN8027寄存器内容
+//  HAL_UART_Transmit(&huart4, QN8027InitReg, 19, 1000); // 通过UART发送寄存器内容
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -183,7 +186,15 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+// I2C错误回调
+void HAL_I2C_ErrorCallback(I2C_HandleTypeDef *hi2c){
+  if (hi2c->Instance == I2C1)
+  {
+    // I2C错误处理，用串口向上位机发送错误信息
+    uint8_t errorMsg[] = "I2C Error occurred!\n";
+    HAL_UART_Transmit(&huart4, errorMsg, sizeof(errorMsg) - 1, 100);
+  }
+}
 /* USER CODE END 4 */
 
 /**

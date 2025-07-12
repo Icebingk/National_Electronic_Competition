@@ -41,20 +41,20 @@ void QN8027WriteRegisterDim(uint8_t Address, uint8_t* Reg, uint8_t Number){
 
 // 读取所有寄存器内容
 void QN8027ReadAllRegisters(uint8_t* Reg){
-  QN8027I2CWrite(0x00, 1); 	   // 发送寄存器地址
-  QN8027I2CRead(Reg,19);       // 读取所有寄存器内容
+	uint8_t startAddr = 0x00;
+	QN8027I2CWrite(&startAddr, 1); // 发送寄存器地址
+	QN8027I2CRead(Reg, 19);	 // 读取所有寄存器内容
 }
 
 // 修改输出频率，但是不会启动发射
-void QN8027SetOutputFrequency(float frq_MHz){
-	uint32_t Frq = (uint8_t)(frq_MHz - 76) * 20; // 将频率转换为寄存器值
-	uint8_t uc00 = (uint8_t)(Frq >> 8) & 0x03;
-	uint8_t uc01 = (uint8_t)(Frq & 0xFF);
+void QN8027SetOutputFrequency(float frq_MHz)
+{
+	// 正确的频率计算公式：(频率 - 76) / 0.05
+	uint16_t Frq = (uint16_t)((frq_MHz - 76.0f) / 0.05f);
 
-	uint8_t ucarr[2]; // 设置寄存器值
-	ucarr[0] = uc00; // 寄存器地址
-	ucarr[1] = uc01; // 寄存器值高字节
-	QN8027WriteRegisterDim(0x00,ucarr, 2); // 写入寄存器
+	// 分别写入两个寄存器
+	QN8027WriteReg(0x00, (uint8_t)((Frq >> 8) & 0x03)); // 高2位到寄存器0x00
+	QN8027WriteReg(0x01, (uint8_t)(Frq & 0xFF));		// 低8位到寄存器0x01
 }
 
 // 初始化QN8027寄存器

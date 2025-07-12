@@ -134,11 +134,11 @@
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
-            <DriverSelection>4107</DriverSelection>
+            <DriverSelection>4101</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>STLink\ST-LINKIII-KEIL_SWO.dll</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -1027,6 +1027,16 @@
               <FileName>QN8027.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\Core\Inc\QN8027.h</FilePath>
+            </File>
+            <File>
+              <FileName>soft_i2c.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Inc\soft_i2c.h</FilePath>
+            </File>
+            <File>
+              <FileName>soft_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\soft_i2c.c</FilePath>
             </File>
           </Files>
         </Group>
