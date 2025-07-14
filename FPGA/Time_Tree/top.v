@@ -19,8 +19,11 @@ wire [3:0] key_edge_neg; // 按键下降沿信号
 wire error_sign; // 错误信号
 
 wire [2:0] clk_choise = 3'd0;  // 时钟选择信号
-wire [7:0] frq_num_int = 8'd56;  // 频率分频或者倍频数，整数部分
-wire [7:0] frq_num_float = 8'd250; // 频率分频或者倍频数，小数部分
+wire [7:0] frq_num_int = 8'd28;  // 频率分频或者倍频数，整数部分
+wire [7:0] frq_num_float = 8'd125; // 频率分频或者倍频数，小数部分
+
+wire [13:0] dac_data_in_w = 14'd0; // DAC输入数据
+wire        dac_data_in_valid_w = 0;
 
 key_edge  key_edge_inst (
     .clk(sys_clk),
@@ -44,10 +47,12 @@ time_tree_dy  time_tree_dy_inst (
 );
 
 DAC_Generate  DAC_Generate_inst (
-    .sys_clk(sys_clk),
     .rst_n(rst_n),
-    .dac_clk(clk_adc),
+    .dac_clk(clk_dac),
+    .default_mode(0),
+    .dac_data_in_valid(dac_data_in_valid_w),
+    .dac_data_in(dac_data_in_w),
     .dac_out(dac_out)
-  );
+);
 
 endmodule

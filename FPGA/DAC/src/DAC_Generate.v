@@ -1,57 +1,85 @@
+/*==============================================
+* Function Name  : DAC_Generate.v
+* Description    : 在默认情况下：用于生成正弦波，通过LUT实现，并且进行了同步时钟域,频率为输入的频率/16个点数
+*                  取消默认情况下：直接输出输入的DAC数据
+* input port     : rst_n(复位信号)，dac_clk(DAC时钟)，
+*                  default_mode(DAC模式控制)，
+*                  dac_data_in_valid(DAC数据输入有效信号)，
+*                  dac_data_in(DAC输入数据)
+* output port    : dac_out(DAC输出数据)
+* Author         : ADBD
+//==============================================*/
 module DAC_Generate (
-    input   wire         sys_clk,
-    input   wire         rst_n,
-    input   wire         dac_clk,
-    output  wire [13:0]  dac_out
+    input   wire         rst_n,                 // 低电平复位信号
+    input   wire         dac_clk,               // dac时钟
+    input   wire         default_mode,          // 1：默认情况，0：取消默认情况
+    input   wire         dac_data_in_valid,     // DAC数据输入有效信号
+    input   wire [13:0]  dac_data_in,           // DAC输入数据
+    output  reg  [13:0]  dac_out                // DAC输出数据
 );
 
-reg [11:0] add_in;
-reg        write_en;
-wire       full;
+localparam sin_rom_add = 5; // 根据实际ROM地址宽度设置，5位对应32点
+localparam sin_rom_max = 2**sin_rom_add - 1; // 最大地址为31
+wire [13:0] dac_out_sin;
+reg  [sin_rom_add-1:0] phase_addr;
 
-wire [11:0] phase_addr1;
-wire         read_en;
-wire        empty;
+// 时钟域交叉处理
+reg dac_auto_disa_meta, dac_auto_disa_sync;
+reg dac_data_in_valid_meta, dac_data_in_valid_sync;
+reg [13:0] dac_data_in_sync, dac_data_in_meta;
 
-always@(posedge sys_clk or negedge rst_n)begin
-    if (!rst_n)begin
-        add_in <= 12'd0;
-        write_en <= 1'b0;
+// 同步控制信号到DAC时钟域
+always @(posedge dac_clk or negedge rst_n) begin
+    if (!rst_n) begin
+        dac_auto_disa_meta <= 1'b1;
+        dac_auto_disa_sync <= 1'b1;
+        dac_data_in_valid_meta <= 1'b0;
+        dac_data_in_valid_sync <= 1'b0;
+        dac_data_in_meta <= 14'd0;
+        dac_data_in_sync <= 14'd0;
     end else begin
-        if (!full)begin
-            write_en <= 1'b1; // 写使能
-            if (add_in < 12'd4095) begin
-                add_in <= add_in + 1'b1;
-            end else begin
-                add_in <= 12'd0; // 重置地址
-            end
-        end else begin
-            write_en <= 1'b0; // FIFO满时停止写入
-            add_in <= add_in; // 保持当前地址
-        end
+        // 两级触发器同步，减少亚稳态
+        dac_auto_disa_meta <= default_mode;
+        dac_auto_disa_sync <= dac_auto_disa_meta;
+        dac_data_in_valid_meta <= dac_data_in_valid;
+        dac_data_in_valid_sync <= dac_data_in_valid_meta;
+        dac_data_in_meta <= dac_data_in;
+        dac_data_in_sync <= dac_data_in_meta;
     end
 end
 
-assign read_en = !empty; // 读取使能信号为非空时有效
+// 在DAC时钟域递增地址
+always @(posedge dac_clk or negedge rst_n) begin
+    if (!rst_n) begin
+        phase_addr <= {sin_rom_add{1'b0}}; // 正确的复位语法
+    end else if (!dac_auto_disa_sync) begin
+        if (phase_addr == sin_rom_max)
+            phase_addr <= {sin_rom_add{1'b0}}; // 正确的复位语法
+        else
+            phase_addr <= phase_addr + 1'b1;
+    end else begin
+        phase_addr <= {sin_rom_add{1'b0}}; // 正确的复位语法
+    end
+end
 
+// 控制输出，同样在DAC时钟域
+always @(posedge dac_clk or negedge rst_n) begin
+    if (!rst_n) begin
+        dac_out <= 14'd0;
+    end else if (!dac_auto_disa_sync) begin
+        dac_out <= dac_out_sin;
+    end else if (dac_data_in_valid_sync) begin
+        dac_out <= dac_data_in_sync;
+    end else begin
+        dac_out <= dac_out;
+    end
+end
+
+// ROM实例化，使用DAC时钟
 sin_rom sin_rom_inst (
-    .addra(phase_addr1),
+    .addra(phase_addr),
     .clka(dac_clk),
-    .douta(dac_out)        // 直接连接14位输出
-);
-
-fifo_generator_0 fifo_generator_0_inst (
-    .rst(!rst_n),           // 复位信号
-
-    .wr_clk(sys_clk),       // 写时钟
-    .din(add_in),           // 输入数据
-    .wr_en(write_en),       // 写使能
-    .full(full),            // FIFO满标志
-    
-    .rd_clk(dac_clk),       // 读时钟
-    .rd_en(read_en),        // 读使能
-    .dout(phase_addr1),     // 输出数据
-    .empty(empty)           // FIFO空标志
+    .douta(dac_out_sin)
 );
 
 endmodule

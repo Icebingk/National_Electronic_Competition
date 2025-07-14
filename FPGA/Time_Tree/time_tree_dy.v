@@ -225,8 +225,8 @@ clk_module  clk_module_inst (
     .s_axi_rvalid(s_axi_rvalid),
     .s_axi_rready(s_axi_rready),
 
-    .clk_out1(clk_adc),
-    .clk_out2(clk_dac),
+    .clk_out1(clk_dac),
+    .clk_out2(clk_adc),
     .clk_out3(clk_fir),
     .locked(locked),
     .clk_in1(sys_clk)

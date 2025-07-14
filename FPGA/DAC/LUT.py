@@ -1,12 +1,12 @@
 import numpy as np
 import os
 
-# 14位DAC正弦波LUT，16位地址深度
+# 14位DAC正弦波LUT，10位地址深度
 DAC_BITS = 14
 CENTER = 2**(DAC_BITS-1)      # 8192
 AMPLITUDE = CENTER - 1        # 8191
-ADDR_BITS = 12                # 12位地址
-ADDR_DEPTH = 2**ADDR_BITS     
+ADDR_BITS = 5                 # 5位地址
+ADDR_DEPTH = 2**ADDR_BITS
 
 # 获取当前脚本所在文件夹
 current_dir = os.path.dirname(os.path.abspath(__file__))

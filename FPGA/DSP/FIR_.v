@@ -1,4 +1,3 @@
-(* keep_hierarchy = "yes" *)// 保持层次结构
 module FIR #(
     parameter DATA_WIDTH = 12,      // 输入数据位宽
     parameter COEFF_WIDTH = 32,     // 系数量化位宽
@@ -10,9 +9,10 @@ module FIR #(
     input  wire                             data_valid,
     input  wire signed [DATA_WIDTH-1:0]     data_in,
     output reg                              data_ready,
-    output reg signed [OUTPUT_WIDTH-1:0]    data_out
+    output reg signed [13:0]    data_out
 );
 localparam COEFF_ADDR_WIDTH = $clog2(TAPS); // 系数RAM地址宽度
+localparam Scale_factor = 25; // 平衡整数和小数精度
 
 // 系数寄存器组
 reg signed [COEFF_WIDTH-1:0] coeff_reg [0:TAPS-1];// 系数寄存器
@@ -130,7 +130,8 @@ always @(posedge sys_clk or negedge rst_n) begin
         data_out <= 0;
         data_ready <= 0;
     end else begin
-        data_out <= acc_pipe[TAPS-1];
+        // 输出高14位，适配14位DAC
+        data_out <= acc_pipe[TAPS-1][Scale_factor-1:Scale_factor-14];
         data_ready <= valid_pipe[TAPS];
     end
 end
