@@ -1,4 +1,4 @@
-module top_ (
+module top (
     input wire          sys_clk,    // 系统时钟
     input wire          rst_n,      // 复位信号，低有效
 
