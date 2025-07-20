@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun May 13 18:31:02 2018
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : AD9708_TEST_Code
+Top-level Entity Name : AD9708_TEST_Code
+Family : Cyclone II
+Total logic elements : 176
+    Total combinational functions : 163
+    Dedicated logic registers : 152
+Total registers : 152
+Total pins : 23
+Total virtual pins : 0
+Total memory bits : 49,152
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1
