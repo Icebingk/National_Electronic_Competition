@@ -104,21 +104,21 @@ NEC/
 
 ## STM32-Project片机引脚及功能
 
-PC10---SCK\\
-PC11---MISO\\
-PC12---MOSI\\
-PA04---CS\\
-PA5 PA6---时钟模式输出\\
-PA10 PA11 PA12---收发模式输入选择\\
+PC10---SCK  
+PC11---MISO  
+PC12---MOSI  
+PA04---CS  
+PA5 PA6---时钟模式输出  
+PA10 PA11 PA12---收发模式输入选择  
 
 ## TI单片机引脚与功能
 
-PA0---I2C.SCL
-PA1---I2C.SDA
-PB16---SCK
-PB15---PICO
-PB14---POCI
-PA2---CS
+PA0---I2C.SCL  
+PA1---I2C.SDA  
+PB16---SCK  
+PB15---PICO  
+PB14---POCI  
+PA2---CS  
 PA21 PA22 PA23---收发模式输入选择
 
 ## 下次更新
