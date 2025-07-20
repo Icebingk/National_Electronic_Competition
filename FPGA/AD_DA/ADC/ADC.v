@@ -2,9 +2,10 @@
 * Function Name  : ADC.v
 * Description    : ADC模块，负责接收ADC数据并进行处理
 *                   AD266输电压范围为：±5V
-*                   ADC数据范围为：-2048~2047
-* input port     : 
-* output port    : dac_out(DAC输出数据)
+*                   ADC数据输出范围为：0~4095，记得阻抗匹配
+* input port     : sys_clk(系统时钟),rst_n(复位信号)，adc_clk(ADC时钟)，
+*                  OTR(超量程提示)，adc_data_in(ADC数据输入)
+* output port    : adc_data_out(ADC输出数据)，adc_data_ready(ADC数据有效标志)
 * Author         : ADBD
 //==============================================*/
 module ADC(

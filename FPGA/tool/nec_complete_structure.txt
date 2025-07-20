@@ -1,0 +1,31 @@
+NEC/
+├── doc/
+│   ├── 数字滤波器的MATLAB与FPGA实现/
+│   ├── CT137X_PIN_X引脚链接表.xlsx (13.5KB)
+│   └── 器件购买清单.xlsx (15.1KB)
+├── FPGA/
+│   ├── basic_model/
+│   ├── DSP/
+│   ├── FIFO/
+│   ├── IIC/
+│   ├── modulsim/
+│   ├── Reset/
+│   ├── SPI/
+│   ├── Time_Tree/
+│   ├── tool/
+│   ├── uart/
+│   ├── Vivado/
+│   └── Xilinx Artix-7 FPGA A704/
+├── Hardware/
+│   ├── Drivers/
+│   ├── FM/
+│   ├── 混频器/
+│   ├── LNA模块20dB.eprj (712.0KB)
+│   ├── qn8027_FM调制.eprj (540.0KB)
+│   └── 自动增益.eprj (712.0KB)
+├── STM32-project/
+│   ├── spi-F407/
+│   └── spi-F429/
+├── TI_project/
+│   └── spi.2.zip (1.6MB)
+└── readme.md (3.1KB)
