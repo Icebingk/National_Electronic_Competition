@@ -1,8 +1,8 @@
 # 2025年全国电子设计大赛——7月20日最新
 
-文件夹说明
+## 文件夹说明
 
-```
+```txt
 NEC/
 ├── doc/
 │   ├── 数字滤波器的MATLAB与FPGA实现/
@@ -34,23 +34,22 @@ NEC/
 ├── TI_project/
 │   └── spi.2.zip (1.6MB)
 └── readme.md (3.1KB)
-
 ```
 
-### FPGA
+## FPGA
 
-#### AD_DA
+### AD_DA
 
-##### AD9226（大端）
+#### AD9226（大端）
 
 - AD并行驱动，内置FIFO解决跨时钟域传输
 
-##### DA9764（小端）
+#### DA9764（小端）
 
 - DA并行驱动，内置FIFO解决跨时钟域传输问题
 - 默认模式用于生成所需正弦波将DAC当作DDS使用，取消默认模式由系统控制
 
-#### SPI
+### SPI
 
 - SPI文件夹内涵SPI主从机源文件、配置文件，和测试文件
 - modulsim是用来仿真时许的
@@ -58,7 +57,7 @@ NEC/
 
 1. 【发送一个字节数据并返回接收的数据】uint8_t SPI_FPGA_SendByte(uint8_t byte);
 2. 【读取一个字节数据】uint8_t SPI_FPGA_ReadByte(void);
-3. 【发送并接收多个字节数据】void SPI_FPGA_TransmitReceive(uint8_t *txData, uint8_t *rxData, uint16_t size);
+3. 【发送并接收多个字节数据】void SPI_FPGA_TransmitReceive(uint8_t \*txData, uint8_t \*rxData, uint16_t size);
 4. 【通过阻塞进行延时的函数】void Delay(__IO uint32_t nCount);
 5. 【仅发送数据】void SPI_FPGA_Transmit(uint8_t *txData, uint16_t size);
 6. 【仅接收数据】void SPI_FPGA_Receive(uint8_t *rxData, uint16_t size);
@@ -71,55 +70,55 @@ NEC/
    （6）连续发送12个字节，在发送完第5个字节后突然拉高片选信号，继续发送完第10个字节后又突然拉低片选信号
    （7）连续接收12个字节，在接收完第5个字节后突然拉高片选信号，继续接收完第10个字节后又突然拉低片选信号。
 
-#### DSP
+### DSP
 
 - 数字FIR低通滤波器，目前截止频率为10MHz，有python辅助脚本生成系数
 
-#### Basic_module
+### Basic_module
 
 - 常用基本模块，包括定时器、蜂鸣器、摁键边沿检测、呼吸灯、LED灯控制、8个8位数码管、sram读写控制等
 
-#### IIC
+### IIC
 
 - 一些用IIC通信协议外设
 
-#### UART
+### UART
 
 - 异步步全双工串口，可收发字符串
 
-#### FIFO
+### FIFO
 
 - 集创赛留下来的FIFO模块，用于跨时钟域传输
 
-#### RESET
+### RESET
 
 - 异步置零，同步复位模块
 
-#### Time_Tree
+### Time_Tree
 
 - 控制系统的时钟树，动态调整Clocking ip核的输出，包括频率和相位
 
-#### Tool
+### Tool
 
 - 一些脚本，生成文件结构树以及文件头文件
 
 ## STM32-Project片机引脚及功能
 
-PC10---SCK
-PC11---MISO
-PC12---MOSI
-PA04---CS
-PA5 PA6---时钟模式输出
-PA10 PA11 PA12---收发模式输入选择
+PC10---SCK  
+PC11---MISO  
+PC12---MOSI  
+PA04---CS  
+PA5 PA6---时钟模式输出  
+PA10 PA11 PA12---收发模式输入选择  
 
 ## TI单片机引脚与功能
 
-PA0---I2C.SCL
-PA1---I2C.SDA
-PB16---SCK
-PB15---PICO
-PB14---POCI
-PA2---CS
+PA0---I2C.SCL  
+PA1---I2C.SDA  
+PB16---SCK  
+PB15---PICO  
+PB14---POCI  
+PA2---CS  
 PA21 PA22 PA23---收发模式输入选择
 
 ## 下次更新
