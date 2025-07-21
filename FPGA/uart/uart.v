@@ -1,5 +1,5 @@
 module uart(
-    input           clk,            // 系统时钟
+    input           sys_clk,            // 系统时钟
     input           rst_n,            // 系统复位
     
     // UART物理接口
@@ -62,17 +62,24 @@ assign rx_valid = !rx_buffer_empty;
 assign tx_ready = !tx_buffer_full;
 
 //======== 接收数据处理 ========
-always @(posedge clk or negedge rst_n) begin
+// 接收缓冲区写入控制
+always @(posedge sys_clk or negedge rst_n) begin
     if (!rst_n) begin
         rx_wr_ptr <= 6'd0;
-        rx_rd_ptr <= 6'd0;
     end else begin
         // 从UART接收模块获取数据
         if (uart_rx_valid && !rx_buffer_full) begin
             rx_buffer[rx_wr_ptr] <= uart_rx_data;
             rx_wr_ptr <= (rx_wr_ptr == RX_BUFFER_SIZE-1) ? 6'd0 : (rx_wr_ptr + 1'b1);
         end
-        
+    end
+end
+
+// 接收缓冲区读取控制
+always @(posedge sys_clk or negedge rst_n) begin
+    if (!rst_n) begin
+        rx_rd_ptr <= 6'd0;
+    end else begin
         // 外部模块读取数据
         if (rx_ready && rx_valid) begin
             rx_rd_ptr <= (rx_rd_ptr == RX_BUFFER_SIZE-1) ? 6'd0 : (rx_rd_ptr + 1'b1);
@@ -81,17 +88,24 @@ always @(posedge clk or negedge rst_n) begin
 end
 
 //======== 发送数据处理 ========
-always @(posedge clk or negedge rst_n) begin
+// 发送缓冲区写入控制
+always @(posedge sys_clk or negedge rst_n) begin
     if (!rst_n) begin
         tx_wr_ptr <= 6'd0;
-        tx_rd_ptr <= 6'd0;
     end else begin
         // 外部模块写入发送数据
         if (tx_valid && tx_ready) begin
             tx_buffer[tx_wr_ptr] <= tx_data_in;
             tx_wr_ptr <= (tx_wr_ptr == TX_BUFFER_SIZE-1) ? 6'd0 : (tx_wr_ptr + 1'b1);
         end
-        
+    end
+end
+
+// 发送缓冲区读取控制
+always @(posedge sys_clk or negedge rst_n) begin
+    if (!rst_n) begin
+        tx_rd_ptr <= 6'd0;
+    end else begin
         // UART发送模块读取数据
         if (current_state == SEND_DATA && uart_tx_ready && uart_tx_valid) begin
             tx_rd_ptr <= (tx_rd_ptr == TX_BUFFER_SIZE-1) ? 6'd0 : (tx_rd_ptr + 1'b1);
@@ -101,7 +115,7 @@ end
 
 //======== 状态机控制 ========
 // 状态转换
-always @(posedge clk or negedge rst_n) begin
+always @(posedge sys_clk or negedge rst_n) begin
     if (!rst_n) begin
         current_state <= IDLE;
     end else begin
@@ -133,7 +147,7 @@ always @(*) begin
 end
 
 // UART发送控制
-always @(posedge clk or negedge rst_n) begin
+always @(posedge sys_clk or negedge rst_n) begin
     if (!rst_n) begin
         uart_tx_data <= 8'h00;
         uart_tx_valid <= 1'b0;
@@ -168,7 +182,7 @@ uart_rx #(
     .CLOCK(CLK_FREQ),
     .CHECK_BIT("None")
 ) rx_inst (
-    .clk(clk),
+    .sys_clk(sys_clk),
     .rst_n(rst_n),
     .rx(rx),
     .rx_data_vld(uart_rx_valid),
@@ -181,7 +195,7 @@ uart_tx #(
     .CLOCK(CLK_FREQ),
     .CHECK_BIT("None")
 ) tx_inst (
-    .clk(clk),
+    .sys_clk(sys_clk),
     .rst_n(rst_n),
     .tx_data(uart_tx_data),
     .tx_data_vld(uart_tx_valid),

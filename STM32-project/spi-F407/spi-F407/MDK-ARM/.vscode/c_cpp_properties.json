@@ -3,16 +3,16 @@
         {
             "name": "spi-F407",
             "includePath": [
-                "e:\\National_Electronic_Competition\\STM32-project\\spi-F407\\spi-F407\\Core\\Inc",
-                "e:\\National_Electronic_Competition\\STM32-project\\spi-F407\\spi-F407\\Drivers\\STM32F4xx_HAL_Driver\\Inc",
-                "e:\\National_Electronic_Competition\\STM32-project\\spi-F407\\spi-F407\\Drivers\\STM32F4xx_HAL_Driver\\Inc\\Legacy",
-                "e:\\National_Electronic_Competition\\STM32-project\\spi-F407\\spi-F407\\Drivers\\CMSIS\\Device\\ST\\STM32F4xx\\Include",
-                "e:\\National_Electronic_Competition\\STM32-project\\spi-F407\\spi-F407\\Drivers\\CMSIS\\Include",
+                "e:\\NEC\\STM32-project\\spi-F407\\spi-F407\\Core\\Inc",
+                "e:\\NEC\\STM32-project\\spi-F407\\spi-F407\\Drivers\\STM32F4xx_HAL_Driver\\Inc",
+                "e:\\NEC\\STM32-project\\spi-F407\\spi-F407\\Drivers\\STM32F4xx_HAL_Driver\\Inc\\Legacy",
+                "e:\\NEC\\STM32-project\\spi-F407\\spi-F407\\Drivers\\CMSIS\\Device\\ST\\STM32F4xx\\Include",
+                "e:\\NEC\\STM32-project\\spi-F407\\spi-F407\\Drivers\\CMSIS\\Include",
                 "D:\\Keil5\\ARM\\ARM\\ARMCC\\include",
                 "D:\\Keil5\\ARM\\ARM\\ARMCC\\include\\rw",
-                "e:\\National_Electronic_Competition\\STM32-project\\spi-F407\\spi-F407\\MDK-ARM",
-                "e:\\National_Electronic_Competition\\STM32-project\\spi-F407\\spi-F407\\Core\\Src",
-                "e:\\National_Electronic_Competition\\STM32-project\\spi-F407\\spi-F407\\Drivers\\STM32F4xx_HAL_Driver\\Src"
+                "e:\\NEC\\STM32-project\\spi-F407\\spi-F407\\MDK-ARM",
+                "e:\\NEC\\STM32-project\\spi-F407\\spi-F407\\Core\\Src",
+                "e:\\NEC\\STM32-project\\spi-F407\\spi-F407\\Drivers\\STM32F4xx_HAL_Driver\\Src"
             ],
             "defines": [
                 "USE_HAL_DRIVER",

@@ -39,3 +39,10 @@
 `define SPI_CONTROL_FREQ_MUL        16'hD0B8 //频率倍频系数
 
 `define SPI_STATE                   8
+
+// AD和DA驱动模块定义
+`define AD_DATA_WIDTH 12 // AD驱动模块数据位宽
+`define DA_DATA_WIDTH 14 // DA驱动模块数据位宽
+`define sin_rom_add   5  // 正弦波ROM地址位宽
+`define sin_rom_max   2**`sin_rom_add - 1 // 最大地址
+

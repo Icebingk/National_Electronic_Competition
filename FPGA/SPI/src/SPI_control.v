@@ -1,146 +1,103 @@
-////////////////////////////////////////////////////////////////////////////
-////更新时间：      2025年2月5日
-////文件说明：      通过SPI模块，发送/接收 1byte的定长指令数据
-////                先发送设备ID，接收到返回的设备ID后，再发送指令，代表一次指令传输完毕
-////指令集说明：    参照处理器设计
-////////////////////////////////////////////////////////////////////////////
+/*==============================================
+* Function Name  : SPI_control.v
+* Description    : SPI控制模块，用于控制SPI_slave字符的读写
+*
+* input port     : sys_clk（系统时钟）, rst_n（复位信号）, 
+*                  CPHA, CPOL,（采样和发送控制）
+*                  DCLK（时钟信号）, MOSI（主机输出从机输入）, nCS（片选信号）
+* output port    : MISO（主机输入从机输出）
+* Author         : ADBD
+//==============================================*/
+`include "top_define.v"
 module SPI_control (
-    input clk,
-    input rst,
-    
-    output wire [7:0] seg_number,
-    output wire [7:0] seg_choice,
-    
-    input CPHA,
-    input CPOL,
-    input DCLK,
-    input MOSI,
-    output MISO,
-    input nCS,
+    input   wire                    sys_clk,
+    input   wire                    rst_n,
 
-    output reg [2:0] mode
+    // input   wire [`DATA_WIDTH-1:0]  data_in,
+    // input   wire                    data_in_vld,
+    input   wire [`DATA_WIDTH-1:0]   spi_data_out_ready,
+    output  wire [`DATA_WIDTH-1:0]   spi_data_out,
+    output  reg                      spi_data_out_vld,
+
+    input   wire                    CPHA,
+    input   wire                    CPOL,
+    input   wire                    DCLK,
+    input   wire                    MOSI,
+    output  wire                    MISO,
+    input   wire                    nCS
 );
-reg [7:0] data_in = 8'b0;
-reg data_in_vld = 1'b0;
-wire [7:0] data_out;
-reg  [7:0] data_out_r[15:0];// 16个数据寄存器
-wire data_out_vld;
-reg [31:0] seg_number_in;
-reg [3:0]  data_out_cnt;
-reg [25:0] time_cnt;
-reg time_cnt_flag;
-reg [4:0] seg_cnt;
+wire [(`DATA_WIDTH-1):0]    data_out;
+wire                        data_out_vld;
+reg                         data_out_ready;
 
-reg once;
+// SPI_Slave_O FIFO缓存
+wire full;
+wire wr_en;
 
-always @(posedge clk or negedge rst) begin
-    if (rst)begin
-        once <= 1'b0;
+wire empty;
+wire rd_en;
+
+wire data_in_ready;
+
+assign wr_en = data_out_vld && !full; // 写使能信号，当数据输入有效且FIFO未满时使能写入
+assign rd_en = !empty && (!spi_data_out_vld || spi_data_out_ready); // 读使能信号，当FIFO不为空且输出数据无效或输出准备好时使能读取
+
+// 输出有效控制
+always @(posedge sys_clk or negedge rst_n) begin
+    if (!rst_n)begin
+        spi_data_out_vld <= 1'b0;
+    end else if (rd_en)begin
+        spi_data_out_vld <= 1'b1;
     end else begin
-        if (data_out_vld)begin
-            once <= 1'b1;
-        end else begin
-            once <= once;
-        end
+        spi_data_out_vld <= 1'b0;
     end
 end
 
-always @(posedge clk or negedge rst) begin
-    if (rst)begin
-        mode <= 3'd0;
+// 写入FIFO
+always@(posedge sys_clk or negedge rst_n) begin
+    if (!rst_n) begin
+        data_out_ready <= 1'b0; // 复位时数据输出无效
+    end else if (wr_en) begin
+        data_out_ready <= 1'b1; // 数据输出有效
     end else begin
-        if (!once)begin
-            mode <= 3'd3;
-        end else begin
-            mode <= 3'd0;
-        end
+        data_out_ready <= 1'b0; // 数据输出无效
     end
 end
 
-always@(posedge clk or posedge rst) begin
-    if (rst) begin
-        time_cnt <= 26'b0;
-        time_cnt_flag <= 'b0;
-    end else if (time_cnt == 26'd50_000_000 - 1) begin
-        time_cnt <= 26'b0;
-        time_cnt_flag <= 'b1;
-    end else begin
-        time_cnt <= time_cnt + 1;
-        time_cnt_flag <= 'b0;
-    end
-end
+// 从机接收到的数据通过FIFO缓存
+SPI_Slave_O SPI_Slave_O_inst(
+    .clk(sys_clk),
+    .rst(!rst_n),
 
-integer i;
-always @(posedge clk or posedge rst) begin
-    if (rst) begin
-        for (i = 0; i < 16; i = i + 1) begin
-            data_out_r[i] <= 8'b0;
-        end
-    end else if (data_out_vld) begin
-        data_out_r[data_out_cnt] <= data_out;
-    end else begin
-        for (i = 0; i < 16; i = i + 1) begin
-            data_out_r[i] <= data_out_r[i];
-        end
-    end
-end
+    .full(full),
+    .din(data_out),
+    .wr_en(wr_en),
 
-always @(posedge clk or posedge rst) begin
-    if (rst)begin
-        data_out_cnt <= 4'b0;
-    end else if (data_out_cnt == 4'd15)begin
-        data_out_cnt <= 4'b0;
-    end else if (data_out_vld) begin
-        data_out_cnt <= data_out_cnt + 1;
-    end else begin
-        data_out_cnt <= data_out_cnt;
-    end
-end
-
-always @(posedge clk or posedge rst) begin
-    if (rst) begin
-        seg_cnt <= 3'b0;
-    end else if (time_cnt_flag) begin
-        if (seg_cnt == 5'd11) begin// 左移11次，共15个数据
-            seg_cnt <= 5'b0;
-        end else begin
-            seg_cnt <= seg_cnt + 1;
-        end
-    end else begin
-        seg_cnt <= seg_cnt;
-    end
-end
-
-always @(posedge clk or posedge rst) begin
-    if (rst) begin
-        seg_number_in <= 32'b0;
-    end else begin
-        seg_number_in[31:0] <= {data_out_r[seg_cnt][7:0],data_out_r[seg_cnt+1][7:0],data_out_r[seg_cnt+2][7:0],data_out_r[seg_cnt+3][7:0]};
-    end 
-end
+    .empty(empty),
+    .dout(spi_data_out),
+    .rd_en(rd_en)
+);
 
 SPI_slave  SPI_slave_inst (
-    .clk(clk),
-    .rst_n(~rst),
-    .data_in(data_in),
-    .data_in_vld(data_in_vld),
+    .sys_clk(sys_clk),
+    .rst_n(rst_n),
+    
+    .data_in(16'hAA),
+    .data_in_vld(1'b1),
+    .data_in_ready(data_in_ready),
+
     .data_out(data_out),
     .data_out_vld(data_out_vld),
+    .data_out_ready(data_out_ready),
+
     .nCS(nCS),
     .DCLK(DCLK),
     .MOSI(MOSI),
     .MISO(MISO),
     .CPOL(CPOL),
     .CPHA(CPHA)
-);
-
-segdisplay  segdisplay_inst (
-    .clk(clk),
-    .rst_n(~rst),
-    .seg_number_in(seg_number_in),
-    .seg_number(seg_number),
-    .seg_choice(seg_choice)
   );
+
 
 endmodule
 

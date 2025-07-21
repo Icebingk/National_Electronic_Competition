@@ -6,7 +6,7 @@ module uart_tx
 	parameter   MAX_1bit = CLOCK/MAX_BPS,		//单bit的时钟耗费的周期
 	parameter   CHECK_BIT = "None"     			//是否使用校验位
 )( 
-	input					clk			,		//系统时钟
+	input					sys_clk		,		//系统时钟
     input					rst_n		,		//复位信号
     input       [7:0]   	tx_data 	,		//要发送数据
     input               	tx_data_vld	,		//数据有效申请发送
@@ -45,7 +45,7 @@ reg  	[7:0]   	tx_data_r		;//要发送的数据
 wire				check_val		;//校验数据是否有效
     
 
-always @(posedge clk or negedge rst_n)begin 
+always @(posedge sys_clk or negedge rst_n)begin 
 	if(~rst_n)begin
 		cnt_baud <= 'd0;
 	end else if(add_cnt_baud)begin //如果需要波特率计数
@@ -61,7 +61,7 @@ assign add_cnt_baud = cstate != IDLE;//非空闲状态下，控制波特率计�
 assign end_cnt_baud = add_cnt_baud && cnt_baud == MAX_1bit - 1'd1;//波特率计数结束，只保持一个周期
     
 //
-always @(posedge clk or negedge rst_n)begin 
+always @(posedge sys_clk or negedge rst_n)begin 
 	if(~rst_n)begin
 		cnt_bit <= 'd0;
 		end 
@@ -98,7 +98,7 @@ assign CHECK_STOP = (cstate ==CHECK) && end_cnt_bit;//校验位发送完成
 assign STOP_IDLE = (cstate == STOP) && end_cnt_bit;//停止位发送完成
 
 //状态机转换
-always @(posedge clk or negedge rst_n)begin 
+always @(posedge sys_clk or negedge rst_n)begin 
    	if(~rst_n)begin
 		cstate <= IDLE;
 	end else begin 
@@ -151,7 +151,7 @@ always @(*) begin
 end
 
 //要发送的数据
-always @(posedge clk or negedge rst_n) begin
+always @(posedge sys_clk or negedge rst_n) begin
 	if (~rst_n) begin
 		tx_data_r <= 'd0;
 	end else if (tx_data_vld) begin

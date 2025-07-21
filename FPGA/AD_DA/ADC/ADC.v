@@ -8,17 +8,18 @@
 * output port    : adc_data_out(ADC输出数据)，adc_data_ready(ADC数据有效标志)
 * Author         : ADBD
 //==============================================*/
+`include "E:/NEC/FPGA/SPI/src/top_define.v"
 module ADC(
-    input wire                  sys_clk,            // 系统时钟
-    input wire                  rst_n,              // 复位信号，低有效
+    input wire                                  sys_clk,            // 系统时钟
+    input wire                                  rst_n,              // 复位信号，低有效
 
-    input wire                  adc_clk,            // ADC时钟
+    input wire                                  adc_clk,            // ADC时钟
 
-    input wire                  OTR,                // 超量程提示
-    input wire        [11:0]    adc_data_in,        // ADC数据输入
+    input wire                                  OTR,                // 超量程提示
+    input wire        [`AD_DATA_WIDTH-1:0]      adc_data_in,        // ADC数据输入
 
-    output reg signed [11:0]    adc_data_out,       // ADC数据输出
-    output reg                  adc_data_ready      // ADC数据有效标志
+    output reg signed [`AD_DATA_WIDTH-1:0]      adc_data_out,       // ADC数据输出
+    output reg                                  adc_data_ready      // ADC数据有效标志
 );
 
 wire wr_en; // 写使能信号
@@ -26,9 +27,9 @@ wire full; // FIFO满标志
 wire rd_en; // 读使能信号
 wire empty; // FIFO空标志
 
-reg [11:0] adc_data_in_reg; // ADC数据输入寄存器
+reg [`AD_DATA_WIDTH-1:0] adc_data_in_reg; // ADC数据输入寄存器
 
-wire [11:0] adc_data; // ADC数据输出寄存器
+wire [`AD_DATA_WIDTH-1:0] adc_data; // ADC数据输出寄存器
 
 assign wr_en = !full & !OTR; // 当FIFO未满且未超量程时允许写入
 

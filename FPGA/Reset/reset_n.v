@@ -1,3 +1,11 @@
+/*==============================================
+* Function Name  : reset_n.v
+* Description    : 复位信号生成模块,异步置零，
+*                  同步复位，置零保持10个周期  
+* input port     : sys_clk（系统时钟），rst_in_n（外部复位信号，低电平有效）
+* output port    : rst_out_n（输出复位信号，低电平有效）
+* Author         : ADBD
+//==============================================*/
 module reset_n(
     input  wire sys_clk,       // 系统时钟
     input  wire rst_in_n,  // 外部复位信号，低电平有效

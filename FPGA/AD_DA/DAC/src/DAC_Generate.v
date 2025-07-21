@@ -9,24 +9,23 @@
 * output port    : dac_out(DAC输出数据)
 * Author         : ADBD
 //==============================================*/
+`include "E:/NEC/FPGA/SPI/src/top_define.v"
 module DAC_Generate (
-    input   wire         sys_clk,               // 系统时钟
-    input   wire         rst_n,                 // 低电平复位信号
-    input   wire         dac_clk,               // dac时钟
-    input   wire         default_mode,          // 1：默认情况，0：取消默认情况
-    input   wire         dac_data_in_valid,     // DAC数据输入有效信号
-    input   wire [13:0]  dac_data_in,           // DAC输入数据
-    output  reg  [13:0]  dac_out                // DAC输出数据
+    input   wire                        sys_clk,               // 系统时钟
+    input   wire                        rst_n,                 // 低电平复位信号
+    input   wire                        dac_clk,               // dac时钟
+    input   wire                        default_mode,          // 1：默认情况，0：取消默认情况
+    input   wire                        dac_data_in_valid,     // DAC数据输入有效信号
+    input   wire [`AD_DATA_WIDTH-1:0]   dac_data_in,           // DAC输入数据
+    output  reg  [`AD_DATA_WIDTH-1:0]   dac_out                // DAC输出数据
 );
 
-localparam sin_rom_add = 5; // 根据实际ROM地址宽度设置，5位对应32点
-localparam sin_rom_max = 2**sin_rom_add - 1; // 最大地址为31
-wire [13:0] dac_out_sin;
-reg  [sin_rom_add-1:0] phase_addr;
+wire [`AD_DATA_WIDTH-1:0] dac_out_sin;
+reg  [`sin_rom_add-1:0] phase_addr;
 
 // 异步FIFO信号
 wire fifo_wr_en;  // 添加缺失的声明
-wire [13:0] fifo_dout;
+wire [`AD_DATA_WIDTH-1:0] fifo_dout;
 wire fifo_empty;
 wire fifo_full;
 reg fifo_rd_en;
@@ -51,14 +50,14 @@ end
 // 在DAC时钟域递增地址
 always @(posedge dac_clk or negedge rst_n) begin
     if (!rst_n) begin
-        phase_addr <= {sin_rom_add{1'b0}};
+        phase_addr <= {`sin_rom_add{1'b0}};
     end else if (default_mode_sync) begin
-        if (phase_addr == sin_rom_max)
-            phase_addr <= {sin_rom_add{1'b0}};
+        if (phase_addr == `sin_rom_max)
+            phase_addr <= {`sin_rom_add{1'b0}};
         else
             phase_addr <= phase_addr + 1'b1;
     end else begin
-        phase_addr <= {sin_rom_add{1'b0}};
+        phase_addr <= {`sin_rom_add{1'b0}};
     end
 end
 

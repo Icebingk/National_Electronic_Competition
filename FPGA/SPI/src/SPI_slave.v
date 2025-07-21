@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////
 ////更新时间：      2025年3月8日
-////文件说明：      SPI模块作为从机，用于与SPI从机通信，模式可选,8bit数据位
+////文件说明：      SPI模块作为从机，用于与SPI从机通信，模式可选,8bit数据位，全双工
 ////用途：          与单片机进行通信
 ////补充：          模式0：CPOL=0，CPHA=0 高电平有效，时钟上升沿采样，下降沿发送
 ////                模式1：CPOL=0，CPHA=1 高电平有效，时钟下降沿采样，上升沿发送
@@ -9,13 +9,16 @@
 ////////////////////////////////////////////////////////////////////////////
 `include "top_define.v"
 module SPI_slave(
-    input   wire                    clk, // 系统时钟
+    input   wire                    sys_clk, // 系统时钟
     input   wire                    rst_n,// 系统时钟50MHz
 
     input   wire [`DATA_WIDTH-1:0]  data_in,// 写数据
-    input   wire                    data_in_vld,// 写数据有效
+    input   wire                    data_in_vld,// 写数据输入有效
+    output  reg                     data_in_ready,// 写数据接收完毕
+
     output  reg  [`DATA_WIDTH-1:0]  data_out,// 读数据
-    output  reg                     data_out_vld,// 读数据有效
+    output  reg                     data_out_vld,// 读数据输出有效
+    input   wire                    data_out_ready,// 上层模块准备好接收数据
 
     input   wire                    nCS,// 片选信号
     input   wire                    DCLK,// 时钟信号
@@ -40,6 +43,7 @@ reg                     DCLK_reg, DCLK_reg2;
 reg                     MOSI_reg, MOSI_reg2;
 reg                     nCS_reg, nCS_reg2;
 reg [`DATA_ADDR-1:0]    data_cnt;
+reg                     data_pending;  // 数据待处理标志
 
 // 线网定义
 wire                    DCLK_edge_up;
@@ -67,7 +71,7 @@ wire TRANS_WAIT = (state == TRANS) && (data_cnt == `DATA_WIDTH - 1);
 wire WAIT_OVER = (state == WAIT) && sample_edge;
 
 // 使用两级寄存器同步外部信号
-always @(posedge clk or negedge rst_n) begin
+always @(posedge sys_clk or negedge rst_n) begin
     if (!rst_n) begin
         DCLK_reg <= CPOL;
         DCLK_reg2 <= CPOL;
@@ -87,7 +91,7 @@ always @(posedge clk or negedge rst_n) begin
 end
 
 // 状态机更新
-always @(posedge clk or negedge rst_n) begin
+always @(posedge sys_clk or negedge rst_n) begin
     if (!rst_n) begin
         state <= IDLE;
     end else begin
@@ -102,13 +106,13 @@ always @(*) begin
         START:  next_state = nCS_reg2 ? IDLE : (START_TRANS ? TRANS : START);
         TRANS:  next_state = nCS_reg2 ? IDLE : (TRANS_WAIT ? WAIT : TRANS);
         WAIT:   next_state = nCS_reg2 ? IDLE : (WAIT_OVER ? OVER : WAIT);
-        OVER:   next_state = nCS_reg2 ? IDLE : START;// 修改输出数据处理
+        OVER:   next_state = nCS_reg2 ? IDLE : (data_out_vld && data_out_ready ? START : OVER);// 等待上层确认接收
         default: next_state = IDLE;
     endcase
 end
 
 // 数据计数器
-always @(posedge clk or negedge rst_n) begin
+always @(posedge sys_clk or negedge rst_n) begin
     if (!rst_n) begin
         data_cnt <= 0;
     end else if ((state == TRANS || state == START) && sample_edge) begin
@@ -119,18 +123,24 @@ always @(posedge clk or negedge rst_n) begin
 end
 
 // 发送数据处理
-always @(posedge clk or negedge rst_n) begin
+always @(posedge sys_clk or negedge rst_n) begin
     if (!rst_n) begin 
         MISO_shift <= 0;
+        data_in_ready <= 1'b0;
     end else if (state == IDLE && data_in_vld) begin
+        data_in_ready <= 1'b1; // 数据接收完毕
         MISO_shift <= data_in;
     end else if ((state == TRANS || state == WAIT) && shift_edge) begin
         MISO_shift <= {MISO_shift[`DATA_WIDTH-2:0], MISO_shift[`DATA_WIDTH-1]};
+        data_in_ready <= 1'b0;
+    end else begin
+        MISO_shift <= MISO_shift;
+        data_in_ready <= 1'b0;
     end
 end
 
 // 接收数据处理
-always @(posedge clk or negedge rst_n) begin
+always @(posedge sys_clk or negedge rst_n) begin
     if (!rst_n) begin
         MOSI_shift <= 0;
     end else if (state == IDLE || state == OVER) begin
@@ -141,15 +151,20 @@ always @(posedge clk or negedge rst_n) begin
 end
 
 // 输出数据处理
-always @(posedge clk or negedge rst_n) begin
+always @(posedge sys_clk or negedge rst_n) begin
     if (!rst_n) begin
         data_out <= 0;
         data_out_vld <= 1'b0;
-    end else if (state == OVER) begin
+        data_pending <= 1'b0;
+    end else if (state == OVER && !data_pending) begin
+        // 只有在没有待处理数据时才输出新数据
         data_out <= MOSI_shift;
         data_out_vld <= 1'b1;
-    end else begin
+        data_pending <= 1'b1;
+    end else if (data_out_vld && data_out_ready) begin
+        // 上层确认接收数据
         data_out_vld <= 1'b0;
+        data_pending <= 1'b0;
     end
 end
 

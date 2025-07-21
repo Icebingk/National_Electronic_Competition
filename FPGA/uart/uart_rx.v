@@ -4,16 +4,13 @@ module uart_rx#(
 	parameter MAX_1bit = CLOCK / MAX_BPS, 	// 单位的时钟耗费的周期定义
 	parameter CHECK_BIT = "None" 			// 是否使用校验位定义
 )( 
-	input				clk				,	//系统时钟
+	input				sys_clk				,	//系统时钟
 	input				rst_n			,	//系统复位
 	input           	rx				,	//接收数据线
+
 	output          	rx_data_vld		,	//接收数据有效标志
-	output   [7:0]		rx_data			,	//接收数据
-	output wire 		ready
+	output   [7:0]		rx_data				//接收数据
 );								 
-
-
-
 
 localparam  IDLE   = 'b0001,//空闲状态
 			START  = 'b0010,//开始状态，接收起始位
@@ -48,7 +45,7 @@ reg				rx_r2;//辅助判断开始信号寄存器
 wire			rx_nege;//判断接收到的是下检验 
 
 //用于判断是下降沿而不是抖动
-always @(posedge clk or negedge rst_n) begin
+always @(posedge sys_clk or negedge rst_n) begin
 	if (!rst_n) begin
 		rx_r1 <= 1;
 		rx_r2 <= 1;
@@ -62,7 +59,7 @@ end
 assign rx_nege = ~rx_r1 && rx_r2;
 
 //
-always @(posedge clk or negedge rst_n)begin 
+always @(posedge sys_clk or negedge rst_n)begin 
 	if(!rst_n)begin
 		cnt_baud <= 'd0;
 	end else if(add_cnt_baud)begin //进行单bit的波特率计数
@@ -79,7 +76,7 @@ assign add_cnt_baud = cstate != IDLE;//非空闲状态下，控制波特率计�
 assign end_cnt_baud = add_cnt_baud && cnt_baud == MAX_1bit - 1'd1;//计数完成
 
 //
-always @(posedge clk or negedge rst_n)begin 
+always @(posedge sys_clk or negedge rst_n)begin 
 	if(!rst_n)begin
 		cnt_bit <= 'd0;
 	end	else if(add_cnt_bit)begin //进行接收的数据计数
@@ -112,7 +109,7 @@ assign DATA_CHECK = (cstate == DATA) && end_cnt_bit;//有校验位
 assign CHECK_IDLE = (cstate == CHECK) && end_cnt_bit;//校验位判断完成
 
 //二段式状态机
-always @(posedge clk or negedge rst_n)begin 
+always @(posedge sys_clk or negedge rst_n)begin 
 	if(!rst_n)begin
 		cstate <= IDLE;
 	end else begin 
@@ -158,7 +155,7 @@ endcase
 end
 
 //
-always @(posedge clk or negedge rst_n) begin
+always @(posedge sys_clk or negedge rst_n) begin
 	if (!rst_n) begin
 		rx_check <= 0;
 	end else if (cstate == CHECK && cnt_baud == MAX_1bit >>1) begin//接收信号
@@ -168,7 +165,7 @@ end
 
 assign check_val = (CHECK_BIT == "Odd") ? ~^rx_temp : ^rx_temp;//奇偶校验计算
 
-always @(posedge clk or negedge rst_n) begin
+always @(posedge sys_clk or negedge rst_n) begin
 	if (!rst_n) begin
 		rx_temp <= 0;
 	end else if (cstate == DATA && cnt_baud == MAX_1bit >> 1) begin//接收信号
@@ -177,11 +174,9 @@ always @(posedge clk or negedge rst_n) begin
 		rx_temp <= rx_temp;
 	end
 end
-assign ready = cstate == IDLE;//可接收发送申请
 
 assign rx_data = rx_data_vld?rx_temp:8'd0;//接收数据
-assign rx_data_vld  = (CHECK_BIT == "None") ? DATA_IDLE//判断接收到的数据在奇偶校验的情况下是否有效
-						:(CHECK_IDLE && (check_val == rx_check)) ? 1
-						: 0;
+assign rx_data_vld  = (CHECK_BIT == "None") ? DATA_IDLE://判断接收到的数据在奇偶校验的情况下是否有效
+						(CHECK_IDLE && (check_val == rx_check)) ? 1: 0;
 
 endmodule
