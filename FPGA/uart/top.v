@@ -12,7 +12,10 @@ module top(
   input wire DCLK,
   input wire MOSI,
   output wire MISO,
-  input wire nCS
+  input wire nCS,
+
+  output wire led1,
+  output wire led2
 );
 assign mode = 3'b011;  // 设置模式为011
 
@@ -41,6 +44,7 @@ localparam WAIT_LOW = 3'b100;
 reg [2:0] state;
 reg [15:0] spi_data_buffer; // 缓存SPI数据
 
+assign led1 = spi_data_out_vld; // led1常亮
 // 状态机实现 - 16位转8位并发送
 always @(posedge sys_clk or negedge rst_n) begin
     if (!rst_n) begin
