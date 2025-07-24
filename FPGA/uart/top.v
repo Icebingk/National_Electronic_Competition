@@ -5,6 +5,8 @@ module top(
   input wire rx,
   output wire tx,
 
+  output wire [2:0] mode,
+
   input wire CPHA,
   input wire CPOL,
   input wire DCLK,
@@ -12,57 +14,91 @@ module top(
   output wire MISO,
   input wire nCS
 );
+assign mode = 3'b011;  // 设置模式为011
 
-// 添加内部信号声明
+// 定义内部信号
 wire [7:0] rx_data_out;
 wire rx_valid;
-wire rx_ready = 0;
-wire [15:0] spi_data_out;  // 16位SPI数据
-wire spi_data_out_vld;
-wire tx_ready;
+wire rx_ready;
 
-// 数据分割和发送控制信号
-reg [15:0] spi_data_reg;
+// SPI接口信号(16位)
+wire [15:0] spi_data_out;
+wire spi_data_out_vld;
+reg spi_data_out_ready;
+
+// UART发送接口信号(8位)
 reg [7:0] tx_data_in;
 reg tx_valid;
-reg send_state;  // 0: 发送低8位, 1: 发送高8位
-reg spi_data_received;
+wire tx_ready;
 
-// SPI数据分割和UART发送控制逻辑
+// 16位到8位转换状态机定义
+localparam IDLE = 3'b000;
+localparam SEND_HIGH = 3'b001;
+localparam WAIT_HIGH = 3'b010;
+localparam SEND_LOW = 3'b011;
+localparam WAIT_LOW = 3'b100;
+
+reg [2:0] state;
+reg [15:0] spi_data_buffer; // 缓存SPI数据
+
+// 状态机实现 - 16位转8位并发送
 always @(posedge sys_clk or negedge rst_n) begin
     if (!rst_n) begin
-        spi_data_reg <= 16'b0;
-        tx_data_in <= 8'b0;
+        state <= IDLE;
         tx_valid <= 1'b0;
-        send_state <= 1'b0;
-        spi_data_received <= 1'b0;
+        tx_data_in <= 8'h00;
+        spi_data_out_ready <= 1'b1; // 初始时准备好接收SPI数据
+        spi_data_buffer <= 16'h0000;
     end else begin
-        // 当SPI数据有效时，保存数据并开始发送流程
-        if (spi_data_out_vld && !spi_data_received) begin
-            spi_data_reg <= spi_data_out;
-            spi_data_received <= 1'b1;
-            send_state <= 1'b0;  // 从低8位开始发送
-            tx_data_in <= spi_data_out[7:0];  // 先发送低8位
-            tx_valid <= 1'b1;
-        end
-        // 当UART准备好接收且当前数据被接受时
-        else if (tx_ready && tx_valid && spi_data_received) begin
-            if (send_state == 1'b0) begin
-                // 已发送低8位，准备发送高8位
-                send_state <= 1'b1;
-                tx_data_in <= spi_data_reg[15:8];  // 发送高8位
-                tx_valid <= 1'b1;
-            end else begin
-                // 已发送高8位，完成一次16位数据传输
-                tx_valid <= 1'b0;
-                spi_data_received <= 1'b0;
-                send_state <= 1'b0;
+        case (state)
+            IDLE: begin
+                // 收到SPI数据，准备发送
+                if (spi_data_out_vld && spi_data_out_ready) begin
+                    spi_data_buffer <= spi_data_out; // 缓存SPI数据
+                    spi_data_out_ready <= 1'b0; // 不再接收新数据
+                    state <= SEND_HIGH;
+                end else begin
+                    tx_valid <= 1'b0;
+                    spi_data_out_ready <= 1'b1; // 准备接收SPI数据
+                end
             end
-        end
-        // 如果没有新的SPI数据且不在发送过程中，保持tx_valid为0
-        else if (!spi_data_received) begin
-            tx_valid <= 1'b0;
-        end
+            
+            SEND_HIGH: begin
+                // 发送高8位
+                if (tx_ready) begin
+                    tx_data_in <= spi_data_buffer[15:8]; // 发送高8位
+                    tx_valid <= 1'b1;
+                    state <= WAIT_HIGH;
+                end
+            end
+            
+            WAIT_HIGH: begin
+                // 等待高8位发送完成
+                if (!tx_ready) begin
+                    tx_valid <= 1'b0; // 清除发送请求
+                end else if (tx_ready && !tx_valid) begin
+                    state <= SEND_LOW; // 高8位发送完成，准备发送低8位
+                end
+            end
+            
+            SEND_LOW: begin
+                // 发送低8位
+                if (tx_ready) begin
+                    tx_data_in <= spi_data_buffer[7:0]; // 发送低8位
+                    tx_valid <= 1'b1;
+                    state <= WAIT_LOW;
+                end
+            end
+            
+            WAIT_LOW: begin
+                // 等待低8位发送完成
+                if (!tx_ready) begin
+                    tx_valid <= 1'b0; // 清除发送请求
+                end else if (tx_ready && !tx_valid) begin
+                    state <= IDLE; // 所有数据发送完成，回到空闲状态
+                end
+            end
+        endcase
     end
 end
 
@@ -86,7 +122,7 @@ SPI_control SPI_control_inst (
     .sys_clk(sys_clk),
     .rst_n(rst_n),
 
-    .spi_data_out_ready(!spi_data_out_vld),  // 始终准备接收SPI数据
+    .spi_data_out_ready(spi_data_out_ready),  // 使用标准握手信号
     .spi_data_out(spi_data_out),
     .spi_data_out_vld(spi_data_out_vld),
 

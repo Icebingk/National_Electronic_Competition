@@ -46,6 +46,7 @@ reg        uart_tx_valid;           // UART发送有效标志
 wire [7:0] uart_rx_data;            // UART接收的数据
 wire       uart_rx_valid;           // UART接收数据有效
 wire       uart_tx_ready;           // UART发送器就绪
+reg        uart_rx_ready;           // 内部UART接收准备信号
 
 //-------- 缓冲区状态 --------
 wire rx_buffer_empty = (rx_wr_ptr == rx_rd_ptr);
@@ -66,11 +67,20 @@ assign tx_ready = !tx_buffer_full;
 always @(posedge sys_clk or negedge rst_n) begin
     if (!rst_n) begin
         rx_wr_ptr <= 6'd0;
+        uart_rx_ready <= 1'b0;
     end else begin
-        // 从UART接收模块获取数据
-        if (uart_rx_valid && !rx_buffer_full) begin
+        // UART接收握手协议
+        if (uart_rx_valid && uart_rx_ready) begin
+            // 握手成功，数据写入缓冲区
             rx_buffer[rx_wr_ptr] <= uart_rx_data;
             rx_wr_ptr <= (rx_wr_ptr == RX_BUFFER_SIZE-1) ? 6'd0 : (rx_wr_ptr + 1'b1);
+            uart_rx_ready <= 1'b0;  // 清除ready信号
+        end else if (!uart_rx_valid && !rx_buffer_full) begin
+            // 缓冲区有空间且没有待处理数据时，准备接收
+            uart_rx_ready <= 1'b1;
+        end else if (rx_buffer_full) begin
+            // 缓冲区满时，不准备接收
+            uart_rx_ready <= 1'b0;
         end
     end
 end
@@ -94,7 +104,7 @@ always @(posedge sys_clk or negedge rst_n) begin
         tx_wr_ptr <= 6'd0;
     end else begin
         // 外部模块写入发送数据
-        if (tx_valid && tx_ready) begin
+        if (tx_valid) begin
             tx_buffer[tx_wr_ptr] <= tx_data_in;
             tx_wr_ptr <= (tx_wr_ptr == TX_BUFFER_SIZE-1) ? 6'd0 : (tx_wr_ptr + 1'b1);
         end
@@ -107,7 +117,7 @@ always @(posedge sys_clk or negedge rst_n) begin
         tx_rd_ptr <= 6'd0;
     end else begin
         // UART发送模块读取数据
-        if (current_state == SEND_DATA && uart_tx_ready && uart_tx_valid) begin
+        if (current_state == SEND_DATA && uart_tx_valid) begin
             tx_rd_ptr <= (tx_rd_ptr == TX_BUFFER_SIZE-1) ? 6'd0 : (tx_rd_ptr + 1'b1);
         end
     end
@@ -158,7 +168,7 @@ always @(posedge sys_clk or negedge rst_n) begin
             end
             
             SEND_DATA: begin
-                if (uart_tx_ready && !uart_tx_valid && !tx_buffer_empty) begin
+                if (!uart_tx_valid && !tx_buffer_empty) begin
                     // 从发送缓冲区读取数据发送
                     uart_tx_data <= tx_buffer[tx_rd_ptr];
                     uart_tx_valid <= 1'b1;
@@ -185,6 +195,7 @@ uart_rx #(
     .sys_clk(sys_clk),
     .rst_n(rst_n),
     .rx(rx),
+    .rx_data_ready(uart_rx_ready),       // 使用内部ready信号进行握手
     .rx_data_vld(uart_rx_valid),
     .rx_data(uart_rx_data)
 );
@@ -199,7 +210,7 @@ uart_tx #(
     .rst_n(rst_n),
     .tx_data(uart_tx_data),
     .tx_data_vld(uart_tx_valid),
-    .ready(uart_tx_ready),
+    .tx_data_ready(uart_tx_ready),
     .tx(tx)
 );
 

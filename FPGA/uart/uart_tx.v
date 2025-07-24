@@ -10,7 +10,7 @@ module uart_tx
     input					rst_n		,		//复位信号
     input       [7:0]   	tx_data 	,		//要发送数据
     input               	tx_data_vld	,		//数据有效申请发送
-    output  wire        	ready   	,		//发送空闲，可接收申请
+    output  wire        	tx_data_ready,		//发送空闲，可接收申请
     output  reg         	tx           		//tx发送线
 );								 
 
@@ -27,6 +27,7 @@ reg		[4:0]		nstate     		;
     
 wire				IDLE_START		;//控制IDLE到START状态转换
 wire 				START_DATA		;//控制START到DATA状态转换
+wire 				DATA_STOP		;//控制DATA到STOP状态转换(无校验位)
 wire 				DATA_CHECK		;//控制DATA到CHECK状态转换
 wire 				CHECK_STOP		;//控制CHECK到STOP状态转换
 wire				STOP_IDLE		;//控制STOP到IDLE状态转换
@@ -38,15 +39,22 @@ wire				end_cnt_baud	;//表示波特率计数完成
 reg	[2:0]			cnt_bit			;//计算发送的数据个数
 wire				add_cnt_bit		;//控制数据计数器
 wire				end_cnt_bit		;//表示数据计数器完成
- 
+
 reg 	[3:0]   	bit_max			;//不同状态下要发送的bit数
 reg  	[7:0]   	tx_data_r		;//要发送的数据
-    
+
 wire				check_val		;//校验数据是否有效
-    
+
+//控制状态转换
+assign IDLE_START = (cstate == IDLE) && tx_data_vld;//空闲状态下有数据需要发送
+assign START_DATA = (cstate == START) && end_cnt_bit;//起始位发送完成
+assign DATA_STOP = (cstate == DATA) && end_cnt_bit && CHECK_BIT == "None";//没有校验位的情况
+assign DATA_CHECK = (cstate == DATA) && end_cnt_bit;//有校验位的情况
+assign CHECK_STOP = (cstate ==CHECK) && end_cnt_bit;//校验位发送完成
+assign STOP_IDLE = (cstate == STOP) && end_cnt_bit;//停止位发送完成
 
 always @(posedge sys_clk or negedge rst_n)begin 
-	if(~rst_n)begin
+	if(!rst_n)begin
 		cnt_baud <= 'd0;
 	end else if(add_cnt_baud)begin //如果需要波特率计数
       	if(end_cnt_baud)begin//如果计数完成
@@ -62,7 +70,7 @@ assign end_cnt_baud = add_cnt_baud && cnt_baud == MAX_1bit - 1'd1;//波特率计
     
 //
 always @(posedge sys_clk or negedge rst_n)begin 
-	if(~rst_n)begin
+	if(!rst_n)begin
 		cnt_bit <= 'd0;
 		end 
 	else if(add_cnt_bit)begin //进行发送的数据计数
@@ -89,17 +97,10 @@ always @(*)begin
 	endcase
 end
 
-//控制状态转换
-assign IDLE_START = (cstate == IDLE) && tx_data_vld;//空闲状态下有数据需要发送
-assign START_DATA = (cstate == START) && end_cnt_bit;//起始位发送完成
-assign DATA_STOP = (cstate == DATA) && end_cnt_bit && CHECK_BIT == "None";//没有校验位的情况
-assign DATA_CHECK = (cstate == DATA) && end_cnt_bit;//有校验位的情况
-assign CHECK_STOP = (cstate ==CHECK) && end_cnt_bit;//校验位发送完成
-assign STOP_IDLE = (cstate == STOP) && end_cnt_bit;//停止位发送完成
 
 //状态机转换
 always @(posedge sys_clk or negedge rst_n)begin 
-   	if(~rst_n)begin
+   	if(!rst_n)begin
 		cstate <= IDLE;
 	end else begin 
 		cstate <= nstate;
@@ -152,7 +153,7 @@ end
 
 //要发送的数据
 always @(posedge sys_clk or negedge rst_n) begin
-	if (~rst_n) begin
+	if (!rst_n) begin
 		tx_data_r <= 'd0;
 	end else if (tx_data_vld) begin
 		tx_data_r <= tx_data;
@@ -176,6 +177,6 @@ always @(*)begin
 	endcase
 end            
 
-assign ready = cstate == IDLE;//可接收发送申请
+assign tx_data_ready = cstate == IDLE;//可接收发送申请
      
 endmodule

@@ -15,7 +15,7 @@ module SPI_control (
 
     // input   wire [`DATA_WIDTH-1:0]  data_in,
     // input   wire                    data_in_vld,
-    input   wire [`DATA_WIDTH-1:0]   spi_data_out_ready,
+    input   wire                     spi_data_out_ready,
     output  wire [`DATA_WIDTH-1:0]   spi_data_out,
     output  reg                      spi_data_out_vld,
 
@@ -67,7 +67,7 @@ end
 // 从机接收到的数据通过FIFO缓存
 SPI_Slave_O SPI_Slave_O_inst(
     .clk(sys_clk),
-    .rst(!rst_n),
+    .srst(!rst_n),
 
     .full(full),
     .din(data_out),
@@ -82,7 +82,7 @@ SPI_slave  SPI_slave_inst (
     .sys_clk(sys_clk),
     .rst_n(rst_n),
     
-    .data_in(16'hAA),
+    .data_in(16'hA0A0),
     .data_in_vld(1'b1),
     .data_in_ready(data_in_ready),
 
