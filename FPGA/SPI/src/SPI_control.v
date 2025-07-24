@@ -67,7 +67,7 @@ end
 // 从机接收到的数据通过FIFO缓存
 SPI_Slave_O SPI_Slave_O_inst(
     .clk(sys_clk),
-    .srst(!rst_n),
+    .rst(!rst_n),
 
     .full(full),
     .din(data_out),

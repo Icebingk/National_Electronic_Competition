@@ -74,7 +74,7 @@ always @(posedge sys_clk or negedge rst_n) begin
             
             WAIT_HIGH: begin
                 // 等待高8位发送完成
-                if (!tx_ready) begin
+                if (tx_valid) begin
                     tx_valid <= 1'b0; // 清除发送请求
                 end else if (tx_ready && !tx_valid) begin
                     state <= SEND_LOW; // 高8位发送完成，准备发送低8位
@@ -92,7 +92,7 @@ always @(posedge sys_clk or negedge rst_n) begin
             
             WAIT_LOW: begin
                 // 等待低8位发送完成
-                if (!tx_ready) begin
+                if (tx_valid) begin
                     tx_valid <= 1'b0; // 清除发送请求
                 end else if (tx_ready && !tx_valid) begin
                     state <= IDLE; // 所有数据发送完成，回到空闲状态
