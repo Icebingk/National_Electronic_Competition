@@ -8,6 +8,7 @@ module uart_rx#(
 	input				rst_n			,	//系统复位
 	input           	rx				,	//接收数据线
 
+	input				rx_data_ready		,	//上层模块准备好接收数据
 	output          	rx_data_vld		,	//接收数据有效标志
 	output   [7:0]		rx_data				//接收数据
 );								 
@@ -39,6 +40,10 @@ reg		[3:0]	bit_max;//不同状态下要接收的bit数
 reg		[7:0]	rx_temp;//接收数据寄存器
 reg				rx_check;//校验位寄存器
 wire			check_val;//计算接收到的数据的奇偶校验值
+
+reg		[7:0]	rx_data_reg;//输出数据寄存器
+reg				rx_data_vld_reg;//输出有效标志寄存器
+wire			data_received;//数据接收完成信号
 
 reg				rx_r1;//接收数据信号寄存器
 reg				rx_r2;//辅助判断开始信号寄存器
@@ -165,6 +170,10 @@ end
 
 assign check_val = (CHECK_BIT == "Odd") ? ~^rx_temp : ^rx_temp;//奇偶校验计算
 
+// 数据接收完成检测信号
+assign data_received = (CHECK_BIT == "None") ? DATA_IDLE : 
+					   (CHECK_IDLE && (check_val == rx_check));
+
 always @(posedge sys_clk or negedge rst_n) begin
 	if (!rst_n) begin
 		rx_temp <= 0;
@@ -175,8 +184,24 @@ always @(posedge sys_clk or negedge rst_n) begin
 	end
 end
 
-assign rx_data = rx_data_vld?rx_temp:8'd0;//接收数据
-assign rx_data_vld  = (CHECK_BIT == "None") ? DATA_IDLE://判断接收到的数据在奇偶校验的情况下是否有效
-						(CHECK_IDLE && (check_val == rx_check)) ? 1: 0;
+// 数据输出控制逻辑 - 实现握手协议
+always @(posedge sys_clk or negedge rst_n) begin
+	if (!rst_n) begin
+		rx_data_reg <= 8'd0;
+		rx_data_vld_reg <= 1'b0;
+	end else begin
+		if (data_received && !rx_data_vld_reg) begin
+			// 新数据接收完成，设置输出
+			rx_data_reg <= rx_temp;
+			rx_data_vld_reg <= 1'b1;
+		end else if (rx_data_vld_reg && rx_data_ready) begin
+			// 握手完成，清除有效标志
+			rx_data_vld_reg <= 1'b0;
+		end
+	end
+end
+
+assign rx_data = rx_data_reg;//接收数据
+assign rx_data_vld = rx_data_vld_reg;//数据有效标志
 
 endmodule
