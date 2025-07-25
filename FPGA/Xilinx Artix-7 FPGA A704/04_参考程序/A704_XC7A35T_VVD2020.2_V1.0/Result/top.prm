@@ -1,0 +1,11 @@
+===================================
+Configuration Memory information
+===================================
+File Format        BIN
+Interface          SPIX4
+Size               128M
+Start Address      0x00000000
+End Address        0x07FFFFFF
+
+Addr1         Addr2         Date                    File(s)
+0x00000000    0x0021728B    Feb  5 19:43:24 2025    J:/work/HY/Xilinx/A704/V1.0/PRJ/TCL/../Project/top.runs/impl_1/top.bit

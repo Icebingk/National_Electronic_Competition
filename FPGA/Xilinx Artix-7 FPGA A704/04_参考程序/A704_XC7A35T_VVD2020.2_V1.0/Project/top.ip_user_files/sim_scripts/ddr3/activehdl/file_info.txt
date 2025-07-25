@@ -1,0 +1,2 @@
+ddr3_sim_netlist.v,verilog,xil_defaultlib,../../../../../RTL/ddr_ctrl/ddr3/ddr3_sim_netlist.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

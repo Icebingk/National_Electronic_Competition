@@ -1,0 +1,1141 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Feb  5 19:08:21 2025
+# Process ID: 16648
+# Current directory: J:/work/HY/Xilinx/A704/V1.0/PRJ/Project/top.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: J:/work/HY/Xilinx/A704/V1.0/PRJ/Project/top.runs/synth_1/top.vds
+# Journal file: J:/work/HY/Xilinx/A704/V1.0/PRJ/Project/top.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a35tfgg484-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tfgg484-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 12540
+WARNING: [Synth 8-2611] redeclaration of ansi port tg_wr_data_counts is not allowed [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/example_top.v:646]
+WARNING: [Synth 8-2611] redeclaration of ansi port tg_rd_data_counts is not allowed [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/example_top.v:648]
+WARNING: [Synth 8-2507] parameter declaration becomes local in mig_7series_v4_2_init_mem_pattern_ctr with formal parameter declaration list [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_init_mem_pattern_ctr.v:357]
+WARNING: [Synth 8-6901] identifier 'time_cnt' is used before its declaration [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/uart_state.v:66]
+WARNING: [Synth 8-6901] identifier 'IO_NUM' is used before its declaration [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/top.v:44]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1014.707 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/top.v:3]
+	Parameter IO_NUM bound to: 161 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'clk_ctrl' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/clk_ctrl/clk_ctrl.v:3]
+INFO: [Synth 8-6157] synthesizing module 'sys_clk' [J:/work/HY/Xilinx/A704/V1.0/PRJ/Project/top.runs/synth_1/.Xil/Vivado-16648-Win102023HEYRFQ/realtime/sys_clk_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'sys_clk' (1#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/Project/top.runs/synth_1/.Xil/Vivado-16648-Win102023HEYRFQ/realtime/sys_clk_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'ddr_clk' [J:/work/HY/Xilinx/A704/V1.0/PRJ/Project/top.runs/synth_1/.Xil/Vivado-16648-Win102023HEYRFQ/realtime/ddr_clk_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'ddr_clk' (2#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/Project/top.runs/synth_1/.Xil/Vivado-16648-Win102023HEYRFQ/realtime/ddr_clk_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_ctrl' (3#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/clk_ctrl/clk_ctrl.v:3]
+INFO: [Synth 8-6157] synthesizing module 'rst_ctrl' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/rst_ctrl/rst_ctrl.v:3]
+INFO: [Synth 8-6157] synthesizing module 'BUFGCE' [E:/Vivado/Vivado/2020.2/scripts/rt/data/unisim_comp.v:1093]
+	Parameter CE_TYPE bound to: SYNC - type: string 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_I_INVERTED bound to: 1'b0 
+	Parameter SIM_DEVICE bound to: ULTRASCALE - type: string 
+	Parameter STARTUP_SYNC bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'BUFGCE' (4#1) [E:/Vivado/Vivado/2020.2/scripts/rt/data/unisim_comp.v:1093]
+INFO: [Synth 8-6155] done synthesizing module 'rst_ctrl' (5#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/rst_ctrl/rst_ctrl.v:3]
+INFO: [Synth 8-6157] synthesizing module 'example_top' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/example_top.v:149]
+	Parameter PORT_MODE bound to: BI_MODE - type: string 
+	Parameter DATA_MODE bound to: 4'b0010 
+	Parameter TST_MEM_INSTR_MODE bound to: R_W_INSTR_MODE - type: string 
+	Parameter EYE_TEST bound to: FALSE - type: string 
+	Parameter DATA_PATTERN bound to: DGEN_ALL - type: string 
+	Parameter CMD_PATTERN bound to: CGEN_ALL - type: string 
+	Parameter CMD_WDT bound to: 1023 - type: integer 
+	Parameter WR_WDT bound to: 8191 - type: integer 
+	Parameter RD_WDT bound to: 1023 - type: integer 
+	Parameter SEL_VICTIM_LINE bound to: 0 - type: integer 
+	Parameter BEGIN_ADDRESS bound to: 0 - type: integer 
+	Parameter END_ADDRESS bound to: 16777215 - type: integer 
+	Parameter PRBS_EADDR_MASK_POS bound to: -16777216 - type: integer 
+	Parameter CK_WIDTH bound to: 1 - type: integer 
+	Parameter nCS_PER_RANK bound to: 1 - type: integer 
+	Parameter CKE_WIDTH bound to: 1 - type: integer 
+	Parameter DM_WIDTH bound to: 2 - type: integer 
+	Parameter ODT_WIDTH bound to: 1 - type: integer 
+	Parameter BANK_WIDTH bound to: 3 - type: integer 
+	Parameter COL_WIDTH bound to: 10 - type: integer 
+	Parameter CS_WIDTH bound to: 1 - type: integer 
+	Parameter DQ_WIDTH bound to: 16 - type: integer 
+	Parameter DQS_WIDTH bound to: 2 - type: integer 
+	Parameter DQS_CNT_WIDTH bound to: 1 - type: integer 
+	Parameter DRAM_WIDTH bound to: 8 - type: integer 
+	Parameter ECC bound to: OFF - type: string 
+	Parameter ECC_TEST bound to: OFF - type: string 
+	Parameter nBANK_MACHS bound to: 4 - type: integer 
+	Parameter RANKS bound to: 1 - type: integer 
+	Parameter ROW_WIDTH bound to: 15 - type: integer 
+	Parameter ADDR_WIDTH bound to: 29 - type: integer 
+	Parameter BURST_MODE bound to: 8 - type: string 
+	Parameter CLKIN_PERIOD bound to: 3000 - type: integer 
+	Parameter CLKFBOUT_MULT bound to: 4 - type: integer 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE bound to: 2 - type: integer 
+	Parameter CLKOUT1_DIVIDE bound to: 4 - type: integer 
+	Parameter CLKOUT2_DIVIDE bound to: 64 - type: integer 
+	Parameter CLKOUT3_DIVIDE bound to: 16 - type: integer 
+	Parameter MMCM_VCO bound to: 666 - type: integer 
+	Parameter MMCM_MULT_F bound to: 8 - type: integer 
+	Parameter MMCM_DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter SIMULATION bound to: FALSE - type: string 
+	Parameter TCQ bound to: 100 - type: integer 
+	Parameter DRAM_TYPE bound to: DDR3 - type: string 
+	Parameter nCK_PER_CLK bound to: 4 - type: integer 
+	Parameter DEBUG_PORT bound to: OFF - type: string 
+	Parameter RST_ACT_LOW bound to: 1 - type: integer 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter RANK_WIDTH bound to: 1 - type: integer 
+	Parameter PAYLOAD_WIDTH bound to: 16 - type: integer 
+	Parameter BURST_LENGTH bound to: 8 - type: integer 
+	Parameter APP_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter APP_MASK_WIDTH bound to: 16 - type: integer 
+	Parameter TG_ADDR_WIDTH bound to: 28 - type: integer 
+	Parameter MASK_SIZE bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ddr3' [J:/work/HY/Xilinx/A704/V1.0/PRJ/Project/top.runs/synth_1/.Xil/Vivado-16648-Win102023HEYRFQ/realtime/ddr3_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'ddr3' (6#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/Project/top.runs/synth_1/.Xil/Vivado-16648-Win102023HEYRFQ/realtime/ddr3_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_traffic_gen_top' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_traffic_gen_top.v:78]
+	Parameter TCQ bound to: 100 - type: integer 
+	Parameter SIMULATION bound to: FALSE - type: string 
+	Parameter FAMILY bound to: VIRTEX7 - type: string 
+	Parameter MEM_TYPE bound to: DDR3 - type: string 
+	Parameter TST_MEM_INSTR_MODE bound to: R_W_INSTR_MODE - type: string 
+	Parameter nCK_PER_CLK bound to: 4 - type: integer 
+	Parameter NUM_DQ_PINS bound to: 16 - type: integer 
+	Parameter MEM_BURST_LEN bound to: 8 - type: integer 
+	Parameter MEM_COL_WIDTH bound to: 10 - type: integer 
+	Parameter DATA_WIDTH bound to: 128 - type: integer 
+	Parameter ADDR_WIDTH bound to: 28 - type: integer 
+	Parameter MASK_SIZE bound to: 2 - type: integer 
+	Parameter DATA_MODE bound to: 4'b0010 
+	Parameter BEGIN_ADDRESS bound to: 0 - type: integer 
+	Parameter END_ADDRESS bound to: 16777215 - type: integer 
+	Parameter PRBS_EADDR_MASK_POS bound to: -16777216 - type: integer 
+	Parameter CMDS_GAP_DELAY bound to: 6'b000000 
+	Parameter SEL_VICTIM_LINE bound to: 0 - type: integer 
+	Parameter CMD_WDT bound to: 1023 - type: integer 
+	Parameter WR_WDT bound to: 8191 - type: integer 
+	Parameter RD_WDT bound to: 1023 - type: integer 
+	Parameter EYE_TEST bound to: FALSE - type: string 
+	Parameter PORT_MODE bound to: BI_MODE - type: string 
+	Parameter DATA_PATTERN bound to: DGEN_ALL - type: string 
+	Parameter CMD_PATTERN bound to: CGEN_ALL - type: string 
+	Parameter ADDR_WIDTH_MASK bound to: 30'b000111111111111111111111111111 
+	Parameter ADDR_WIDTH_MASK_1 bound to: 30'b001111111111111111111111111111 
+	Parameter BEGIN_ADDRESS_MASK bound to: 0 - type: integer 
+	Parameter END_ADDRESS_MASK bound to: 16777215 - type: integer 
+	Parameter SHIFT_COUNT bound to: 3 - type: integer 
+	Parameter BEGIN_ADDRESS_INT bound to: 0 - type: integer 
+	Parameter END_ADDRESS_INT bound to: 16777215 - type: integer 
+	Parameter TG_INIT_DATA_MODE bound to: 4'b0010 
+	Parameter CMD_WDT_WIDTH bound to: 10 - type: integer 
+	Parameter RD_WDT_WIDTH bound to: 10 - type: integer 
+	Parameter WR_WDT_WIDTH bound to: 13 - type: integer 
+	Parameter TG_FAMILY bound to: VIRTEX6 - type: string 
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_init_mem_pattern_ctr' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_init_mem_pattern_ctr.v:87]
+	Parameter SIMULATION bound to: FALSE - type: string 
+	Parameter TCQ bound to: 100 - type: integer 
+	Parameter FAMILY bound to: VIRTEX6 - type: string 
+	Parameter MEM_TYPE bound to: DDR3 - type: string 
+	Parameter TST_MEM_INSTR_MODE bound to: R_W_INSTR_MODE - type: string 
+	Parameter MEM_BURST_LEN bound to: 8 - type: integer 
+	Parameter nCK_PER_CLK bound to: 4 - type: integer 
+	Parameter BL_WIDTH bound to: 10 - type: integer 
+	Parameter NUM_DQ_PINS bound to: 16 - type: integer 
+	Parameter CMD_PATTERN bound to: CGEN_ALL - type: string 
+	Parameter BEGIN_ADDRESS bound to: 0 - type: integer 
+	Parameter END_ADDRESS bound to: 16777215 - type: integer 
+	Parameter ADDR_WIDTH bound to: 28 - type: integer 
+	Parameter DWIDTH bound to: 128 - type: integer 
+	Parameter CMD_SEED_VALUE bound to: 1447389059 - type: integer 
+	Parameter DATA_SEED_VALUE bound to: 305419896 - type: integer 
+	Parameter DATA_MODE bound to: 4'b0010 
+	Parameter PORT_MODE bound to: BI_MODE - type: string 
+	Parameter EYE_TEST bound to: FALSE - type: string 
+	Parameter IDLE bound to: 8'b00000001 
+	Parameter INIT_MEM_WRITE bound to: 8'b00000010 
+	Parameter INIT_MEM_READ bound to: 8'b00000100 
+	Parameter TEST_MEM bound to: 8'b00001000 
+	Parameter SINGLE_STEP_WRITE bound to: 8'b00010000 
+	Parameter SINGLE_STEP_READ bound to: 8'b00100000 
+	Parameter CMP_ERROR bound to: 8'b01000000 
+	Parameter SINGLE_CMD_WAIT bound to: 8'b10000000 
+	Parameter BRAM_ADDR bound to: 3'b000 
+	Parameter FIXED_ADDR bound to: 3'b001 
+	Parameter PRBS_ADDR bound to: 3'b010 
+	Parameter SEQUENTIAL_ADDR bound to: 3'b011 
+	Parameter BRAM_INSTR_MODE bound to: 4'b0000 
+	Parameter FIXED_INSTR_MODE bound to: 4'b0001 
+	Parameter R_W_INSTR_MODE bound to: 4'b0010 
+	Parameter RP_WP_INSTR_MODE bound to: 4'b0011 
+	Parameter R_RP_W_WP_INSTR_MODE bound to: 4'b0100 
+	Parameter R_RP_W_WP_REF_INSTR_MODE bound to: 4'b0101 
+	Parameter BRAM_BL_MODE bound to: 2'b00 
+	Parameter FIXED_BL_MODE bound to: 2'b01 
+	Parameter PRBS_BL_MODE bound to: 2'b10 
+	Parameter BRAM_DATAL_MODE bound to: 4'b0000 
+	Parameter FIXED_DATA_MODE bound to: 4'b0001 
+	Parameter ADDR_DATA_MODE bound to: 4'b0010 
+	Parameter HAMMER_DATA_MODE bound to: 4'b0011 
+	Parameter NEIGHBOR_DATA_MODE bound to: 4'b0100 
+	Parameter WALKING1_DATA_MODE bound to: 4'b0101 
+	Parameter WALKING0_DATA_MODE bound to: 4'b0110 
+	Parameter PRBS_DATA_MODE bound to: 4'b0111 
+	Parameter RD_INSTR bound to: 3'b001 
+	Parameter RDP_INSTR bound to: 3'b011 
+	Parameter WR_INSTR bound to: 3'b000 
+	Parameter WRP_INSTR bound to: 3'b010 
+	Parameter REFRESH_INSTR bound to: 3'b100 
+	Parameter NOP_WR_INSTR bound to: 3'b101 
+INFO: [Synth 8-251] Data DQ bus Walking 1's test. [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_init_mem_pattern_ctr.v:583]
+INFO: [Synth 8-251] A single DQ bit is set to 1 and walk through entire DQ bus to test  [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_init_mem_pattern_ctr.v:585]
+INFO: [Synth 8-251] if each DQ bit can be set to 0 or 1  [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_init_mem_pattern_ctr.v:587]
+INFO: [Synth 8-251] Warning ! Fixed Burst Length in this mode is forced to equal to NUM_DQ_PINS [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_init_mem_pattern_ctr.v:601]
+INFO: [Synth 8-251] to ensure '1' always appear on DQ0 of each beginning User Burst [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_init_mem_pattern_ctr.v:603]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_init_mem_pattern_ctr' (7#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_init_mem_pattern_ctr.v:87]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_memc_traffic_gen' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_memc_traffic_gen.v:81]
+	Parameter TCQ bound to: 100 - type: integer 
+	Parameter FAMILY bound to: VIRTEX6 - type: string 
+	Parameter MEM_TYPE bound to: DDR3 - type: string 
+	Parameter SIMULATION bound to: FALSE - type: string 
+	Parameter tCK bound to: 2500 - type: integer 
+	Parameter nCK_PER_CLK bound to: 4 - type: integer 
+	Parameter BL_WIDTH bound to: 10 - type: integer 
+	Parameter MEM_BURST_LEN bound to: 8 - type: integer 
+	Parameter PORT_MODE bound to: BI_MODE - type: string 
+	Parameter DATA_PATTERN bound to: DGEN_ALL - type: string 
+	Parameter CMD_PATTERN bound to: CGEN_ALL - type: string 
+	Parameter ADDR_WIDTH bound to: 28 - type: integer 
+	Parameter BANK_WIDTH bound to: 3 - type: integer 
+	Parameter CMP_DATA_PIPE_STAGES bound to: 0 - type: integer 
+	Parameter MEM_COL_WIDTH bound to: 10 - type: integer 
+	Parameter NUM_DQ_PINS bound to: 16 - type: integer 
+	Parameter SEL_VICTIM_LINE bound to: 0 - type: integer 
+	Parameter DWIDTH bound to: 128 - type: integer 
+	Parameter PRBS_EADDR_MASK_POS bound to: -16777216 - type: integer 
+	Parameter PRBS_SADDR_MASK_POS bound to: 0 - type: integer 
+	Parameter PRBS_EADDR bound to: 16777215 - type: integer 
+	Parameter PRBS_SADDR bound to: 0 - type: integer 
+	Parameter EYE_TEST bound to: FALSE - type: string 
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_read_data_path' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_read_data_path.v:72]
+	Parameter TCQ bound to: 100 - type: integer 
+	Parameter START_ADDR bound to: 0 - type: integer 
+	Parameter nCK_PER_CLK bound to: 4 - type: integer 
+	Parameter MEM_TYPE bound to: DDR3 - type: string 
+	Parameter FAMILY bound to: VIRTEX6 - type: string 
+	Parameter BL_WIDTH bound to: 10 - type: integer 
+	Parameter MEM_BURST_LEN bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 28 - type: integer 
+	Parameter CMP_DATA_PIPE_STAGES bound to: 0 - type: integer 
+	Parameter DATA_PATTERN bound to: DGEN_ALL - type: string 
+	Parameter NUM_DQ_PINS bound to: 16 - type: integer 
+	Parameter DWIDTH bound to: 128 - type: integer 
+	Parameter SEL_VICTIM_LINE bound to: 0 - type: integer 
+	Parameter MEM_COL_WIDTH bound to: 10 - type: integer 
+	Parameter SIMULATION bound to: FALSE - type: string 
+	Parameter ER_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_read_posted_fifo' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_read_posted_fifo.v:69]
+	Parameter TCQ bound to: 100 - type: integer 
+	Parameter FAMILY bound to: VIRTEX6 - type: string 
+	Parameter nCK_PER_CLK bound to: 4 - type: integer 
+	Parameter MEM_BURST_LEN bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter BL_WIDTH bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_afifo' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_afifo.v:69]
+	Parameter TCQ bound to: 100 - type: integer 
+	Parameter DSIZE bound to: 42 - type: integer 
+	Parameter FIFO_DEPTH bound to: 16 - type: integer 
+	Parameter ASIZE bound to: 4 - type: integer 
+	Parameter SYNC bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_afifo' (8#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_afifo.v:69]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_read_posted_fifo' (9#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_read_posted_fifo.v:69]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_rd_data_gen' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_rd_data_gen.v:69]
+	Parameter TCQ bound to: 100 - type: integer 
+	Parameter FAMILY bound to: VIRTEX6 - type: string 
+	Parameter MEM_TYPE bound to: DDR3 - type: string 
+	Parameter nCK_PER_CLK bound to: 4 - type: integer 
+	Parameter MEM_BURST_LEN bound to: 8 - type: integer 
+	Parameter START_ADDR bound to: 0 - type: integer 
+	Parameter ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter BL_WIDTH bound to: 10 - type: integer 
+	Parameter DWIDTH bound to: 128 - type: integer 
+	Parameter DATA_PATTERN bound to: DGEN_ALL - type: string 
+	Parameter NUM_DQ_PINS bound to: 16 - type: integer 
+	Parameter SEL_VICTIM_LINE bound to: 0 - type: integer 
+	Parameter COLUMN_WIDTH bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_s7ven_data_gen' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_s7ven_data_gen.v:85]
+	Parameter DMODE bound to: READ - type: string 
+	Parameter nCK_PER_CLK bound to: 4 - type: integer 
+	Parameter MEM_TYPE bound to: DDR3 - type: string 
+	Parameter TCQ bound to: 100 - type: integer 
+	Parameter BL_WIDTH bound to: 10 - type: integer 
+	Parameter FAMILY bound to: VIRTEX6 - type: string 
+	Parameter EYE_TEST bound to: FALSE - type: string 
+	Parameter ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter MEM_BURST_LEN bound to: 8 - type: integer 
+	Parameter START_ADDR bound to: 0 - type: integer 
+	Parameter DWIDTH bound to: 128 - type: integer 
+	Parameter DATA_PATTERN bound to: DGEN_ALL - type: string 
+	Parameter NUM_DQ_PINS bound to: 16 - type: integer 
+	Parameter COLUMN_WIDTH bound to: 10 - type: integer 
+	Parameter SEL_VICTIM_LINE bound to: 0 - type: integer 
+	Parameter PRBS_WIDTH bound to: 8 - type: integer 
+	Parameter TAPS_VALUE bound to: 8'b10001110 
+	Parameter NUM_WIDTH bound to: 128 - type: integer 
+	Parameter USER_BUS_DWIDTH bound to: 128 - type: integer 
+	Parameter BRAM_DATAL_MODE bound to: 4'b0000 
+	Parameter FIXED_DATA_MODE bound to: 4'b0001 
+	Parameter ADDR_DATA_MODE bound to: 4'b0010 
+	Parameter HAMMER_DATA_MODE bound to: 4'b0011 
+	Parameter NEIGHBOR_DATA_MODE bound to: 4'b0100 
+	Parameter WALKING1_DATA_MODE bound to: 4'b0101 
+	Parameter WALKING0_DATA_MODE bound to: 4'b0110 
+	Parameter PRBS_DATA_MODE bound to: 4'b0111 
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_data_prbs_gen' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_data_prbs_gen.v:70]
+	Parameter TCQ bound to: 100 - type: integer 
+	Parameter EYE_TEST bound to: FALSE - type: string 
+	Parameter PRBS_WIDTH bound to: 32 - type: integer 
+	Parameter SEED_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_data_prbs_gen' (10#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_data_prbs_gen.v:70]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_tg_prbs_gen' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_tg_prbs_gen.v:82]
+	Parameter TCQ bound to: 100 - type: integer 
+	Parameter PRBS_WIDTH bound to: 8 - type: integer 
+	Parameter nCK_PER_CLK bound to: 4 - type: integer 
+	Parameter PRBS_SEQ_LEN_CYCLES bound to: 32 - type: integer 
+	Parameter PRBS_SEQ_LEN_CYCLES_BITS bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_tg_prbs_gen' (11#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_tg_prbs_gen.v:82]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_vio_init_pattern_bram' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_vio_init_pattern_bram.v:70]
+	Parameter TCQ bound to: 100 - type: integer 
+	Parameter START_ADDR bound to: 0 - type: integer 
+	Parameter MEM_BURST_LEN bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter DEPTH bound to: 16 - type: integer 
+	Parameter NUM_DQ_PINS bound to: 16 - type: integer 
+	Parameter SEL_VICTIM_LINE bound to: 0 - type: integer 
+INFO: [Synth 8-226] default block is never used [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_vio_init_pattern_bram.v:284]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_vio_init_pattern_bram' (12#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_vio_init_pattern_bram.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_s7ven_data_gen' (13#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_s7ven_data_gen.v:85]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_rd_data_gen' (14#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_rd_data_gen.v:69]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_afifo__parameterized0' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_afifo.v:69]
+	Parameter TCQ bound to: 100 - type: integer 
+	Parameter DSIZE bound to: 128 - type: integer 
+	Parameter FIFO_DEPTH bound to: 32 - type: integer 
+	Parameter ASIZE bound to: 4 - type: integer 
+	Parameter SYNC bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_afifo__parameterized0' (14#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_afifo.v:69]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_read_data_path' (15#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_read_data_path.v:72]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_write_data_path' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_write_data_path.v:70]
+	Parameter TCQ bound to: 100 - type: integer 
+	Parameter FAMILY bound to: VIRTEX6 - type: string 
+	Parameter MEM_TYPE bound to: DDR3 - type: string 
+	Parameter ADDR_WIDTH bound to: 28 - type: integer 
+	Parameter START_ADDR bound to: 0 - type: integer 
+	Parameter BL_WIDTH bound to: 10 - type: integer 
+	Parameter nCK_PER_CLK bound to: 4 - type: integer 
+	Parameter MEM_BURST_LEN bound to: 8 - type: integer 
+	Parameter DWIDTH bound to: 128 - type: integer 
+	Parameter DATA_PATTERN bound to: DGEN_ALL - type: string 
+	Parameter NUM_DQ_PINS bound to: 16 - type: integer 
+	Parameter SEL_VICTIM_LINE bound to: 0 - type: integer 
+	Parameter MEM_COL_WIDTH bound to: 10 - type: integer 
+	Parameter EYE_TEST bound to: FALSE - type: string 
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_wr_data_gen' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_wr_data_gen.v:70]
+	Parameter TCQ bound to: 100 - type: integer 
+	Parameter FAMILY bound to: VIRTEX6 - type: string 
+	Parameter MEM_BURST_LEN bound to: 8 - type: integer 
+	Parameter START_ADDR bound to: 0 - type: integer 
+	Parameter nCK_PER_CLK bound to: 4 - type: integer 
+	Parameter MEM_TYPE bound to: DDR3 - type: string 
+	Parameter MODE bound to: WR - type: string 
+	Parameter ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter BL_WIDTH bound to: 10 - type: integer 
+	Parameter DWIDTH bound to: 128 - type: integer 
+	Parameter DATA_PATTERN bound to: DGEN_ALL - type: string 
+	Parameter NUM_DQ_PINS bound to: 16 - type: integer 
+	Parameter SEL_VICTIM_LINE bound to: 0 - type: integer 
+	Parameter COLUMN_WIDTH bound to: 10 - type: integer 
+	Parameter EYE_TEST bound to: FALSE - type: string 
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_s7ven_data_gen__parameterized0' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_s7ven_data_gen.v:85]
+	Parameter DMODE bound to: WRITE - type: string 
+	Parameter nCK_PER_CLK bound to: 4 - type: integer 
+	Parameter MEM_TYPE bound to: DDR3 - type: string 
+	Parameter TCQ bound to: 100 - type: integer 
+	Parameter BL_WIDTH bound to: 10 - type: integer 
+	Parameter FAMILY bound to: VIRTEX6 - type: string 
+	Parameter EYE_TEST bound to: FALSE - type: string 
+	Parameter ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter MEM_BURST_LEN bound to: 8 - type: integer 
+	Parameter START_ADDR bound to: 0 - type: integer 
+	Parameter DWIDTH bound to: 128 - type: integer 
+	Parameter DATA_PATTERN bound to: DGEN_ALL - type: string 
+	Parameter NUM_DQ_PINS bound to: 16 - type: integer 
+	Parameter COLUMN_WIDTH bound to: 10 - type: integer 
+	Parameter SEL_VICTIM_LINE bound to: 0 - type: integer 
+	Parameter PRBS_WIDTH bound to: 8 - type: integer 
+	Parameter TAPS_VALUE bound to: 8'b10001110 
+	Parameter NUM_WIDTH bound to: 128 - type: integer 
+	Parameter USER_BUS_DWIDTH bound to: 128 - type: integer 
+	Parameter BRAM_DATAL_MODE bound to: 4'b0000 
+	Parameter FIXED_DATA_MODE bound to: 4'b0001 
+	Parameter ADDR_DATA_MODE bound to: 4'b0010 
+	Parameter HAMMER_DATA_MODE bound to: 4'b0011 
+	Parameter NEIGHBOR_DATA_MODE bound to: 4'b0100 
+	Parameter WALKING1_DATA_MODE bound to: 4'b0101 
+	Parameter WALKING0_DATA_MODE bound to: 4'b0110 
+	Parameter PRBS_DATA_MODE bound to: 4'b0111 
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_s7ven_data_gen__parameterized0' (15#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_s7ven_data_gen.v:85]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_wr_data_gen' (16#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_wr_data_gen.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_write_data_path' (17#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_write_data_path.v:70]
+INFO: [Synth 8-251] Error ! Command access beyond address range [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_memc_traffic_gen.v:375]
+INFO: [Synth 8-251] Assigned Address Space: Start_Address = 0xxxxxxxxx ; End_Addr = 0xxxxxxxxx [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_memc_traffic_gen.v:376]
+INFO: [Synth 8-251] Attempted area = 0xxxxxxxxx [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_memc_traffic_gen.v:377]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_cmd_gen' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_cmd_gen.v:101]
+	Parameter TCQ bound to: 100 - type: integer 
+	Parameter FAMILY bound to: VIRTEX6 - type: string 
+	Parameter MEM_TYPE bound to: DDR3 - type: string 
+	Parameter BL_WIDTH bound to: 10 - type: integer 
+	Parameter MEM_BURST_LEN bound to: 8 - type: integer 
+	Parameter nCK_PER_CLK bound to: 4 - type: integer 
+	Parameter PORT_MODE bound to: BI_MODE - type: string 
+	Parameter NUM_DQ_PINS bound to: 16 - type: integer 
+	Parameter DATA_PATTERN bound to: DGEN_ALL - type: string 
+	Parameter CMD_PATTERN bound to: CGEN_ALL - type: string 
+	Parameter ADDR_WIDTH bound to: 28 - type: integer 
+	Parameter BANK_WIDTH bound to: 3 - type: integer 
+	Parameter DWIDTH bound to: 128 - type: integer 
+	Parameter PIPE_STAGES bound to: 0 - type: integer 
+	Parameter MEM_COL_WIDTH bound to: 10 - type: integer 
+	Parameter PRBS_EADDR_MASK_POS bound to: -16777216 - type: integer 
+	Parameter PRBS_SADDR_MASK_POS bound to: 0 - type: integer 
+	Parameter PRBS_EADDR bound to: 16777215 - type: integer 
+	Parameter PRBS_SADDR bound to: 0 - type: integer 
+	Parameter PRBS_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter INSTR_PRBS_WIDTH bound to: 16 - type: integer 
+	Parameter BL_PRBS_WIDTH bound to: 16 - type: integer 
+	Parameter BRAM_DATAL_MODE bound to: 4'b0000 
+	Parameter FIXED_DATA_MODE bound to: 4'b0001 
+	Parameter ADDR_DATA_MODE bound to: 4'b0010 
+	Parameter HAMMER_DATA_MODE bound to: 4'b0011 
+	Parameter NEIGHBOR_DATA_MODE bound to: 4'b0100 
+	Parameter WALKING1_DATA_MODE bound to: 4'b0101 
+	Parameter WALKING0_DATA_MODE bound to: 4'b0110 
+	Parameter PRBS_DATA_MODE bound to: 4'b0111 
+	Parameter DWIDTH_BY_8 bound to: 16 - type: integer 
+	Parameter LOGB2_MEM_BURST_INT bound to: 3 - type: integer 
+	Parameter BRAM_ADDR bound to: 2'b00 
+	Parameter FIXED_ADDR bound to: 2'b01 
+	Parameter PRBS_ADDR bound to: 2'b10 
+	Parameter SEQUENTIAL_ADDR bound to: 2'b11 
+	Parameter MEM_BURST_INT bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_cmd_prbs_gen' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_cmd_prbs_gen.v:71]
+	Parameter TCQ bound to: 100 - type: integer 
+	Parameter FAMILY bound to: VIRTEX6 - type: string 
+	Parameter MEM_BURST_LEN bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter DWIDTH bound to: 128 - type: integer 
+	Parameter PRBS_CMD bound to: ADDRESS - type: string 
+	Parameter PRBS_WIDTH bound to: 32 - type: integer 
+	Parameter SEED_WIDTH bound to: 32 - type: integer 
+	Parameter PRBS_EADDR_MASK_POS bound to: -16777216 - type: integer 
+	Parameter PRBS_SADDR_MASK_POS bound to: 0 - type: integer 
+	Parameter PRBS_EADDR bound to: 16777215 - type: integer 
+	Parameter PRBS_SADDR bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_cmd_prbs_gen' (18#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_cmd_prbs_gen.v:71]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_cmd_prbs_gen__parameterized0' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_cmd_prbs_gen.v:71]
+	Parameter TCQ bound to: 100 - type: integer 
+	Parameter FAMILY bound to: SPARTAN6 - type: string 
+	Parameter MEM_BURST_LEN bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter DWIDTH bound to: 128 - type: integer 
+	Parameter PRBS_CMD bound to: INSTR - type: string 
+	Parameter PRBS_WIDTH bound to: 20 - type: integer 
+	Parameter SEED_WIDTH bound to: 15 - type: integer 
+	Parameter PRBS_EADDR_MASK_POS bound to: -12288 - type: integer 
+	Parameter PRBS_SADDR_MASK_POS bound to: 8192 - type: integer 
+	Parameter PRBS_EADDR bound to: 8192 - type: integer 
+	Parameter PRBS_SADDR bound to: 8192 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_cmd_prbs_gen__parameterized0' (18#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_cmd_prbs_gen.v:71]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_cmd_prbs_gen__parameterized1' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_cmd_prbs_gen.v:71]
+	Parameter TCQ bound to: 100 - type: integer 
+	Parameter FAMILY bound to: SPARTAN6 - type: string 
+	Parameter MEM_BURST_LEN bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 29 - type: integer 
+	Parameter DWIDTH bound to: 128 - type: integer 
+	Parameter PRBS_CMD bound to: INSTR - type: string 
+	Parameter PRBS_WIDTH bound to: 20 - type: integer 
+	Parameter SEED_WIDTH bound to: 15 - type: integer 
+	Parameter PRBS_EADDR_MASK_POS bound to: -12288 - type: integer 
+	Parameter PRBS_SADDR_MASK_POS bound to: 8192 - type: integer 
+	Parameter PRBS_EADDR bound to: 8192 - type: integer 
+	Parameter PRBS_SADDR bound to: 8192 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_cmd_prbs_gen__parameterized1' (18#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_cmd_prbs_gen.v:71]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_cmd_prbs_gen__parameterized2' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_cmd_prbs_gen.v:71]
+	Parameter TCQ bound to: 100 - type: integer 
+	Parameter FAMILY bound to: VIRTEX6 - type: string 
+	Parameter MEM_BURST_LEN bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter PRBS_CMD bound to: BLEN - type: string 
+	Parameter PRBS_WIDTH bound to: 20 - type: integer 
+	Parameter SEED_WIDTH bound to: 15 - type: integer 
+	Parameter PRBS_EADDR_MASK_POS bound to: -12288 - type: integer 
+	Parameter PRBS_SADDR_MASK_POS bound to: 8192 - type: integer 
+	Parameter PRBS_EADDR bound to: 8192 - type: integer 
+	Parameter PRBS_SADDR bound to: 8192 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_cmd_prbs_gen__parameterized2' (18#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_cmd_prbs_gen.v:71]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_cmd_gen' (19#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_cmd_gen.v:101]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_memc_flow_vcontrol' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_memc_flow_vcontrol.v:70]
+	Parameter TCQ bound to: 100 - type: integer 
+	Parameter nCK_PER_CLK bound to: 4 - type: integer 
+	Parameter NUM_DQ_PINS bound to: 16 - type: integer 
+	Parameter BL_WIDTH bound to: 10 - type: integer 
+	Parameter MEM_BURST_LEN bound to: 8 - type: integer 
+	Parameter FAMILY bound to: VIRTEX6 - type: string 
+	Parameter MEM_TYPE bound to: DDR3 - type: string 
+	Parameter READY bound to: 4'b0001 
+	Parameter READ bound to: 4'b0010 
+	Parameter WRITE bound to: 4'b0100 
+	Parameter CMD_WAIT bound to: 4'b1000 
+	Parameter RD bound to: 3'b001 
+	Parameter RDP bound to: 3'b011 
+	Parameter WR bound to: 3'b000 
+	Parameter WRP bound to: 3'b010 
+	Parameter REFRESH bound to: 3'b100 
+	Parameter NOP bound to: 3'b101 
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_memc_flow_vcontrol' (20#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_memc_flow_vcontrol.v:70]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_tg_status' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_tg_status.v:70]
+	Parameter TCQ bound to: 100 - type: integer 
+	Parameter DWIDTH bound to: 128 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_tg_status' (21#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_tg_status.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_memc_traffic_gen' (22#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_memc_traffic_gen.v:81]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_traffic_gen_top' (23#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/traffic_gen/mig_7series_v4_2_traffic_gen_top.v:78]
+WARNING: [Synth 8-689] width (29) of port connection 'memc_cmd_addr' does not match port width (32) of module 'mig_7series_v4_2_traffic_gen_top' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/example_top.v:1006]
+INFO: [Synth 8-6155] done synthesizing module 'example_top' (24#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/example_top.v:149]
+INFO: [Synth 8-6157] synthesizing module 'led_ctrl' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/led_ctrl/led_ctrl.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'led_ctrl' (25#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/led_ctrl/led_ctrl.v:2]
+INFO: [Synth 8-6157] synthesizing module 'xadc_temp' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/xadc_temp/xadc_temp.v:69]
+	Parameter TCQ bound to: 100 - type: integer 
+	Parameter TEMP_MON_CONTROL bound to: INTERNAL - type: string 
+	Parameter XADC_CLK_PERIOD bound to: 5000 - type: integer 
+	Parameter tTEMPSAMPLE bound to: 10000000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'XADC' [E:/Vivado/Vivado/2020.2/scripts/rt/data/unisim_comp.v:82182]
+	Parameter INIT_40 bound to: 16'b0001000000000000 
+	Parameter INIT_41 bound to: 16'b0010111111111111 
+	Parameter INIT_42 bound to: 16'b0000100000000000 
+	Parameter INIT_43 bound to: 16'b0000000000000000 
+	Parameter INIT_44 bound to: 16'b0000000000000000 
+	Parameter INIT_45 bound to: 16'b0000000000000000 
+	Parameter INIT_46 bound to: 16'b0000000000000000 
+	Parameter INIT_47 bound to: 16'b0000000000000000 
+	Parameter INIT_48 bound to: 16'b0000000100000001 
+	Parameter INIT_49 bound to: 16'b0000000000000000 
+	Parameter INIT_4A bound to: 16'b0000000100000000 
+	Parameter INIT_4B bound to: 16'b0000000000000000 
+	Parameter INIT_4C bound to: 16'b0000000000000000 
+	Parameter INIT_4D bound to: 16'b0000000000000000 
+	Parameter INIT_4E bound to: 16'b0000000000000000 
+	Parameter INIT_4F bound to: 16'b0000000000000000 
+	Parameter INIT_50 bound to: 16'b1011010111101101 
+	Parameter INIT_51 bound to: 16'b0101011111100100 
+	Parameter INIT_52 bound to: 16'b1010000101000111 
+	Parameter INIT_53 bound to: 16'b1100101000110011 
+	Parameter INIT_54 bound to: 16'b1010100100111010 
+	Parameter INIT_55 bound to: 16'b0101001011000110 
+	Parameter INIT_56 bound to: 16'b1001010101010101 
+	Parameter INIT_57 bound to: 16'b1010111001001110 
+	Parameter INIT_58 bound to: 16'b0101100110011001 
+	Parameter INIT_59 bound to: 16'b0000000000000000 
+	Parameter INIT_5A bound to: 16'b0000000000000000 
+	Parameter INIT_5B bound to: 16'b0000000000000000 
+	Parameter INIT_5C bound to: 16'b0101000100010001 
+	Parameter INIT_5D bound to: 16'b0000000000000000 
+	Parameter INIT_5E bound to: 16'b0000000000000000 
+	Parameter INIT_5F bound to: 16'b0000000000000000 
+	Parameter IS_CONVSTCLK_INVERTED bound to: 1'b0 
+	Parameter IS_DCLK_INVERTED bound to: 1'b0 
+	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
+	Parameter SIM_MONITOR_FILE bound to: design.txt - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'XADC' (26#1) [E:/Vivado/Vivado/2020.2/scripts/rt/data/unisim_comp.v:82182]
+INFO: [Synth 8-6155] done synthesizing module 'xadc_temp' (27#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/xadc_temp/xadc_temp.v:69]
+INFO: [Synth 8-6157] synthesizing module 'uart_top' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/uart_top.v:21]
+INFO: [Synth 8-6157] synthesizing module 'uart_state' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/uart_state.v:21]
+	Parameter I1 bound to: 0 - type: integer 
+	Parameter I2 bound to: 50 - type: integer 
+	Parameter I3 bound to: 80 - type: integer 
+	Parameter I4 bound to: 110 - type: integer 
+	Parameter I5 bound to: 130 - type: integer 
+	Parameter I6 bound to: 150 - type: integer 
+	Parameter I7 bound to: 180 - type: integer 
+	Parameter I8 bound to: 210 - type: integer 
+	Parameter I9 bound to: 241 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'device_temp_ascii_dis' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/device_temp_ascii_dis.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'device_temp_ascii_dis' (28#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/device_temp_ascii_dis.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ascii_code' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/ascii_code.v:3]
+	Parameter DATA_IN_WIDTH bound to: 4 - type: integer 
+	Parameter DATA_OUT_WIDTH bound to: 8 - type: integer 
+	Parameter NUM bound to: 1 - type: integer 
+INFO: [Synth 8-226] default block is never used [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/ascii_code.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'ascii_code' (29#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/ascii_code.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ascii_code__parameterized0' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/ascii_code.v:3]
+	Parameter DATA_IN_WIDTH bound to: 48 - type: integer 
+	Parameter DATA_OUT_WIDTH bound to: 96 - type: integer 
+	Parameter NUM bound to: 12 - type: integer 
+INFO: [Synth 8-226] default block is never used [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/ascii_code.v:28]
+INFO: [Synth 8-226] default block is never used [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/ascii_code.v:28]
+INFO: [Synth 8-226] default block is never used [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/ascii_code.v:28]
+INFO: [Synth 8-226] default block is never used [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/ascii_code.v:28]
+INFO: [Synth 8-226] default block is never used [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/ascii_code.v:28]
+INFO: [Synth 8-226] default block is never used [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/ascii_code.v:28]
+INFO: [Synth 8-226] default block is never used [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/ascii_code.v:28]
+INFO: [Synth 8-226] default block is never used [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/ascii_code.v:28]
+INFO: [Synth 8-226] default block is never used [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/ascii_code.v:28]
+INFO: [Synth 8-226] default block is never used [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/ascii_code.v:28]
+INFO: [Synth 8-226] default block is never used [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/ascii_code.v:28]
+INFO: [Synth 8-226] default block is never used [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/ascii_code.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'ascii_code__parameterized0' (29#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/ascii_code.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'uart_state' (30#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/uart_state.v:21]
+INFO: [Synth 8-6157] synthesizing module 'reset_bridge' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/reset_bridge.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'reset_bridge' (31#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/reset_bridge.v:35]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/uart_tx/uart_tx.v:35]
+	Parameter BAUD_RATE bound to: 57600 - type: integer 
+	Parameter CLOCK_RATE bound to: 50000000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'uart_baud_gen' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/uart_tx/uart_baud_gen.v:35]
+	Parameter BAUD_RATE bound to: 57600 - type: integer 
+	Parameter CLOCK_RATE bound to: 50000000 - type: integer 
+	Parameter OVERSAMPLE_RATE bound to: 921600 - type: integer 
+	Parameter DIVIDER bound to: 54 - type: integer 
+	Parameter OVERSAMPLE_VALUE bound to: 53 - type: integer 
+	Parameter CNT_WID bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_baud_gen' (32#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/uart_tx/uart_baud_gen.v:35]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx_ctl' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/uart_tx/uart_tx_ctl.v:60]
+	Parameter IDLE bound to: 2'b00 
+	Parameter START bound to: 2'b01 
+	Parameter DATA bound to: 2'b10 
+	Parameter STOP bound to: 2'b11 
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx_ctl' (33#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/uart_tx/uart_tx_ctl.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (34#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/uart_tx/uart_tx.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'uart_top' (35#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/uart_ctrl/uart_top.v:21]
+INFO: [Synth 8-6157] synthesizing module 'io_test' [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/io_test/io_test.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'io_test' (36#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/io_test/io_test.v:2]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'UU1'. This will prevent further optimization [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/top.v:78]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'UU2'. This will prevent further optimization [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/top.v:96]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'UU3'. This will prevent further optimization [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/top.v:109]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'UU6'. This will prevent further optimization [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/top.v:160]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'UU4'. This will prevent further optimization [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/top.v:137]
+INFO: [Synth 8-6155] done synthesizing module 'top' (37#1) [J:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/top.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1017.898 ; gain = 3.191
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1017.898 ; gain = 3.191
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1017.898 ; gain = 3.191
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.325 . Memory (MB): peak = 1017.898 ; gain = 0.000
+WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'UU2/BUFGCE_inst' of type 'BUFGCE' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'UU2/BUFGCE_inst' of type 'BUFGCTRL' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc] for cell 'UU3/u_ddr3'
+Finished Parsing XDC File [j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc] for cell 'UU3/u_ddr3'
+Parsing XDC File [J:/work/HY/Xilinx/A704/V1.0/PRJ/Project/top.runs/synth_1/.Xil/Vivado-16648-Win102023HEYRFQ/ddr_clk/ddr_clk/ddr_clk_in_context.xdc] for cell 'UU1/U1_ddr_clk'
+Finished Parsing XDC File [J:/work/HY/Xilinx/A704/V1.0/PRJ/Project/top.runs/synth_1/.Xil/Vivado-16648-Win102023HEYRFQ/ddr_clk/ddr_clk/ddr_clk_in_context.xdc] for cell 'UU1/U1_ddr_clk'
+Parsing XDC File [J:/work/HY/Xilinx/A704/V1.0/PRJ/Project/top.runs/synth_1/.Xil/Vivado-16648-Win102023HEYRFQ/sys_clk/sys_clk/sys_clk_in_context.xdc] for cell 'UU1/U0_sys_clk'
+Finished Parsing XDC File [J:/work/HY/Xilinx/A704/V1.0/PRJ/Project/top.runs/synth_1/.Xil/Vivado-16648-Win102023HEYRFQ/sys_clk/sys_clk/sys_clk_in_context.xdc] for cell 'UU1/U0_sys_clk'
+Parsing XDC File [J:/work/HY/Xilinx/A704/V1.0/PRJ/XDC/debug.xdc]
+Finished Parsing XDC File [J:/work/HY/Xilinx/A704/V1.0/PRJ/XDC/debug.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [J:/work/HY/Xilinx/A704/V1.0/PRJ/XDC/debug.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [J:/work/HY/Xilinx/A704/V1.0/PRJ/XDC/io_test.xdc]
+Finished Parsing XDC File [J:/work/HY/Xilinx/A704/V1.0/PRJ/XDC/io_test.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [J:/work/HY/Xilinx/A704/V1.0/PRJ/XDC/io_test.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [J:/work/HY/Xilinx/A704/V1.0/PRJ/XDC/pin.xdc]
+Finished Parsing XDC File [J:/work/HY/Xilinx/A704/V1.0/PRJ/XDC/pin.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [J:/work/HY/Xilinx/A704/V1.0/PRJ/XDC/pin.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [J:/work/HY/Xilinx/A704/V1.0/PRJ/XDC/timing.xdc]
+Finished Parsing XDC File [J:/work/HY/Xilinx/A704/V1.0/PRJ/XDC/timing.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [J:/work/HY/Xilinx/A704/V1.0/PRJ/XDC/timing.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [J:/work/HY/Xilinx/A704/V1.0/PRJ/Project/top.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [J:/work/HY/Xilinx/A704/V1.0/PRJ/Project/top.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1151.105 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  BUFGCE => BUFGCTRL: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.081 . Memory (MB): peak = 1151.105 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1151.105 ; gain = 136.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tfgg484-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1151.105 ; gain = 136.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[0]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 2).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[0]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 3).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[10]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[10]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[11]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[11]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[12]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[12]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[13]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[13]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[14]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[14]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[1]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[1]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[2]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[2]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[3]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 18).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[3]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[4]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 20).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[4]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 21).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[5]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 22).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[5]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 23).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[6]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 24).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[6]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 25).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[7]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 26).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[7]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 27).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[8]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 28).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[8]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 29).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[9]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 30).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[9]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 31).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[0]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 32).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[0]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 33).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[1]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 34).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[1]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 35).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[2]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 36).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[2]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 37).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cas_n. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 38).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cas_n. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 39).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ck_n[0]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 40).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ck_n[0]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 41).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ck_p[0]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 42).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ck_p[0]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 43).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cke[0]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 44).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cke[0]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 45).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[0]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 46).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[0]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 47).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[1]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 48).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[1]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 49).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[0]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 50).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[0]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 51).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[10]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 52).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[10]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 53).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[11]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 54).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[11]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 55).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[12]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 56).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[12]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 57).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[13]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 58).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[13]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 59).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[14]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 60).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[14]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 61).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[15]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 62).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[15]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 63).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[1]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 64).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[1]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 65).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[2]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 66).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[2]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 67).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[3]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 68).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[3]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 69).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[4]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 70).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[4]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 71).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[5]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 72).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[5]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 73).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[6]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 74).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[6]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 75).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[7]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 76).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[7]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 77).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[8]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 78).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[8]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 79).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[9]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 80).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[9]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 81).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[0]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 82).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[0]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 83).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[1]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 84).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[1]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 85).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[0]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 86).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[0]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 87).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[1]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 88).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[1]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 89).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_odt[0]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 90).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_odt[0]. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 91).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ras_n. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 92).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ras_n. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 93).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_reset_n. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 94).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_reset_n. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 95).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_we_n. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 96).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_we_n. (constraint file  j:/work/HY/Xilinx/A704/V1.0/PRJ/RTL/ddr_ctrl/ddr3/ddr3/ddr3_in_context.xdc, line 97).
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clk. (constraint file  J:/work/HY/Xilinx/A704/V1.0/PRJ/Project/top.runs/synth_1/.Xil/Vivado-16648-Win102023HEYRFQ/sys_clk/sys_clk/sys_clk_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clk. (constraint file  J:/work/HY/Xilinx/A704/V1.0/PRJ/Project/top.runs/synth_1/.Xil/Vivado-16648-Win102023HEYRFQ/sys_clk/sys_clk/sys_clk_in_context.xdc, line 5).
+Applied set_property KEEP_HIERARCHY = SOFT for UU3/u_ddr3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for UU1/U1_ddr_clk. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for UU1/U0_sys_clk. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1151.105 ; gain = 136.398
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'mig_7series_v4_2_init_mem_pattern_ctr'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'mig_7series_v4_2_memc_flow_vcontrol'
+INFO: [Synth 8-802] inferred FSM for state register 'xadc_supplied_temperature.tempmon_state_reg' in module 'xadc_temp'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_tx_ctl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                         00000001 |                         00000001
+       SINGLE_STEP_WRITE |                         00010000 |                         00010000
+          INIT_MEM_WRITE |                         00000010 |                         00000010
+                TEST_MEM |                         00001000 |                         00001000
+         SINGLE_CMD_WAIT |                         10000000 |                         10000000
+        SINGLE_STEP_READ |                         00100000 |                         00100000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'mig_7series_v4_2_init_mem_pattern_ctr'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                   READY |                             0001 |                             0001
+                    READ |                             0010 |                             0010
+                   WRITE |                             0100 |                             0100
+                CMD_WAIT |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'mig_7series_v4_2_memc_flow_vcontrol'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+               INIT_IDLE |                             0001 |                              000
+       REQUEST_READ_TEMP |                             1000 |                              001
+           WAIT_FOR_READ |                             0100 |                              010
+                    READ |                             0010 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'xadc_supplied_temperature.tempmon_state_reg' using encoding 'one-hot' in module 'xadc_temp'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE1 |                               00 |                               00
+                 iSTATE2 |                               01 |                               01
+                  iSTATE |                               10 |                               10
+                 iSTATE0 |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_tx_ctl'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1151.105 ; gain = 136.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   36 Bit       Adders := 1     
+	   3 Input   33 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 4     
+	   2 Input   28 Bit       Adders := 3     
+	   2 Input   26 Bit       Adders := 1     
+	   2 Input   24 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 4     
+	   2 Input   10 Bit       Adders := 4     
+	   2 Input    9 Bit       Adders := 5     
+	   2 Input    8 Bit       Adders := 33    
+	   2 Input    7 Bit       Adders := 2     
+	   3 Input    7 Bit       Adders := 2     
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 38    
+	   3 Input    5 Bit       Adders := 4     
+	   2 Input    4 Bit       Adders := 7     
+	   2 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 140   
+	   3 Input      1 Bit         XORs := 128   
+	   4 Input      1 Bit         XORs := 96    
++---Registers : 
+	              320 Bit    Registers := 1     
+	              128 Bit    Registers := 9     
+	               36 Bit    Registers := 1     
+	               32 Bit    Registers := 18    
+	               28 Bit    Registers := 4     
+	               26 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               20 Bit    Registers := 3     
+	               16 Bit    Registers := 28    
+	               13 Bit    Registers := 1     
+	               12 Bit    Registers := 7     
+	               11 Bit    Registers := 5     
+	               10 Bit    Registers := 7     
+	                9 Bit    Registers := 5     
+	                8 Bit    Registers := 107   
+	                7 Bit    Registers := 3     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 36    
+	                4 Bit    Registers := 21    
+	                3 Bit    Registers := 10    
+	                2 Bit    Registers := 6     
+	                1 Bit    Registers := 304   
++---RAMs : 
+	               2K Bit	(16 X 128 bit)          RAMs := 1     
+	              672 Bit	(16 X 42 bit)          RAMs := 1     
+	              128 Bit	(16 X 8 bit)          RAMs := 8     
++---Muxes : 
+	   4 Input  128 Bit        Muxes := 2     
+	   7 Input  128 Bit        Muxes := 2     
+	   2 Input  127 Bit        Muxes := 2     
+	   2 Input   46 Bit        Muxes := 1     
+	   3 Input   45 Bit        Muxes := 1     
+	   2 Input   36 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 22    
+	   2 Input   26 Bit        Muxes := 1     
+	   2 Input   20 Bit        Muxes := 3     
+	   3 Input   16 Bit        Muxes := 2     
+	   2 Input   16 Bit        Muxes := 2     
+	   2 Input   13 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 10    
+	   2 Input   10 Bit        Muxes := 18    
+	   9 Input   10 Bit        Muxes := 1     
+	   3 Input   10 Bit        Muxes := 3     
+	   4 Input   10 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 1     
+	   9 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 108   
+	  96 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 1     
+	 242 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 5     
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 45    
+	   9 Input    4 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 12    
+	   6 Input    4 Bit        Muxes := 2     
+	   3 Input    4 Bit        Muxes := 4     
+	   5 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 8     
+	   9 Input    3 Bit        Muxes := 2     
+	   4 Input    3 Bit        Muxes := 2     
+	   8 Input    3 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 9     
+	   9 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 165   
+	   9 Input    1 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 3     
+	   5 Input    1 Bit        Muxes := 3     
+	   4 Input    1 Bit        Muxes := 3     
+	 141 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP device_temp_mul, operation Mode is: A*(B:0x1f8).
+DSP Report: operator device_temp_mul is absorbed into DSP device_temp_mul.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:57 ; elapsed = 00:01:02 . Memory (MB): peak = 1151.105 ; gain = 136.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping	Report (see note below)
++-------------------------------------------+--------------------------------------------------------+-----------+----------------------+-------------+
+|Module Name                                | RTL Object                                             | Inference | Size (Depth x Width) | Primitives  | 
++-------------------------------------------+--------------------------------------------------------+-----------+----------------------+-------------+
+|UU3/\u_traffic_gen_top/u_memc_traffic_gen  | RD_PATH.read_data_path/read_postedfifo/rd_fifo/mem_reg | Implied   | 16 x 42              | RAM32M x 7	 | 
++-------------------------------------------+--------------------------------------------------------+-----------+----------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping	Report (see note below)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|uart_state  | A*(B:0x1f8) | 12     | 9      | -      | -      | 21     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:13 ; elapsed = 00:01:19 . Memory (MB): peak = 1151.105 ; gain = 136.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:01:20 . Memory (MB): peak = 1157.773 ; gain = 143.066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping	Report
++-------------------------------------------+--------------------------------------------------------+-----------+----------------------+-------------+
+|Module Name                                | RTL Object                                             | Inference | Size (Depth x Width) | Primitives  | 
++-------------------------------------------+--------------------------------------------------------+-----------+----------------------+-------------+
+|UU3/\u_traffic_gen_top/u_memc_traffic_gen  | RD_PATH.read_data_path/read_postedfifo/rd_fifo/mem_reg | Implied   | 16 x 42              | RAM32M x 7	 | 
++-------------------------------------------+--------------------------------------------------------+-----------+----------------------+-------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:17 ; elapsed = 00:01:22 . Memory (MB): peak = 1168.852 ; gain = 154.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:22 ; elapsed = 00:01:28 . Memory (MB): peak = 1168.852 ; gain = 154.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:22 ; elapsed = 00:01:28 . Memory (MB): peak = 1168.852 ; gain = 154.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:23 ; elapsed = 00:01:28 . Memory (MB): peak = 1168.852 ; gain = 154.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:23 ; elapsed = 00:01:28 . Memory (MB): peak = 1168.852 ; gain = 154.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:23 ; elapsed = 00:01:29 . Memory (MB): peak = 1168.852 ; gain = 154.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:23 ; elapsed = 00:01:29 . Memory (MB): peak = 1168.852 ; gain = 154.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |sys_clk       |         1|
+|2     |ddr_clk       |         1|
+|3     |ddr3          |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |ddr3    |     1|
+|2     |ddr_clk |     1|
+|3     |sys_clk |     1|
+|4     |BUFGCE  |     1|
+|5     |CARRY4  |   123|
+|6     |DSP48E1 |     1|
+|7     |LUT1    |    41|
+|8     |LUT2    |   194|
+|9     |LUT3    |   223|
+|10    |LUT4    |   163|
+|11    |LUT5    |   234|
+|12    |LUT6    |   350|
+|13    |MUXF7   |    20|
+|14    |MUXF8   |     1|
+|15    |RAM32M  |     6|
+|16    |XADC    |     1|
+|17    |FDCE    |   273|
+|18    |FDPE    |     3|
+|19    |FDRE    |   671|
+|20    |FDSE    |    23|
+|21    |IBUF    |     1|
+|22    |OBUF    |   164|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:23 ; elapsed = 00:01:29 . Memory (MB): peak = 1168.852 ; gain = 154.145
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:03 ; elapsed = 00:01:21 . Memory (MB): peak = 1168.852 ; gain = 20.938
+Synthesis Optimization Complete : Time (s): cpu = 00:01:23 ; elapsed = 00:01:29 . Memory (MB): peak = 1168.852 ; gain = 154.145
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.097 . Memory (MB): peak = 1168.852 ; gain = 0.000
+WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'UU2/BUFGCE_inst' of type 'BUFGCE' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
+INFO: [Netlist 29-17] Analyzing 153 Unisim elements for replacement
+WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'UU2/BUFGCE_inst' of type 'BUFGCTRL' is 'ULTRASCALE'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist. 
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1168.852 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 7 instances were transformed.
+  BUFGCE => BUFGCTRL: 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 6 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+141 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:34 ; elapsed = 00:01:43 . Memory (MB): peak = 1168.852 ; gain = 154.145
+INFO: [Common 17-1381] The checkpoint 'J:/work/HY/Xilinx/A704/V1.0/PRJ/Project/top.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Feb  5 19:10:19 2025...

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Feb  5 19:08:21 2025
+# Process ID: 16648
+# Current directory: J:/work/HY/Xilinx/A704/V1.0/PRJ/Project/top.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: J:/work/HY/Xilinx/A704/V1.0/PRJ/Project/top.runs/synth_1/top.vds
+# Journal file: J:/work/HY/Xilinx/A704/V1.0/PRJ/Project/top.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace

@@ -1,0 +1,4 @@
+xpm_cdc.sv,systemverilog,xpm,E:/Vivado/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv,incdir="../../../ip/sys_clk"
+xpm_VCOMP.vhd,vhdl,xpm,E:/Vivado/Vivado/2020.2/data/ip/xpm/xpm_VCOMP.vhd,incdir="../../../ip/sys_clk"
+sys_clk_sim_netlist.v,verilog,xil_defaultlib,../../../ip/sys_clk/sys_clk_sim_netlist.v,incdir="../../../ip/sys_clk"
+glbl.v,Verilog,xil_defaultlib,glbl.v

@@ -12,100 +12,36 @@ module top(
   input wire DCLK,
   input wire MOSI,
   output wire MISO,
-  input wire nCS,
-
-  output wire led1,
-  output wire led2
+  input wire nCS
 );
-assign mode = 3'b011;  // 设置模式为011
 
-// 定义内部信号
-wire [7:0] rx_data_out;
-wire rx_valid;
-wire rx_ready;
+// 内部信号定义
+wire [7:0] rx_data_out;      // UART接收数据
+wire rx_valid;               // UART接收数据有效
+wire rx_ready;               // UART接收就绪
 
-// SPI接口信号(16位)
-wire [15:0] spi_data_out;
-wire spi_data_out_vld;
-reg spi_data_out_ready;
+wire [7:0] tx_data_in;       // UART发送数据
+wire tx_valid;               // UART发送数据有效
+wire tx_ready;               // UART发送就绪
 
-// UART发送接口信号(8位)
-reg [7:0] tx_data_in;
-reg tx_valid;
-wire tx_ready;
+wire [15:0] spi_rx_data;     // SPI接收到的16位数据
+wire spi_rx_data_vld;        // SPI接收数据有效
+wire spi_rx_data_ready;      // SPI接收就绪
 
-// 16位到8位转换状态机定义
-localparam IDLE = 3'b000;
-localparam SEND_HIGH = 3'b001;
-localparam WAIT_HIGH = 3'b010;
-localparam SEND_LOW = 3'b011;
-localparam WAIT_LOW = 3'b100;
+wire [15:0] spi_tx_data;     // 发送给SPI的16位数据
+wire spi_tx_data_vld;        // SPI发送数据有效
+wire spi_tx_data_ready;      // SPI发送就绪
 
-reg [2:0] state;
-reg [15:0] spi_data_buffer; // 缓存SPI数据
+// 状态机定义
+reg [1:0] state;
+localparam IDLE = 2'b00;
+localparam SEND_LOW = 2'b01;
+localparam SEND_HIGH = 2'b10;
 
-assign led1 = spi_data_out_vld; // led1常亮
-// 状态机实现 - 16位转8位并发送
-always @(posedge sys_clk or negedge rst_n) begin
-    if (!rst_n) begin
-        state <= IDLE;
-        tx_valid <= 1'b0;
-        tx_data_in <= 8'h00;
-        spi_data_out_ready <= 1'b1; // 初始时准备好接收SPI数据
-        spi_data_buffer <= 16'h0000;
-    end else begin
-        case (state)
-            IDLE: begin
-                // 收到SPI数据，准备发送
-                if (spi_data_out_vld && spi_data_out_ready) begin
-                    spi_data_buffer <= spi_data_out; // 缓存SPI数据
-                    spi_data_out_ready <= 1'b0; // 不再接收新数据
-                    state <= SEND_HIGH;
-                end else begin
-                    tx_valid <= 1'b0;
-                    spi_data_out_ready <= 1'b1; // 准备接收SPI数据
-                end
-            end
-            
-            SEND_HIGH: begin
-                // 发送高8位
-                if (tx_ready) begin
-                    tx_data_in <= spi_data_buffer[15:8]; // 发送高8位
-                    tx_valid <= 1'b1;
-                    state <= WAIT_HIGH;
-                end
-            end
-            
-            WAIT_HIGH: begin
-                // 等待高8位发送完成
-                if (tx_valid) begin
-                    tx_valid <= 1'b0; // 清除发送请求
-                end else if (tx_ready && !tx_valid) begin
-                    state <= SEND_LOW; // 高8位发送完成，准备发送低8位
-                end
-            end
-            
-            SEND_LOW: begin
-                // 发送低8位
-                if (tx_ready) begin
-                    tx_data_in <= spi_data_buffer[7:0]; // 发送低8位
-                    tx_valid <= 1'b1;
-                    state <= WAIT_LOW;
-                end
-            end
-            
-            WAIT_LOW: begin
-                // 等待低8位发送完成
-                if (tx_valid) begin
-                    tx_valid <= 1'b0; // 清除发送请求
-                end else if (tx_ready && !tx_valid) begin
-                    state <= IDLE; // 所有数据发送完成，回到空闲状态
-                end
-            end
-        endcase
-    end
-end
+// 数据缓存寄存器
+reg [15:0] data_buffer;
 
+// UART实例
 uart uart_inst (
     .sys_clk(sys_clk),
     .rst_n(rst_n),
@@ -122,13 +58,25 @@ uart uart_inst (
     .tx_ready(tx_ready)
 );
 
+ila_0 ila_0_inst(
+    .clk(sys_clk),
+    .probe0(spi_rx_data),
+    .probe1(spi_rx_data_vld),
+    .probe2(spi_rx_data_ready)
+);
+
+// SPI控制实例
 SPI_control SPI_control_inst (
     .sys_clk(sys_clk),
     .rst_n(rst_n),
 
-    .spi_data_out_ready(spi_data_out_ready),  // 使用标准握手信号
-    .spi_data_out(spi_data_out),
-    .spi_data_out_vld(spi_data_out_vld),
+    .tx_data_in(spi_tx_data),
+    .tx_data_in_vld(spi_tx_data_vld),
+    .tx_data_in_ready(spi_tx_data_ready),
+
+    .rx_data_out(spi_rx_data),
+    .rx_data_out_vld(spi_rx_data_vld),
+    .rx_data_out_ready(spi_rx_data_ready),
 
     .CPHA(CPHA),
     .CPOL(CPOL),
@@ -137,5 +85,57 @@ SPI_control SPI_control_inst (
     .MISO(MISO),
     .nCS(nCS)
 );
+
+// 状态机实现 - 控制16位SPI数据分两次发送给UART
+always @(posedge sys_clk or negedge rst_n) begin
+    if (!rst_n) begin
+        state <= IDLE;
+        data_buffer <= 16'h0000;
+    end else begin
+        case (state)
+            IDLE: begin
+                // 当SPI有有效数据时，缓存数据并准备发送低8位
+                if (spi_rx_data_vld) begin
+                    data_buffer <= spi_rx_data;
+                    state <= SEND_LOW;
+                end
+            end
+            
+            SEND_LOW: begin
+                // 当UART准备好发送，先发送低8位
+                if (tx_ready) begin
+                    state <= SEND_HIGH;
+                end
+            end
+            
+            SEND_HIGH: begin
+                // 当UART准备好发送，再发送高8位
+                if (tx_ready) begin
+                    state <= IDLE;
+                end
+            end
+            
+            default: state <= IDLE;
+        endcase
+    end
+end
+
+// UART发送数据选择
+assign tx_data_in = (state == SEND_LOW) ? data_buffer[7:0] : 
+                    (state == SEND_HIGH) ? data_buffer[15:8] : 
+                    8'h00;
+
+// UART发送有效信号控制
+assign tx_valid = (state == SEND_LOW || state == SEND_HIGH);
+
+// SPI接收就绪信号 - 只有在空闲状态才接收新数据
+assign spi_rx_data_ready = (state == IDLE);
+
+// 处理从UART接收到的数据转发到SPI (如果需要)
+assign spi_tx_data = {8'h00, rx_data_out};  // 简单示例，可根据需要修改
+assign spi_tx_data_vld = rx_valid;
+
+// 模式指示灯 (可根据需要自定义)
+assign mode = 3'd3;
 
 endmodule

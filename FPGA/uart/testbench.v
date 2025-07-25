@@ -32,6 +32,8 @@ end
 initial begin
     #200;
     nCS = 0;  // Activate SPI slave
+    #100_000;
+    nCS = 1;
 end
 
 initial begin

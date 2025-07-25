@@ -1,0 +1,35 @@
+
+create_debug_core u_ila_0 ila
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list UU3/u_ddr3/u_ddr3_mig/u_ddr3_infrastructure/CLK]]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+set_property port_width 2 [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {clk_locked[0]} {clk_locked[1]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+set_property port_width 48 [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {tg_rd_data_counts[0]} {tg_rd_data_counts[1]} {tg_rd_data_counts[2]} {tg_rd_data_counts[3]} {tg_rd_data_counts[4]} {tg_rd_data_counts[5]} {tg_rd_data_counts[6]} {tg_rd_data_counts[7]} {tg_rd_data_counts[8]} {tg_rd_data_counts[9]} {tg_rd_data_counts[10]} {tg_rd_data_counts[11]} {tg_rd_data_counts[12]} {tg_rd_data_counts[13]} {tg_rd_data_counts[14]} {tg_rd_data_counts[15]} {tg_rd_data_counts[16]} {tg_rd_data_counts[17]} {tg_rd_data_counts[18]} {tg_rd_data_counts[19]} {tg_rd_data_counts[20]} {tg_rd_data_counts[21]} {tg_rd_data_counts[22]} {tg_rd_data_counts[23]} {tg_rd_data_counts[24]} {tg_rd_data_counts[25]} {tg_rd_data_counts[26]} {tg_rd_data_counts[27]} {tg_rd_data_counts[28]} {tg_rd_data_counts[29]} {tg_rd_data_counts[30]} {tg_rd_data_counts[31]} {tg_rd_data_counts[32]} {tg_rd_data_counts[33]} {tg_rd_data_counts[34]} {tg_rd_data_counts[35]} {tg_rd_data_counts[36]} {tg_rd_data_counts[37]} {tg_rd_data_counts[38]} {tg_rd_data_counts[39]} {tg_rd_data_counts[40]} {tg_rd_data_counts[41]} {tg_rd_data_counts[42]} {tg_rd_data_counts[43]} {tg_rd_data_counts[44]} {tg_rd_data_counts[45]} {tg_rd_data_counts[46]} {tg_rd_data_counts[47]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+set_property port_width 48 [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {tg_wr_data_counts[0]} {tg_wr_data_counts[1]} {tg_wr_data_counts[2]} {tg_wr_data_counts[3]} {tg_wr_data_counts[4]} {tg_wr_data_counts[5]} {tg_wr_data_counts[6]} {tg_wr_data_counts[7]} {tg_wr_data_counts[8]} {tg_wr_data_counts[9]} {tg_wr_data_counts[10]} {tg_wr_data_counts[11]} {tg_wr_data_counts[12]} {tg_wr_data_counts[13]} {tg_wr_data_counts[14]} {tg_wr_data_counts[15]} {tg_wr_data_counts[16]} {tg_wr_data_counts[17]} {tg_wr_data_counts[18]} {tg_wr_data_counts[19]} {tg_wr_data_counts[20]} {tg_wr_data_counts[21]} {tg_wr_data_counts[22]} {tg_wr_data_counts[23]} {tg_wr_data_counts[24]} {tg_wr_data_counts[25]} {tg_wr_data_counts[26]} {tg_wr_data_counts[27]} {tg_wr_data_counts[28]} {tg_wr_data_counts[29]} {tg_wr_data_counts[30]} {tg_wr_data_counts[31]} {tg_wr_data_counts[32]} {tg_wr_data_counts[33]} {tg_wr_data_counts[34]} {tg_wr_data_counts[35]} {tg_wr_data_counts[36]} {tg_wr_data_counts[37]} {tg_wr_data_counts[38]} {tg_wr_data_counts[39]} {tg_wr_data_counts[40]} {tg_wr_data_counts[41]} {tg_wr_data_counts[42]} {tg_wr_data_counts[43]} {tg_wr_data_counts[44]} {tg_wr_data_counts[45]} {tg_wr_data_counts[46]} {tg_wr_data_counts[47]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+set_property port_width 1 [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list init_calib_complete]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+set_property port_width 1 [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list tg_compare_error]]
+set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
+set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
+set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
+connect_debug_port dbg_hub/clk [get_nets u_ila_0_CLK]
