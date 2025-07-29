@@ -189,11 +189,4 @@ uart_tx #(
     .tx(tx)
 );
 
-ila_1 ila_1_inst(
-    .clk(sys_clk),
-    .probe0(uart_tx_data),
-    .probe1(uart_tx_ready),
-    .probe2(uart_tx_valid)
-);
-
 endmodule

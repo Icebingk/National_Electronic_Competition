@@ -17,7 +17,6 @@ module ADC(
 
     input wire                                  OTR,                // 超量程提示
     input wire        [`AD_DATA_WIDTH-1:0]      adc_data_in,        // ADC数据输入
-
     output reg signed [`AD_DATA_WIDTH-1:0]      adc_data_out,       // ADC数据输出
     output reg                                  adc_data_ready      // ADC数据有效标志
 );
@@ -60,7 +59,7 @@ fifo_generator_0 fifo_generator_0_inst (
     .rst(!rst_n),           // 复位信号
 
     .wr_clk(adc_clk),       // 写时钟
-    .din(adc_data_in_reg),      // 输入数据
+    .din(adc_data_in_reg),  // 输入数据
     .wr_en(wr_en),          // 写使能
     .full(full),            // FIFO满标志
     

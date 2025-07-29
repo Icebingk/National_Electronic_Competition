@@ -58,13 +58,6 @@ uart uart_inst (
     .tx_ready(tx_ready)
 );
 
-ila_0 ila_0_inst(
-    .clk(sys_clk),
-    .probe0(spi_rx_data),
-    .probe1(spi_rx_data_vld),
-    .probe2(spi_rx_data_ready)
-);
-
 // SPI¿ØÖÆÊµÀý
 SPI_control SPI_control_inst (
     .sys_clk(sys_clk),

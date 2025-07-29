@@ -18,12 +18,13 @@ module time_tree_dy(
     input  wire [2:0]     clk_control_num,// 需要控制的时钟总数量
     input  wire [2:0]     clk_choise,     // 时钟选择信号，0表示全部时钟，
                                           // 1表示时钟1，2表示时钟2，3表示时钟3
+
     input  wire [7:0]     frq_mult_int,   // 频率倍频系数，正数部分，对于全部时钟
     input  wire [7:0]     frq_mult_float, // 频率倍频系数，小数部分，对于全部时钟
     input  wire [7:0]     frq_div_int,    // 频率分频系数,整数部分，复用，可对所有时钟，也可以对某个时钟
-    input  wire [7:0]     frq_div_float,  // 频率分频系数,小数部分，对于时钟0才有小数分频
+    input  wire [7:0]     frq_div_float,  // 频率分频系数,小数部分，对于时钟1才有小数分频
     input  wire [31:0]    frq_phase_value,// 频率相位值，对各自的时钟进行设置
-    output wire           accomplish,    // 表示写寄存器全部完成
+    output wire           accomplish,     // 表示写寄存器全部完成
 
     output wire           error_sign,    // 错误信号
     output wire           clk_adc,       // 输出时钟1
@@ -84,7 +85,7 @@ wire ERROR_IDLE  =  (axi_cstate == ERROR) && (s_axi_bresp_r != 2'd0 || s_axi_awa
 wire LOAD_WRITE  =  (axi_cstate == LOAD);
 
 assign error_sign = (axi_cstate == ERROR) && (s_axi_bresp_r != 2'd0); // 错误信号，当状态机处于错误状态时为高
-assign cnt_goal = (clk_control_num << 1) + 1;
+assign cnt_goal = enable_r?(clk_control_num << 1) + 1: 4'd0;
 assign accomplish = axi_cstate == LOAD;
 
 // 使能信号寄存器
@@ -111,7 +112,7 @@ end
 always @(posedge sys_clk or negedge rst_n) begin
     if (!rst_n) begin
         cnt <= 4'd0; // 复位时清零
-    end else if (axi_cstate == START) begin
+    end else if (axi_cstate == START && valid) begin
         cnt <= cnt + 1'b1; // 计数器自增
     end else if (axi_cstate == LOAD) begin
         cnt <= 4'd0; // 重置计数器

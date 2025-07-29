@@ -8,7 +8,7 @@
 //==============================================*/
 `include "E:/NEC/FPGA/SPI/src/top_define.v"
 module instruction_decode(
-    input   wire                        clk,// 时钟信号
+    input   wire                        sys_clk,// 时钟信号
     input   wire                        rst_n,// 复位信号
 
     input   wire [`DATA_WIDTH-1:0]      instruction_data,// 上位机输入指令
@@ -53,16 +53,18 @@ wire INSTR_DEAL          = (cstate == INSTRUCTION_MODE) && (instruction_data_reg
 assign instruction_data_ready = cstate == OVER;// 上位机指令数据准备好信号
 
 // 指令数据读取缓存寄存器
-always @(posedge clk or negedge rst_n) begin
+always @(posedge sys_clk or negedge rst_n) begin
     if (!rst_n)begin
         instruction_data_reg <= {`DATA_WIDTH{1'b0}};
     end else if ((cstate == IDLE) && instruction_data_valid) begin//指令数据有效时，读取指令或数据
         instruction_data_reg <= instruction_data;
+    end else begin
+        instruction_data_reg <= instruction_data_reg;
     end
 end
 
 // Module 1: Handle data_re_allow register
-always @(posedge clk or negedge rst_n) begin
+always @(posedge sys_clk or negedge rst_n) begin
     if (!rst_n) begin
         data_re_allow <= 2'b00;
     end else if (cstate == INSTRUCTION_MODE_DATA && instruction_data_return_req) begin
@@ -77,7 +79,7 @@ always @(posedge clk or negedge rst_n) begin
 end
 
 // Module 2: Handle data_wr_allow register
-always @(posedge clk or negedge rst_n) begin
+always @(posedge sys_clk or negedge rst_n) begin
     if (!rst_n) begin
         data_wr_allow <= 2'b00;
     end else if (cstate == INSTRUCTION_MODE_DATA && instruction_data_return_req) begin
@@ -93,7 +95,7 @@ always @(posedge clk or negedge rst_n) begin
 end
 
 // Module 3: Handle data_in_ready register
-always @(posedge clk or negedge rst_n) begin
+always @(posedge sys_clk or negedge rst_n) begin
     if (!rst_n) begin
         data_in_ready <= 1'b0;
     end else if (cstate == INSTRUCTION_MODE_DATA && instruction_data_return_req) begin
@@ -108,7 +110,7 @@ always @(posedge clk or negedge rst_n) begin
 end
 
 //输出数据指令寄存器
-always @(posedge clk or negedge rst_n) begin
+always @(posedge sys_clk or negedge rst_n) begin
     if (!rst_n)begin
         instruction_data_return <= {`DATA_WIDTH{1'b0}};
         instruction_data_return_vld <= 1'b0;
@@ -121,7 +123,7 @@ always @(posedge clk or negedge rst_n) begin
 end
 
 //外设输入数据
-always @(posedge clk or negedge rst_n) begin
+always @(posedge sys_clk or negedge rst_n) begin
     if (!rst_n)begin
         data_in_reg <= {`DATA_WIDTH{1'b0}};
     end else if (cstate == INSTRUCTION_MODE_DATA) begin
@@ -139,7 +141,7 @@ always @(posedge clk or negedge rst_n) begin
 end
 
 // 上位机写入数据
-always @(posedge clk or negedge rst_n) begin
+always @(posedge sys_clk or negedge rst_n) begin
     if (!rst_n)begin
         data_out <= {`DATA_WIDTH{1'b0}};
         data_out_valid <= 1'b0;
@@ -158,7 +160,7 @@ always @(posedge clk or negedge rst_n) begin
 end
 
 // 控制指令
-always @(posedge clk or negedge rst_n) begin
+always @(posedge sys_clk or negedge rst_n) begin
     if (!rst_n) begin
         device_control <= {`DEVICE_CONTROL_WIDTH/2{1'b0}};
         device_freq_control <= {`DEVICE_CONTROL_WIDTH/2{1'b0}};
@@ -185,7 +187,7 @@ always @(posedge clk or negedge rst_n) begin
 end
 
 // 指令状态机
-always @(posedge clk or negedge rst_n) begin
+always @(posedge sys_clk or negedge rst_n) begin
     if (!rst_n) begin
         cstate <= IDLE;
     end else begin

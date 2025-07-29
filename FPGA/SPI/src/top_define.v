@@ -13,30 +13,35 @@
 `define SPI_CLK_EDGE 5  //SPI时钟边沿计数器位宽
 
 // SPI指令集定义
-`define SPI_Instruction             16'hD000 //指令集起始地址
+`define SPI_Instruction             16'hFF00 //指令集起始地址
 `define DATA                        16'h8000 //数据起始地址
 //设备ID
-`define SPI_DEVICE_ID               16'hD0FE //设备ID
-`define SPI_DEVICE_ID_READ          16'hD0EA //设备ID读取指令
-// 读写指令
-//////单次读写
-`define SPI_READ                    16'hD0E8 //读指令
-`define SPI_WRITE                   16'hD0E9 //写指令
-//////连续读写
-`define SPI_WRITE_CONTINUOUS_REQ    16'hD0ED //连续写请求指令
-`define SPI_WRITE_CONTINUOUS_END    16'hD0EC //连续写结束指令
-`define SPI_READ_CONTINUOUS_REQ     16'hD0EF //连续读请求指令
-`define SPI_READ_CONTINUOUS_END     16'hD0EE //连续读结束指令
-//////读写状态指令
-`define SPI_READ_REG_STATE          16'hD0E0 //读状态指令
+`define SPI_DEVICE_ID               16'hFFFE //设备ID
+`define SPI_DEVICE_ID_READ          16'hFFEA //设备ID读取指令
 
 //控制指令
 //////控制指令开始
-`define SPI_CONTROL_REQ             16'hD0A8 //控制指令开始
-`define SPI_CONTROL_END             16'hD0A0 //控制指令结束
+`define SPI_CONTROL_REQ             16'hFFA8 //控制指令开始
+`define SPI_CONTROL_END             16'hFFA0 //控制指令结束
+
+// A类指令，只需要控
+`define A_Class                     4'hA // A类指令标识
+`define IDREAD                      3'h1
+`define ADC_Read                    3'h2
+`define FIR_ADC                     3'h3
+`define FIR_DAC                     3'h4
+`define PFD                         3'h5
+
+// B类指令，需要数据交换
+`define B_Class                     4'hB // B类指令标识
+`define TIME_SET                    3'h6
+`define DAC_Write                   3'h7
+
+`define Turn_ON                     'b1
+`define Turn_OFF                    'b0
 //////控制设备频率
-`define SPI_CONTROL_FREQ_DIV        16'hD0B0 //频率分频系数
-`define SPI_CONTROL_FREQ_MUL        16'hD0B8 //频率倍频系数
+`define SPI_CONTROL_FREQ_DIV        16'hFFB0 //频率分频系数
+`define SPI_CONTROL_FREQ_MUL        16'hFFB8 //频率倍频系数
 
 `define SPI_STATE                   8
 
