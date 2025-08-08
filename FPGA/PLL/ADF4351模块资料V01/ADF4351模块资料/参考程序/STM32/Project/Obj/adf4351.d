@@ -1,0 +1,14 @@
+.\Obj\adf4351.o: ..\User\adf4351.c
+.\Obj\adf4351.o: ..\CMSIS\DeviceSupport\STM32F10x\stm32f10x.h
+.\Obj\adf4351.o: ..\CMSIS\CoreSupport\core_cm3.h
+.\Obj\adf4351.o: E:\keil4stm32\ARM\ARMCC\bin\..\include\stdint.h
+.\Obj\adf4351.o: ..\CMSIS\DeviceSupport\STM32F10x\system_stm32f10x.h
+.\Obj\adf4351.o: ..\CMSIS\DeviceSupport\STM32F10x\stm32f10x_conf.h
+.\Obj\adf4351.o: ..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h
+.\Obj\adf4351.o: ..\CMSIS\DeviceSupport\STM32F10x\stm32f10x.h
+.\Obj\adf4351.o: ..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_fsmc.h
+.\Obj\adf4351.o: ..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h
+.\Obj\adf4351.o: ..\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h
+.\Obj\adf4351.o: ..\STM32F10x_StdPeriph_Driver\inc\misc.h
+.\Obj\adf4351.o: ..\User\adf4351.h
+.\Obj\adf4351.o: ..\User\delay.h

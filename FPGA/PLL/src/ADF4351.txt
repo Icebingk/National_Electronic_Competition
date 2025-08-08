@@ -1,0 +1,168 @@
+module ADF4351(
+    input wire sys_clk,
+    input wire rst_n,
+    
+    output wire DCLK,
+    output wire MOSI,
+    input  wire MISO,
+    output wire CS,
+    output wire le
+);
+localparam  freq_setting = 8'd35;
+localparam  cnt_goal = 6;
+localparam  R5 = 32'h00580005;
+localparam  R4 = 32'h0060a43c;
+localparam  R3 = 32'h006004b3;
+localparam  R2 = 32'h0D003Fc2 | (125 << 14);
+localparam  R1 = 32'h08008011;
+localparam  R0 = 32'h00000000 | (freq_setting << 15);
+
+localparam  IDLE    = 0,
+            Initial = 1,
+            START   = 2,
+            SEND    = 3,
+            WAIT    = 4,
+            OVER    = 5;
+
+reg [2:0] cstate,nstate;
+
+reg Initial_Flag;
+
+reg [2:0] cnt;
+reg [31:0] delay;
+reg wr_req;
+wire wr_ack;
+reg [31:0] data_in;
+reg CS_ctrl;
+wire IDLE_Initial = (cstate == IDLE) & !Initial_Flag & delay == 50_000;
+// wire IDLE_START   = (cstate == IDLE) & 
+wire Initial_OVER = (cstate == Initial) && cnt == cnt_goal;
+wire OVER_IDLE    = (cstate == OVER);
+
+always @(posedge sys_clk or negedge rst_n) begin
+    if (!rst_n) begin
+        delay <= 32'd0;
+    end else if (delay == 500_000)begin
+        delay <= 32'd0;
+    end else if (!Initial_Flag & cstate == IDLE) begin
+        delay <= delay + 32'd1;
+    end else begin
+        delay <= 32'd0;
+    end
+end
+
+
+always @(*)begin
+    if (!rst_n)begin
+        CS_ctrl = 'b0;
+    end else begin
+        CS_ctrl = 'b1;
+    end
+end
+
+always @(posedge sys_clk or negedge rst_n)begin
+    if (!rst_n)begin
+        Initial_Flag <= 'b0;
+    end else if (IDLE_Initial) begin
+        Initial_Flag <= 'b1;
+    end else begin
+        Initial_Flag <= Initial_Flag;
+    end
+end
+
+always @(*)begin
+    if (!rst_n)begin
+        data_in = 32'd0;
+    end else if (cstate == Initial)begin
+        case(cnt)
+        3'd0: data_in = R5;
+        3'd1: data_in = R4;
+        3'd2: data_in = R3;
+        3'd3: data_in = R2;
+        3'd4: data_in = R1;
+        3'd5: data_in = R0;
+        endcase
+    end
+end
+
+always @(posedge sys_clk or negedge rst_n)begin
+    if (!rst_n)begin
+        wr_req <= 'b0;
+    end else if (cstate == Initial) begin
+        wr_req <= 'b1;
+    end else begin
+        wr_req <= 'b0;
+    end
+end
+
+always @(posedge sys_clk or negedge rst_n)begin
+    if (!rst_n)begin
+        cnt <= 3'd0;
+    end else if (cstate == Initial && wr_ack) begin
+        cnt <= cnt + 1;
+    end else begin
+        cnt <= cnt;
+    end
+end
+
+always @(*)begin
+    case(cstate)
+        IDLE: begin
+            if (IDLE_Initial)begin
+                nstate = Initial;
+            end else begin
+                nstate = IDLE;
+            end
+        end
+        Initial:begin
+            if (Initial_OVER)begin
+                nstate = OVER;
+            end else begin
+                nstate = Initial;
+            end
+        end
+        OVER: begin
+            if (OVER_IDLE)begin
+                nstate = IDLE;
+            end else begin
+                nstate = OVER;
+            end
+        end
+
+        default:begin
+            nstate = IDLE;
+        end
+    endcase
+end
+// ×´Ì¬»ú1
+always @(posedge sys_clk or negedge rst_n) begin
+    if (!rst_n)begin
+        cstate <= IDLE;
+    end else begin
+        cstate <= nstate;
+    end
+end
+
+
+spi_master spi_master_inst (
+    .clk(sys_clk),
+    .rst_n(rst_n),
+    .clk_div(50), // 50_000_000 / 50 = 1_000_000
+    
+    .wr_req(wr_req),
+    .wr_ack(wr_ack),
+    .data_in(data_in),
+    .CS_ctrl(CS_ctrl),
+    .data_out(data_out),
+
+    .CS(CS),
+    .DCLK(DCLK),
+    .MOSI(MOSI),
+    .MISO(MISO),
+    .le(le),
+    .CPOL('b0),
+    .CPHA('b0)
+  );
+
+
+endmodule

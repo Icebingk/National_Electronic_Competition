@@ -45,21 +45,21 @@ module inst_data_deal(
     // 开启鉴频鉴相器       
     output  reg             Freq_Phase_Enable                                       // 开启鉴频鉴相器
 );
-reg [3:0] cstate, nstate; // 状态寄存器
-localparam IDLE      = 4'b0000;
-localparam START     = 4'b0001;// 在START里面，单次控制可以处理完的直接到DONE，需要数据传输的就到对应的模式
-localparam Time_Mode = 4'b0010;// 在这模式里面根据要控制的时钟的数量进行控制
-localparam DAC_Mode  = 4'b0011;// 直接转运数据，直到说要结束转运
-localparam DONE      = 4'b0100;
+reg [2:0] cstate, nstate; // 状态寄存器
+localparam IDLE      = 3'b000;
+localparam START     = 3'b001;// 在START里面，单次控制可以处理完的直接到DONE，需要数据传输的就到对应的模式
+localparam Time_Mode = 3'b010;// 在这模式里面根据要控制的时钟的数量进行控制
+localparam DAC_Mode  = 3'b011;// 直接转运数据，直到说要结束转运
+localparam DONE      = 3'b100;
 
-reg [3:0] time_cstate,time_nstate; // 时间模式状态寄存器
-localparam CLK_NUM  = 4'b0001;  // 记录时钟数量
-localparam CLK_ALL  = 4'b0010;  // 控制全部时钟的 整数+小数倍频->整数分频
-localparam CLK_FRQ  = 4'b0011;  // 控制每个时钟的频率
-localparam CLK_PHA  = 4'b0100;  // 控制每个时钟的相位
-localparam CLK_OVER = 4'b0101;  // 结束状态
+reg [2:0] time_cstate,time_nstate; // 时间模式状态寄存器
+localparam CLK_NUM  = 3'b001;  // 记录时钟数量
+localparam CLK_ALL  = 3'b010;  // 控制全部时钟的 整数+小数倍频->整数分频
+localparam CLK_FRQ  = 3'b011;  // 控制每个时钟的频率
+localparam CLK_PHA  = 3'b100;  // 控制每个时钟的相位
+localparam CLK_OVER = 3'b101;  // 结束状态
 
-reg  [`DATA_WIDTH-1:0]              instr_data_out_r;             // 输出数据到设备
+// reg  [`DATA_WIDTH-1:0]              instr_data_out_r;             // 输出数据到设备
 reg                                 device_enable_r;              // 设备使能信号
 reg  [`DEVICE_CONTROL_WIDTH/2-2:0]  device_control_r;             // 设备控制信号片选
 
@@ -119,19 +119,15 @@ end
 // 数据缓存
 always @(posedge sys_clk or negedge rst_n) begin
     if (!rst_n)begin
-        instr_data_out_r <= 16'h0000; 
         device_enable_r  <= 'b0;
         device_control_r <= 3'd0;
     end else if (data_out_vld)begin
-        instr_data_out_r <= instr_data_out;
         device_enable_r  <= device_enable;
         device_control_r <= device_control;
     end else if (cstate == DONE) begin
-        instr_data_out_r <= 16'h0000; // 空闲状态下数据输出为0
         device_enable_r  <= 'b0;
         device_control_r <= 3'd0;
     end else begin
-        instr_data_out_r <= instr_data_out_r; // 保持当前指令
         device_enable_r  <= device_enable_r;  // 保持当前使能信号
         device_control_r <= device_control_r; // 保持当前控制信号
     end
@@ -348,44 +344,44 @@ always @(*) begin
     case (time_cstate)
         IDLE: begin
             if (IDLE_CLK_NUM)begin
-                time_nstate <= CLK_NUM;
+                time_nstate = CLK_NUM;
             end else begin
-                time_nstate <= IDLE;
+                time_nstate = IDLE;
             end
         end
         CLK_NUM: begin
             if (CLK_NUM_CLK_ALL)begin
-                time_nstate <= CLK_ALL;
+                time_nstate = CLK_ALL;
             end else begin
-                time_nstate <= CLK_NUM;
+                time_nstate = CLK_NUM;
             end        
         end
         CLK_ALL:begin
             if (CLK_ALL_CLK_FRQ)begin
-                time_nstate <= CLK_FRQ;
+                time_nstate = CLK_FRQ;
             end else begin
-                time_nstate <= CLK_ALL; // 保持当前状态
+                time_nstate = CLK_ALL; // 保持当前状态
             end
         end
         CLK_FRQ:begin
             if (CLK_FRQ_FLK_PHA) begin
-                time_nstate <= CLK_PHA; // 频率状态下进入相位状态
+                time_nstate = CLK_PHA; // 频率状态下进入相位状态
             end else begin
-                time_nstate <= CLK_FRQ; // 保持当前状态
+                time_nstate = CLK_FRQ; // 保持当前状态
             end
         end
         CLK_PHA: begin
             if (CLK_PHA_CLK_OVER) begin
-                time_nstate <= CLK_OVER;
+                time_nstate = CLK_OVER;
             end else begin
-                time_nstate <= CLK_PHA; // 保持当前状态
+                time_nstate = CLK_PHA; // 保持当前状态
             end
         end
         CLK_OVER:begin
             if (CLK_OVER_IDLE) begin
-                time_nstate <= IDLE;
+                time_nstate = IDLE;
             end else begin
-                time_nstate <= CLK_OVER; // 保持当前状态
+                time_nstate = CLK_OVER; // 保持当前状态
             end
         end
         default:begin

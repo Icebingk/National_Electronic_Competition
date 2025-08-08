@@ -1,0 +1,6 @@
+"main.obj",
+"lcd1602.obj",
+"adf4351.obj",
+"delay.obj" 
+TO "ADF4351" 
+RAMSIZE(256) 

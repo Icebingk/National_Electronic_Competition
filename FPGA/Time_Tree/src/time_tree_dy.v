@@ -8,28 +8,28 @@
 * Author         : ADBD
 //==============================================*/
 module time_tree_dy(
-    input  wire     sys_clk,        // 系统时钟
-    input  wire     rst_n,          // 低电平复位 
-
-    input  wire     enable,         // 模块启动信号
-    input  wire     valid,          // 输入有效信号
-    output reg      ready,          // 输出就绪信号，表示模块已准备好接收数据
+    input  wire         sys_clk,        // 系统时钟
+    input  wire         rst_n,          // 低电平复位 
+    
+    input  wire         enable,         // 模块启动信号
+    input  wire         valid,          // 输入有效信号
+    output reg          ready,          // 输出就绪信号，表示模块已准备好接收数据
 
     input  wire [2:0]     clk_control_num,// 需要控制的时钟总数量
     input  wire [2:0]     clk_choise,     // 时钟选择信号，0表示全部时钟，
                                           // 1表示时钟1，2表示时钟2，3表示时钟3
-
+    input  wire           phase_enable,   // 相位使能信号，1-使能相位配置，0-不使能相位配置
     input  wire [7:0]     frq_mult_int,   // 频率倍频系数，正数部分，对于全部时钟
-    input  wire [7:0]     frq_mult_float, // 频率倍频系数，小数部分，对于全部时钟
+    input  wire [9:0]     frq_mult_float, // 频率倍频系数，小数部分，对于全部时钟
     input  wire [7:0]     frq_div_int,    // 频率分频系数,整数部分，复用，可对所有时钟，也可以对某个时钟
-    input  wire [7:0]     frq_div_float,  // 频率分频系数,小数部分，对于时钟1才有小数分频
+    input  wire [9:0]     frq_div_float,  // 频率分频系数,小数部分，对于时钟1才有小数分频
     input  wire [31:0]    frq_phase_value,// 频率相位值，对各自的时钟进行设置
     output wire           accomplish,     // 表示写寄存器全部完成
 
     output wire           error_sign,    // 错误信号
-    output wire           clk_adc,       // 输出时钟1
-    output wire           clk_dac,       // 输出时钟2
-    output wire           clk_fir,       // 输出时钟3
+    output wire           clk_out1,       // 输出时钟1
+    // output wire           clk_dac,       // 输出时钟2
+    // output wire           clk_fir,       // 输出时钟3
     output wire           locked         // 锁定信号
 );
 
@@ -85,7 +85,7 @@ wire ERROR_IDLE  =  (axi_cstate == ERROR) && (s_axi_bresp_r != 2'd0 || s_axi_awa
 wire LOAD_WRITE  =  (axi_cstate == LOAD);
 
 assign error_sign = (axi_cstate == ERROR) && (s_axi_bresp_r != 2'd0); // 错误信号，当状态机处于错误状态时为高
-assign cnt_goal = enable_r?(clk_control_num << 1) + 1: 4'd0;
+assign cnt_goal = enable_r ? phase_enable ? (clk_control_num << 1) + 1 : clk_control_num + 1: 4'd0; // 计数器目标值，根据使能信号和相位使能信号计算
 assign accomplish = axi_cstate == LOAD;
 
 // 使能信号寄存器
@@ -127,12 +127,13 @@ always @(posedge sys_clk or negedge rst_n) begin
         ready <= 1'b0; // 复位时清零
     end else if (axi_cstate == IDLE) begin
         ready <= 1'b0; // 空闲状态下清零
-    end else if (axi_cstate == START && valid)begin
+    end else if (Accept_Response)begin
         ready <= 1'b1; // 有效信号拉高，表示模块准备好接收数据
     end else begin
         ready <= 1'b0; // 如果没有有效信号，保持就绪状态
     end
 end
+
 
 // 数据缓存并处理
 always@(posedge sys_clk or negedge rst_n)begin
@@ -142,24 +143,24 @@ always@(posedge sys_clk or negedge rst_n)begin
         s_axi_wstrb <= 4'd0;
     end else if (axi_cstate == START) begin
         if (valid)begin
-            if(cnt <= (cnt_goal - 1)>>1)begin// 写频率
+            if(cnt > (cnt_goal - 1)>>1 && phase_enable)begin// 写频率
+                s_axi_awaddr <= 11'h20C + ((clk_choise - 1) * 4'd12);
+                s_axi_wdata  <= (frq_phase_value << 10) - (frq_phase_value << 4) - (frq_phase_value << 3);// ×1000
+                s_axi_wstrb  <= 4'b1111;
+            end else begin
                 if (clk_choise == 3'b000)begin
                     s_axi_awaddr <= 11'h200;
-                    s_axi_wdata  <= {8'd0,frq_mult_float,frq_mult_int,frq_div_int};
+                    s_axi_wdata  <= {6'd0,frq_mult_float,frq_mult_int,frq_div_int};
                     s_axi_wstrb  <= 4'b0111;
                 end else if (clk_choise == 3'b001) begin
                     s_axi_awaddr <= 11'h208;// 确定时钟分频的寄存器地址
-                    s_axi_wdata  <= {16'd0,frq_div_float,frq_div_int}; // 将整数和小数部分拼接成32位数据
+                    s_axi_wdata  <= {14'd0,frq_div_float,frq_div_int}; // 将整数和小数部分拼接成32位数据
                     s_axi_wstrb  <= 4'b0011;
                 end else begin
                     s_axi_awaddr <= 11'h208 +  ((clk_choise - 1) * 4'd12);// 确定时钟分频的寄存器地址
                     s_axi_wdata  <= {24'd0,frq_div_int}; // 只有整数分频
                     s_axi_wstrb  <= 4'b0001;
                 end                
-            end else begin// 写相位
-                    s_axi_awaddr <= 11'h20C + ((clk_choise - 1) * 4'd12);
-                    s_axi_wdata  <= (frq_phase_value << 10) - (frq_phase_value << 4) - (frq_phase_value << 3);// ×1000
-                    s_axi_wstrb  <= 4'b1111;
             end
         end else begin
             s_axi_awaddr <= s_axi_awaddr; // 保持地址不变
@@ -295,9 +296,9 @@ clk_module  clk_module_inst (
     .s_axi_rvalid(s_axi_rvalid),
     .s_axi_rready(s_axi_rready),
 
-    .clk_out1(clk_dac),
-    .clk_out2(clk_adc),
-    .clk_out3(clk_fir),
+    .clk_out1(clk_out1),
+    // .clk_out2(clk_adc),
+    // .clk_out3(clk_fir),
     .locked(locked),
     .clk_in1(sys_clk)
   );

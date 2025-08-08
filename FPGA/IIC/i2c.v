@@ -8,6 +8,7 @@ module i2c(
    	output              		rd_data_vld	,
    	output  reg         		rev_ack 	,
    	output              		done    	,
+	
    	output  reg         		scl     	,
    	inout               		sda      	
 );

@@ -1,0 +1,1206 @@
+88:
+frq_mult_int = 5
+frq_mult_float = 0.5
+frq_div_int_all = 1
+frq_div_int = 3
+frq_div_float = 0.125
+88.1:
+frq_mult_int = 4
+frq_mult_float = 0.625
+frq_div_int_all = 1
+frq_div_int = 2
+frq_div_float = 0.625
+88.2:
+frq_mult_int = 19
+frq_mult_float = 0.625
+frq_div_int_all = 1
+frq_div_int = 11
+frq_div_float = 0.125
+88.3:
+frq_mult_int = 10
+frq_mult_float = 0.375
+frq_div_int_all = 1
+frq_div_int = 5
+frq_div_float = 0.875
+88.4:
+frq_mult_int = 42
+frq_mult_float = 0.875
+frq_div_int_all = 2
+frq_div_int = 12
+frq_div_float = 0.125
+88.5:
+frq_mult_int = 22
+frq_mult_float = 0.125
+frq_div_int_all = 1
+frq_div_int = 12
+frq_div_float = 0.5
+88.6:
+frq_mult_int = 30
+frq_mult_float = 0.125
+frq_div_int_all = 2
+frq_div_int = 8
+frq_div_float = 0.5
+88.7:
+frq_mult_int = 39
+frq_mult_float = 0.25
+frq_div_int_all = 3
+frq_div_int = 7
+frq_div_float = 0.375
+88.8:
+frq_mult_int = 42
+frq_mult_float = 0.625
+frq_div_int_all = 2
+frq_div_int = 12
+frq_div_float = 0.0
+88.9:
+frq_mult_int = 8
+frq_mult_float = 0.0
+frq_div_int_all = 3
+frq_div_int = 1
+frq_div_float = 0.5
+89:
+frq_mult_int = 11
+frq_mult_float = 0.125
+frq_div_int_all = 1
+frq_div_int = 6
+frq_div_float = 0.25
+89.1:
+frq_mult_int = 17
+frq_mult_float = 0.375
+frq_div_int_all = 1
+frq_div_int = 9
+frq_div_float = 0.75
+89.2:
+frq_mult_int = 47
+frq_mult_float = 0.5
+frq_div_int_all = 3
+frq_div_int = 8
+frq_div_float = 0.875
+89.3:
+frq_mult_int = 44
+frq_mult_float = 0.875
+frq_div_int_all = 3
+frq_div_int = 8
+frq_div_float = 0.375
+89.4:
+frq_mult_int = 41
+frq_mult_float = 0.125
+frq_div_int_all = 2
+frq_div_int = 11
+frq_div_float = 0.5
+89.5:
+frq_mult_int = 22
+frq_mult_float = 0.375
+frq_div_int_all = 1
+frq_div_int = 12
+frq_div_float = 0.5
+89.6:
+frq_mult_int = 22
+frq_mult_float = 0.625
+frq_div_int_all = 1
+frq_div_int = 12
+frq_div_float = 0.625
+89.7:
+frq_mult_int = 37
+frq_mult_float = 0.0
+frq_div_int_all = 3
+frq_div_int = 6
+frq_div_float = 0.875
+89.8:
+frq_mult_int = 45
+frq_mult_float = 0.125
+frq_div_int_all = 3
+frq_div_int = 8
+frq_div_float = 0.375
+89.9:
+frq_mult_int = 22
+frq_mult_float = 0.25
+frq_div_int_all = 1
+frq_div_int = 12
+frq_div_float = 0.375
+90:
+frq_mult_int = 2
+frq_mult_float = 0.25
+frq_div_int_all = 1
+frq_div_int = 1
+frq_div_float = 0.25
+90.1:
+frq_mult_int = 22
+frq_mult_float = 0.75
+frq_div_int_all = 1
+frq_div_int = 12
+frq_div_float = 0.625
+90.2:
+frq_mult_int = 33
+frq_mult_float = 0.375
+frq_div_int_all = 2
+frq_div_int = 9
+frq_div_float = 0.25
+90.3:
+frq_mult_int = 15
+frq_mult_float = 0.125
+frq_div_int_all = 1
+frq_div_int = 8
+frq_div_float = 0.375
+90.4:
+frq_mult_int = 22
+frq_mult_float = 0.375
+frq_div_int_all = 1
+frq_div_int = 12
+frq_div_float = 0.375
+90.5:
+frq_mult_int = 22
+frq_mult_float = 0.625
+frq_div_int_all = 1
+frq_div_int = 12
+frq_div_float = 0.5
+90.6:
+frq_mult_int = 26
+frq_mult_float = 0.5
+frq_div_int_all = 1
+frq_div_int = 14
+frq_div_float = 0.625
+90.7:
+frq_mult_int = 9
+frq_mult_float = 0.75
+frq_div_int_all = 1
+frq_div_int = 5
+frq_div_float = 0.375
+90.8:
+frq_mult_int = 48
+frq_mult_float = 0.125
+frq_div_int_all = 2
+frq_div_int = 13
+frq_div_float = 0.25
+90.9:
+frq_mult_int = 2
+frq_mult_float = 0.5
+frq_div_int_all = 1
+frq_div_int = 1
+frq_div_float = 0.375
+91:
+frq_mult_int = 11
+frq_mult_float = 0.375
+frq_div_int_all = 1
+frq_div_int = 6
+frq_div_float = 0.25
+91.1:
+frq_mult_int = 26
+frq_mult_float = 0.875
+frq_div_int_all = 1
+frq_div_int = 14
+frq_div_float = 0.75
+91.2:
+frq_mult_int = 32
+frq_mult_float = 0.375
+frq_div_int_all = 2
+frq_div_int = 8
+frq_div_float = 0.875
+91.3:
+frq_mult_int = 5
+frq_mult_float = 0.25
+frq_div_int_all = 1
+frq_div_int = 2
+frq_div_float = 0.875
+91.4:
+frq_mult_int = 21
+frq_mult_float = 0.25
+frq_div_int_all = 3
+frq_div_int = 3
+frq_div_float = 0.875
+91.5:
+frq_mult_int = 22
+frq_mult_float = 0.875
+frq_div_int_all = 1
+frq_div_int = 12
+frq_div_float = 0.5
+91.6:
+frq_mult_int = 27
+frq_mult_float = 0.25
+frq_div_int_all = 1
+frq_div_int = 14
+frq_div_float = 0.875
+91.7:
+frq_mult_int = 2
+frq_mult_float = 0.75
+frq_div_int_all = 1
+frq_div_int = 1
+frq_div_float = 0.5
+91.8:
+frq_mult_int = 43
+frq_mult_float = 0.375
+frq_div_int_all = 3
+frq_div_int = 7
+frq_div_float = 0.875
+91.9:
+frq_mult_int = 32
+frq_mult_float = 0.625
+frq_div_int_all = 2
+frq_div_int = 8
+frq_div_float = 0.875
+92:
+frq_mult_int = 5
+frq_mult_float = 0.75
+frq_div_int_all = 1
+frq_div_int = 3
+frq_div_float = 0.125
+92.1:
+frq_mult_int = 4
+frq_mult_float = 0.375
+frq_div_int_all = 1
+frq_div_int = 2
+frq_div_float = 0.375
+92.2:
+frq_mult_int = 32
+frq_mult_float = 0.5
+frq_div_int_all = 3
+frq_div_int = 5
+frq_div_float = 0.875
+92.3:
+frq_mult_int = 3
+frq_mult_float = 0.0
+frq_div_int_all = 1
+frq_div_int = 1
+frq_div_float = 0.625
+92.4:
+frq_mult_int = 47
+frq_mult_float = 0.125
+frq_div_int_all = 3
+frq_div_int = 8
+frq_div_float = 0.5
+92.5:
+frq_mult_int = 4
+frq_mult_float = 0.625
+frq_div_int_all = 1
+frq_div_int = 2
+frq_div_float = 0.5
+92.6:
+frq_mult_int = 45
+frq_mult_float = 0.375
+frq_div_int_all = 2
+frq_div_int = 12
+frq_div_float = 0.25
+92.7:
+frq_mult_int = 20
+frq_mult_float = 0.625
+frq_div_int_all = 1
+frq_div_int = 11
+frq_div_float = 0.125
+92.8:
+frq_mult_int = 30
+frq_mult_float = 0.625
+frq_div_int_all = 2
+frq_div_int = 8
+frq_div_float = 0.25
+92.9:
+frq_mult_int = 37
+frq_mult_float = 0.625
+frq_div_int_all = 2
+frq_div_int = 10
+frq_div_float = 0.125
+93:
+frq_mult_int = 11
+frq_mult_float = 0.625
+frq_div_int_all = 1
+frq_div_int = 6
+frq_div_float = 0.25
+93.1:
+frq_mult_int = 6
+frq_mult_float = 0.75
+frq_div_int_all = 1
+frq_div_int = 3
+frq_div_float = 0.625
+93.2:
+frq_mult_int = 34
+frq_mult_float = 0.25
+frq_div_int_all = 3
+frq_div_int = 6
+frq_div_float = 0.125
+93.3:
+frq_mult_int = 22
+frq_mult_float = 0.625
+frq_div_int_all = 1
+frq_div_int = 12
+frq_div_float = 0.125
+93.4:
+frq_mult_int = 33
+frq_mult_float = 0.625
+frq_div_int_all = 2
+frq_div_int = 9
+frq_div_float = 0.0
+93.5:
+frq_mult_int = 23
+frq_mult_float = 0.375
+frq_div_int_all = 1
+frq_div_int = 12
+frq_div_float = 0.5
+93.6:
+frq_mult_int = 38
+frq_mult_float = 0.375
+frq_div_int_all = 2
+frq_div_int = 10
+frq_div_float = 0.25
+93.7:
+frq_mult_int = 27
+frq_mult_float = 0.875
+frq_div_int_all = 1
+frq_div_int = 14
+frq_div_float = 0.875
+93.8:
+frq_mult_int = 30
+frq_mult_float = 0.25
+frq_div_int_all = 3
+frq_div_int = 5
+frq_div_float = 0.375
+93.9:
+frq_mult_int = 9
+frq_mult_float = 0.625
+frq_div_int_all = 1
+frq_div_int = 5
+frq_div_float = 0.125
+94:
+frq_mult_int = 5
+frq_mult_float = 0.875
+frq_div_int_all = 1
+frq_div_int = 3
+frq_div_float = 0.125
+94.1:
+frq_mult_int = 41
+frq_mult_float = 0.875
+frq_div_int_all = 2
+frq_div_int = 11
+frq_div_float = 0.125
+94.2:
+frq_mult_int = 16
+frq_mult_float = 0.25
+frq_div_int_all = 3
+frq_div_int = 2
+frq_div_float = 0.875
+94.3:
+frq_mult_int = 26
+frq_mult_float = 0.875
+frq_div_int_all = 3
+frq_div_int = 4
+frq_div_float = 0.75
+94.4:
+frq_mult_int = 31
+frq_mult_float = 0.625
+frq_div_int_all = 2
+frq_div_int = 8
+frq_div_float = 0.375
+94.5:
+frq_mult_int = 23
+frq_mult_float = 0.625
+frq_div_int_all = 1
+frq_div_int = 12
+frq_div_float = 0.5
+94.6:
+frq_mult_int = 41
+frq_mult_float = 0.625
+frq_div_int_all = 2
+frq_div_int = 11
+frq_div_float = 0.0
+94.7:
+frq_mult_int = 15
+frq_mult_float = 0.625
+frq_div_int_all = 1
+frq_div_int = 8
+frq_div_float = 0.25
+94.8:
+frq_mult_int = 47
+frq_mult_float = 0.875
+frq_div_int_all = 2
+frq_div_int = 12
+frq_div_float = 0.625
+94.9:
+frq_mult_int = 11
+frq_mult_float = 0.625
+frq_div_int_all = 1
+frq_div_int = 6
+frq_div_float = 0.125
+95:
+frq_mult_int = 2
+frq_mult_float = 0.375
+frq_div_int_all = 1
+frq_div_int = 1
+frq_div_float = 0.25
+95.1:
+frq_mult_int = 12
+frq_mult_float = 0.125
+frq_div_int_all = 3
+frq_div_int = 2
+frq_div_float = 0.125
+95.2:
+frq_mult_int = 47
+frq_mult_float = 0.125
+frq_div_int_all = 3
+frq_div_int = 8
+frq_div_float = 0.25
+95.3:
+frq_mult_int = 27
+frq_mult_float = 0.875
+frq_div_int_all = 1
+frq_div_int = 14
+frq_div_float = 0.625
+95.4:
+frq_mult_int = 20
+frq_mult_float = 0.75
+frq_div_int_all = 1
+frq_div_int = 10
+frq_div_float = 0.875
+95.5:
+frq_mult_int = 23
+frq_mult_float = 0.875
+frq_div_int_all = 1
+frq_div_int = 12
+frq_div_float = 0.5
+95.6:
+frq_mult_int = 38
+frq_mult_float = 0.0
+frq_div_int_all = 3
+frq_div_int = 6
+frq_div_float = 0.625
+95.7:
+frq_mult_int = 22
+frq_mult_float = 0.25
+frq_div_int_all = 1
+frq_div_int = 11
+frq_div_float = 0.625
+95.8:
+frq_mult_int = 28
+frq_mult_float = 0.5
+frq_div_int_all = 1
+frq_div_int = 14
+frq_div_float = 0.875
+95.9:
+frq_mult_int = 14
+frq_mult_float = 0.625
+frq_div_int_all = 1
+frq_div_int = 7
+frq_div_float = 0.625
+96:
+frq_mult_int = 6
+frq_mult_float = 0.0
+frq_div_int_all = 1
+frq_div_int = 3
+frq_div_float = 0.125
+96.1:
+frq_mult_int = 33
+frq_mult_float = 0.875
+frq_div_int_all = 3
+frq_div_int = 5
+frq_div_float = 0.875
+96.2:
+frq_mult_int = 41
+frq_mult_float = 0.125
+frq_div_int_all = 3
+frq_div_int = 7
+frq_div_float = 0.125
+96.3:
+frq_mult_int = 45
+frq_mult_float = 0.5
+frq_div_int_all = 3
+frq_div_int = 7
+frq_div_float = 0.875
+96.4:
+frq_mult_int = 26
+frq_mult_float = 0.75
+frq_div_int_all = 1
+frq_div_int = 13
+frq_div_float = 0.875
+96.5:
+frq_mult_int = 24
+frq_mult_float = 0.125
+frq_div_int_all = 1
+frq_div_int = 12
+frq_div_float = 0.5
+96.6:
+frq_mult_int = 35
+frq_mult_float = 0.5
+frq_div_int_all = 3
+frq_div_int = 6
+frq_div_float = 0.125
+96.7:
+frq_mult_int = 25
+frq_mult_float = 0.625
+frq_div_int_all = 1
+frq_div_int = 13
+frq_div_float = 0.25
+96.8:
+frq_mult_int = 41
+frq_mult_float = 0.625
+frq_div_int_all = 2
+frq_div_int = 10
+frq_div_float = 0.75
+96.9:
+frq_mult_int = 31
+frq_mult_float = 0.25
+frq_div_int_all = 3
+frq_div_int = 5
+frq_div_float = 0.375
+97:
+frq_mult_int = 12
+frq_mult_float = 0.125
+frq_div_int_all = 1
+frq_div_int = 6
+frq_div_float = 0.25
+97.1:
+frq_mult_int = 16
+frq_mult_float = 0.75
+frq_div_int_all = 1
+frq_div_int = 8
+frq_div_float = 0.625
+97.2:
+frq_mult_int = 26
+frq_mult_float = 0.0
+frq_div_int_all = 1
+frq_div_int = 13
+frq_div_float = 0.375
+97.3:
+frq_mult_int = 9
+frq_mult_float = 0.0
+frq_div_int_all = 1
+frq_div_int = 4
+frq_div_float = 0.625
+97.4:
+frq_mult_int = 18
+frq_mult_float = 0.75
+frq_div_int_all = 1
+frq_div_int = 9
+frq_div_float = 0.625
+97.5:
+frq_mult_int = 4
+frq_mult_float = 0.875
+frq_div_int_all = 1
+frq_div_int = 2
+frq_div_float = 0.5
+97.6:
+frq_mult_int = 35
+frq_mult_float = 0.625
+frq_div_int_all = 2
+frq_div_int = 9
+frq_div_float = 0.125
+97.7:
+frq_mult_int = 21
+frq_mult_float = 0.25
+frq_div_int_all = 1
+frq_div_int = 10
+frq_div_float = 0.875
+97.8:
+frq_mult_int = 38
+frq_mult_float = 0.875
+frq_div_int_all = 3
+frq_div_int = 6
+frq_div_float = 0.625
+97.9:
+frq_mult_int = 29
+frq_mult_float = 0.125
+frq_div_int_all = 1
+frq_div_int = 14
+frq_div_float = 0.875
+98:
+frq_mult_int = 6
+frq_mult_float = 0.125
+frq_div_int_all = 1
+frq_div_int = 3
+frq_div_float = 0.125
+98.1:
+frq_mult_int = 19
+frq_mult_float = 0.375
+frq_div_int_all = 1
+frq_div_int = 9
+frq_div_float = 0.875
+98.2:
+frq_mult_int = 27
+frq_mult_float = 0.25
+frq_div_int_all = 1
+frq_div_int = 13
+frq_div_float = 0.875
+98.3:
+frq_mult_int = 36
+frq_mult_float = 0.125
+frq_div_int_all = 3
+frq_div_int = 6
+frq_div_float = 0.125
+98.4:
+frq_mult_int = 38
+frq_mult_float = 0.375
+frq_div_int_all = 2
+frq_div_int = 9
+frq_div_float = 0.75
+98.5:
+frq_mult_int = 24
+frq_mult_float = 0.625
+frq_div_int_all = 1
+frq_div_int = 12
+frq_div_float = 0.5
+98.6:
+frq_mult_int = 26
+frq_mult_float = 0.375
+frq_div_int_all = 1
+frq_div_int = 13
+frq_div_float = 0.375
+98.7:
+frq_mult_int = 19
+frq_mult_float = 0.0
+frq_div_int_all = 1
+frq_div_int = 9
+frq_div_float = 0.625
+98.8:
+frq_mult_int = 20
+frq_mult_float = 0.5
+frq_div_int_all = 1
+frq_div_int = 10
+frq_div_float = 0.375
+98.9:
+frq_mult_int = 22
+frq_mult_float = 0.5
+frq_div_int_all = 1
+frq_div_int = 11
+frq_div_float = 0.375
+99:
+frq_mult_int = 12
+frq_mult_float = 0.375
+frq_div_int_all = 1
+frq_div_int = 6
+frq_div_float = 0.25
+99.1:
+frq_mult_int = 27
+frq_mult_float = 0.5
+frq_div_int_all = 1
+frq_div_int = 13
+frq_div_float = 0.875
+99.2:
+frq_mult_int = 46
+frq_mult_float = 0.625
+frq_div_int_all = 2
+frq_div_int = 11
+frq_div_float = 0.75
+99.3:
+frq_mult_int = 17
+frq_mult_float = 0.625
+frq_div_int_all = 1
+frq_div_int = 8
+frq_div_float = 0.875
+99.4:
+frq_mult_int = 20
+frq_mult_float = 0.625
+frq_div_int_all = 1
+frq_div_int = 10
+frq_div_float = 0.375
+99.5:
+frq_mult_int = 24
+frq_mult_float = 0.875
+frq_div_int_all = 1
+frq_div_int = 12
+frq_div_float = 0.5
+99.6:
+frq_mult_int = 31
+frq_mult_float = 0.375
+frq_div_int_all = 3
+frq_div_int = 5
+frq_div_float = 0.25
+99.7:
+frq_mult_int = 41
+frq_mult_float = 0.375
+frq_div_int_all = 2
+frq_div_int = 10
+frq_div_float = 0.375
+99.8:
+frq_mult_int = 49
+frq_mult_float = 0.875
+frq_div_int_all = 2
+frq_div_int = 12
+frq_div_float = 0.5
+99.9:
+frq_mult_int = 2
+frq_mult_float = 0.0
+frq_div_int_all = 1
+frq_div_int = 1
+frq_div_float = 0.0
+100:
+frq_mult_int = 2
+frq_mult_float = 0.0
+frq_div_int_all = 1
+frq_div_int = 1
+frq_div_float = 0.0
+100.1:
+frq_mult_int = 2
+frq_mult_float = 0.0
+frq_div_int_all = 1
+frq_div_int = 1
+frq_div_float = 0.0
+100.2:
+frq_mult_int = 49
+frq_mult_float = 0.625
+frq_div_int_all = 2
+frq_div_int = 12
+frq_div_float = 0.375
+100.3:
+frq_mult_int = 41
+frq_mult_float = 0.625
+frq_div_int_all = 2
+frq_div_int = 10
+frq_div_float = 0.375
+100.4:
+frq_mult_int = 31
+frq_mult_float = 0.625
+frq_div_int_all = 3
+frq_div_int = 5
+frq_div_float = 0.25
+100.5:
+frq_mult_int = 25
+frq_mult_float = 0.125
+frq_div_int_all = 1
+frq_div_int = 12
+frq_div_float = 0.5
+100.6:
+frq_mult_int = 20
+frq_mult_float = 0.875
+frq_div_int_all = 1
+frq_div_int = 10
+frq_div_float = 0.375
+100.7:
+frq_mult_int = 17
+frq_mult_float = 0.875
+frq_div_int_all = 1
+frq_div_int = 8
+frq_div_float = 0.875
+100.8:
+frq_mult_int = 47
+frq_mult_float = 0.375
+frq_div_int_all = 2
+frq_div_int = 11
+frq_div_float = 0.75
+100.9:
+frq_mult_int = 28
+frq_mult_float = 0.0
+frq_div_int_all = 1
+frq_div_int = 13
+frq_div_float = 0.875
+101:
+frq_mult_int = 12
+frq_mult_float = 0.625
+frq_div_int_all = 1
+frq_div_int = 6
+frq_div_float = 0.25
+101.1:
+frq_mult_int = 23
+frq_mult_float = 0.0
+frq_div_int_all = 1
+frq_div_int = 11
+frq_div_float = 0.375
+101.2:
+frq_mult_int = 21
+frq_mult_float = 0.0
+frq_div_int_all = 1
+frq_div_int = 10
+frq_div_float = 0.375
+101.3:
+frq_mult_int = 19
+frq_mult_float = 0.5
+frq_div_int_all = 1
+frq_div_int = 9
+frq_div_float = 0.625
+101.4:
+frq_mult_int = 27
+frq_mult_float = 0.125
+frq_div_int_all = 1
+frq_div_int = 13
+frq_div_float = 0.375
+101.5:
+frq_mult_int = 25
+frq_mult_float = 0.375
+frq_div_int_all = 1
+frq_div_int = 12
+frq_div_float = 0.5
+101.6:
+frq_mult_int = 39
+frq_mult_float = 0.625
+frq_div_int_all = 2
+frq_div_int = 9
+frq_div_float = 0.75
+101.7:
+frq_mult_int = 37
+frq_mult_float = 0.375
+frq_div_int_all = 3
+frq_div_int = 6
+frq_div_float = 0.125
+101.8:
+frq_mult_int = 28
+frq_mult_float = 0.25
+frq_div_int_all = 1
+frq_div_int = 13
+frq_div_float = 0.875
+101.9:
+frq_mult_int = 20
+frq_mult_float = 0.125
+frq_div_int_all = 1
+frq_div_int = 9
+frq_div_float = 0.875
+102:
+frq_mult_int = 6
+frq_mult_float = 0.375
+frq_div_int_all = 1
+frq_div_int = 3
+frq_div_float = 0.125
+102.1:
+frq_mult_int = 30
+frq_mult_float = 0.375
+frq_div_int_all = 1
+frq_div_int = 14
+frq_div_float = 0.875
+102.2:
+frq_mult_int = 40
+frq_mult_float = 0.625
+frq_div_int_all = 3
+frq_div_int = 6
+frq_div_float = 0.625
+102.3:
+frq_mult_int = 22
+frq_mult_float = 0.25
+frq_div_int_all = 1
+frq_div_int = 10
+frq_div_float = 0.875
+102.4:
+frq_mult_int = 37
+frq_mult_float = 0.375
+frq_div_int_all = 2
+frq_div_int = 9
+frq_div_float = 0.125
+102.5:
+frq_mult_int = 5
+frq_mult_float = 0.125
+frq_div_int_all = 1
+frq_div_int = 2
+frq_div_float = 0.5
+102.6:
+frq_mult_int = 19
+frq_mult_float = 0.75
+frq_div_int_all = 1
+frq_div_int = 9
+frq_div_float = 0.625
+102.7:
+frq_mult_int = 9
+frq_mult_float = 0.5
+frq_div_int_all = 1
+frq_div_int = 4
+frq_div_float = 0.625
+102.8:
+frq_mult_int = 27
+frq_mult_float = 0.5
+frq_div_int_all = 1
+frq_div_int = 13
+frq_div_float = 0.375
+102.9:
+frq_mult_int = 17
+frq_mult_float = 0.75
+frq_div_int_all = 1
+frq_div_int = 8
+frq_div_float = 0.625
+103:
+frq_mult_int = 12
+frq_mult_float = 0.875
+frq_div_int_all = 1
+frq_div_int = 6
+frq_div_float = 0.25
+103.1:
+frq_mult_int = 33
+frq_mult_float = 0.25
+frq_div_int_all = 3
+frq_div_int = 5
+frq_div_float = 0.375
+103.2:
+frq_mult_int = 44
+frq_mult_float = 0.375
+frq_div_int_all = 2
+frq_div_int = 10
+frq_div_float = 0.75
+103.3:
+frq_mult_int = 27
+frq_mult_float = 0.375
+frq_div_int_all = 1
+frq_div_int = 13
+frq_div_float = 0.25
+103.4:
+frq_mult_int = 38
+frq_mult_float = 0.0
+frq_div_int_all = 3
+frq_div_int = 6
+frq_div_float = 0.125
+103.5:
+frq_mult_int = 25
+frq_mult_float = 0.875
+frq_div_int_all = 1
+frq_div_int = 12
+frq_div_float = 0.5
+103.6:
+frq_mult_int = 28
+frq_mult_float = 0.75
+frq_div_int_all = 1
+frq_div_int = 13
+frq_div_float = 0.875
+103.7:
+frq_mult_int = 49
+frq_mult_float = 0.0
+frq_div_int_all = 3
+frq_div_int = 7
+frq_div_float = 0.875
+103.8:
+frq_mult_int = 44
+frq_mult_float = 0.375
+frq_div_int_all = 3
+frq_div_int = 7
+frq_div_float = 0.125
+103.9:
+frq_mult_int = 36
+frq_mult_float = 0.625
+frq_div_int_all = 3
+frq_div_int = 5
+frq_div_float = 0.875
+104:
+frq_mult_int = 6
+frq_mult_float = 0.5
+frq_div_int_all = 1
+frq_div_int = 3
+frq_div_float = 0.125
+104.1:
+frq_mult_int = 15
+frq_mult_float = 0.875
+frq_div_int_all = 1
+frq_div_int = 7
+frq_div_float = 0.625
+104.2:
+frq_mult_int = 31
+frq_mult_float = 0.0
+frq_div_int_all = 1
+frq_div_int = 14
+frq_div_float = 0.875
+104.3:
+frq_mult_int = 24
+frq_mult_float = 0.25
+frq_div_int_all = 1
+frq_div_int = 11
+frq_div_float = 0.625
+104.4:
+frq_mult_int = 41
+frq_mult_float = 0.5
+frq_div_int_all = 3
+frq_div_int = 6
+frq_div_float = 0.625
+104.5:
+frq_mult_int = 26
+frq_mult_float = 0.125
+frq_div_int_all = 1
+frq_div_int = 12
+frq_div_float = 0.5
+104.6:
+frq_mult_int = 22
+frq_mult_float = 0.75
+frq_div_int_all = 1
+frq_div_int = 10
+frq_div_float = 0.875
+104.7:
+frq_mult_int = 30
+frq_mult_float = 0.625
+frq_div_int_all = 1
+frq_div_int = 14
+frq_div_float = 0.625
+104.8:
+frq_mult_int = 46
+frq_mult_float = 0.375
+frq_div_int_all = 3
+frq_div_int = 7
+frq_div_float = 0.375
+104.9:
+frq_mult_int = 13
+frq_mult_float = 0.375
+frq_div_int_all = 3
+frq_div_int = 2
+frq_div_float = 0.125
+105:
+frq_mult_int = 2
+frq_mult_float = 0.625
+frq_div_int_all = 1
+frq_div_int = 1
+frq_div_float = 0.25
+105.1:
+frq_mult_int = 12
+frq_mult_float = 0.875
+frq_div_int_all = 1
+frq_div_int = 6
+frq_div_float = 0.125
+105.2:
+frq_mult_int = 20
+frq_mult_float = 0.25
+frq_div_int_all = 1
+frq_div_int = 9
+frq_div_float = 0.625
+105.3:
+frq_mult_int = 17
+frq_mult_float = 0.375
+frq_div_int_all = 1
+frq_div_int = 8
+frq_div_float = 0.25
+105.4:
+frq_mult_int = 46
+frq_mult_float = 0.375
+frq_div_int_all = 2
+frq_div_int = 11
+frq_div_float = 0.0
+105.5:
+frq_mult_int = 26
+frq_mult_float = 0.375
+frq_div_int_all = 1
+frq_div_int = 12
+frq_div_float = 0.5
+105.6:
+frq_mult_int = 35
+frq_mult_float = 0.375
+frq_div_int_all = 2
+frq_div_int = 8
+frq_div_float = 0.375
+105.7:
+frq_mult_int = 30
+frq_mult_float = 0.125
+frq_div_int_all = 3
+frq_div_int = 4
+frq_div_float = 0.75
+105.8:
+frq_mult_int = 18
+frq_mult_float = 0.25
+frq_div_int_all = 3
+frq_div_int = 2
+frq_div_float = 0.875
+105.9:
+frq_mult_int = 47
+frq_mult_float = 0.125
+frq_div_int_all = 2
+frq_div_int = 11
+frq_div_float = 0.125
+106:
+frq_mult_int = 6
+frq_mult_float = 0.625
+frq_div_int_all = 1
+frq_div_int = 3
+frq_div_float = 0.125
+106.1:
+frq_mult_int = 10
+frq_mult_float = 0.875
+frq_div_int_all = 1
+frq_div_int = 5
+frq_div_float = 0.125
+106.2:
+frq_mult_int = 34
+frq_mult_float = 0.25
+frq_div_int_all = 3
+frq_div_int = 5
+frq_div_float = 0.375
+106.3:
+frq_mult_int = 31
+frq_mult_float = 0.625
+frq_div_int_all = 1
+frq_div_int = 14
+frq_div_float = 0.875
+106.4:
+frq_mult_int = 43
+frq_mult_float = 0.625
+frq_div_int_all = 2
+frq_div_int = 10
+frq_div_float = 0.25
+106.5:
+frq_mult_int = 26
+frq_mult_float = 0.625
+frq_div_int_all = 1
+frq_div_int = 12
+frq_div_float = 0.5
+106.6:
+frq_mult_int = 38
+frq_mult_float = 0.375
+frq_div_int_all = 2
+frq_div_int = 9
+frq_div_float = 0.0
+106.7:
+frq_mult_int = 25
+frq_mult_float = 0.875
+frq_div_int_all = 1
+frq_div_int = 12
+frq_div_float = 0.125
+106.8:
+frq_mult_int = 39
+frq_mult_float = 0.25
+frq_div_int_all = 3
+frq_div_int = 6
+frq_div_float = 0.125
+106.9:
+frq_mult_int = 7
+frq_mult_float = 0.75
+frq_div_int_all = 1
+frq_div_int = 3
+frq_div_float = 0.625
+107:
+frq_mult_int = 13
+frq_mult_float = 0.375
+frq_div_int_all = 1
+frq_div_int = 6
+frq_div_float = 0.25
+107.1:
+frq_mult_int = 43
+frq_mult_float = 0.375
+frq_div_int_all = 2
+frq_div_int = 10
+frq_div_float = 0.125
+107.2:
+frq_mult_int = 35
+frq_mult_float = 0.375
+frq_div_int_all = 2
+frq_div_int = 8
+frq_div_float = 0.25
+107.3:
+frq_mult_int = 23
+frq_mult_float = 0.875
+frq_div_int_all = 1
+frq_div_int = 11
+frq_div_float = 0.125
+107.4:
+frq_mult_int = 38
+frq_mult_float = 0.125
+frq_div_int_all = 2
+frq_div_int = 8
+frq_div_float = 0.875
+107.5:
+frq_mult_int = 5
+frq_mult_float = 0.375
+frq_div_int_all = 1
+frq_div_int = 2
+frq_div_float = 0.5
+107.6:
+frq_mult_int = 46
+frq_mult_float = 0.0
+frq_div_int_all = 3
+frq_div_int = 7
+frq_div_float = 0.125
+107.7:
+frq_mult_int = 3
+frq_mult_float = 0.5
+frq_div_int_all = 1
+frq_div_int = 1
+frq_div_float = 0.625
+107.8:
+frq_mult_int = 38
+frq_mult_float = 0.0
+frq_div_int_all = 3
+frq_div_int = 5
+frq_div_float = 0.875
+107.9:
+frq_mult_int = 5
+frq_mult_float = 0.125
+frq_div_int_all = 1
+frq_div_int = 2
+frq_div_float = 0.375
+108:
+frq_mult_int = 6
+frq_mult_float = 0.75
+frq_div_int_all = 1
+frq_div_int = 3
+frq_div_float = 0.125

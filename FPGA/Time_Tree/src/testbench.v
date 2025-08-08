@@ -1,35 +1,44 @@
-`timescale 1ps/1ps
-module testbench;
+`timescale 1ns/1ps
+module PLL_Control_tb;
 
-reg sys_clk = 0;
-reg rst_n = 0;
+  // Parameters
 
-wire clk_adc;
-wire clk_dac;
-wire clk_fir;
-wire locked;
-wire [13:0] dac_out;
-wire light;
+  //Ports
+  reg  sys_clk = 0;
+  reg  rst_n = 0;
+  wire  clk_out1;
+  wire [7:0] frq;
+  reg  frq_search_over = 1;
+  reg  clc_accompish = 1;
+  wire  locked;
+
+initial begin
+    #100; rst_n = 1;
+end
+
+initial begin
+    #2000; clc_accompish = 0;
+
+    #10000; clc_accompish = 1;
+    #20; clc_accompish = 0;
+end
 
 initial begin
     forever begin
-        #10 sys_clk = ~sys_clk; // 10ns周期的时钟
+        #10; sys_clk = ~sys_clk;
     end
 end
 
-initial begin
-    #100; rst_n = 1; // 复位信号
-end
-
-top  top_inst (
+MMCM_Control  MMCM_Control_inst (
     .sys_clk(sys_clk),
     .rst_n(rst_n),
-    .clk_adc(clk_adc),
-    .clk_dac(clk_dac),
-    .clk_fir(clk_fir),
-    .locked(locked),
-    .dac_out(dac_out),
-    .light(light)
+    .clk_out1(clk_out1),
+    .frq(frq),
+    .frq_search_over(frq_search_over),
+    .clc_accompish(clc_accompish),
+    .locked(locked)
   );
+
+//always #5  clk = ! clk ;
 
 endmodule
